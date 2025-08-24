@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "username": "0988010011",
+    "email": "admin@gmail.com",
+    "password": "admin123"
+  },
+  {
+    "id": 2,
+    "username": "0389927069",
+    "email": "user1@gmail.com",
+    "password": "nhat1234"
+  },
+  {
+    "id": 3,
+    "username": "0123456789",
+    "email": "user2@gmail.com",
+    "password": "12121234z"
+  },
+  {
+    "id": 4,
+    "username": "0123456788",
+    "email": "user3@gmail.com",
+    "password": "12121234z"
+  },
+  {
+    "id": 5,
+    "username": "0123456787",
+    "email": "user4@gmail.com",
+    "password": "12121234z"
+  },
+  {
+    "id": 6,
+    "username": "0123456786",
+    "email": "user5@gmail.com",
+    "password": "12121234z"
+  },
+  {
+    "id": 7,
+    "username": "0123456785",
+    "email": "user6@gmail.com",
+    "password": "12121234z"
+  },
+  {
+    "id": 8,
+    "username": "0123456781",
+    "email": "user7@gmail.com",
+    "password": "nhat1234"
+  },
+  {
+    "id": 9,
+    "username": "0123456780",
+    "email": "user8@gmail.com",
+    "password": "nhat1234"
+  }
+]
