@@ -5,6 +5,8 @@ import Chat from "~/components/Chat";
 import Detail from "~/components/Detail";
 import List from "~/components/List";
 import Sidebar from "~/components/Sidebar";
+import Content from "~/components/Content";
+import Request from "~/components/Request"
 
 const cx = classNames.bind(styles);
 
@@ -14,8 +16,9 @@ function DashBoard() {
             <Sidebar/>
             <div className={cx('content')}>
                 <List/>
-                <Chat/>
-                <Detail/>
+                {/*<Chat/>
+                <Detail/> */}
+                <Content/>
             </div>
         </div>
     );

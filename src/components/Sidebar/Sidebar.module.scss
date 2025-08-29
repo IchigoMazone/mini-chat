@@ -1,224 +1,165 @@
 
-// // Variables
-// $sidebar-width: 80px;
-// $sidebar-bg: #1e5bc6;
-// $sidebar-item-size: 60px;
-// $icon-size: 32px;
-// $border-radius: 15px;
-// $transition: all 0.3s ease;
-
-// // Sidebar Component
 // .sidebar {
-//   width: $sidebar-width;
-//   background: $sidebar-bg;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between; // đẩy top lên, bottom xuống
-//   align-items: center;
-//   height: 100vh;
-//   padding: 20px 0;
-// }
-
-// // Top & Bottom sections
-// .topSection {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   flex-grow: 1; // chiếm toàn bộ khoảng trống để đẩy bottom xuống
-// }
-
-// .bottomSection {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   margin-bottom: 0; // dính sát lề dưới
-// }
-
-// // Sidebar Items
-// .sidebarItem {
-//   width: $sidebar-item-size;
-//   height: $sidebar-item-size;
-//   margin: 12px 0;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   border-radius: $border-radius;
-//   cursor: pointer;
-//   transition: $transition;
-
-//   &:hover {
-//     background: rgba(255, 255, 255, 0.15);
-//     transform: scale(1.1);
-//   }
-
-//   &.active {
-//     background: rgba(255, 255, 255, 0.25);
-//   }
-// }
-
-// // Icons
-// .icon {
-//   width: $icon-size;
-//   height: $icon-size;
-//   border-radius: 50%;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: 20px;
-//   color: white;
-
-//   &.pdf {
-//     background: #dc3545;
-//     font-size: 14px;
-//     font-weight: bold;
-//   }
-
-//   &.user {
-//     background: none;
-//     border: 2px solid white;
-//   }
-// }
-
-// // Mobile Responsive
-// @media (max-width: 768px) {
-//   .sidebar {
-//     width: 100%;
-//     height: 80px;
-//     flex-direction: row;
-//     justify-content: space-between;
-//     padding: 0 20px;
-//     position: fixed;
-//     bottom: 0;
-//   }
-
-//   .topSection,
-//   .bottomSection {
-//     flex-direction: row;
-//   }
-
-//   .sidebarItem {
-//     margin: 0 8px;
-//     width: 50px;
-//     height: 50px;
-//   }
+//     border-right: 2px solid #ddd;
 // }
 
 
-// Variables
-$sidebar-width: 80px;
-$sidebar-bg: #1e5bc6;
-$sidebar-item-size: 60px;
-$icon-size: 32px;
-$border-radius: 15px;
-$transition: all 0.3s ease;
-
-// Sidebar Component
 .sidebar {
-  width: $sidebar-width;
-  background: $sidebar-bg;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 80px;
   height: 100vh;
-  padding-top: 20px; // chỉ padding trên thôi
+  background: linear-gradient(180deg, #4285f4 0%, #1565c0 100%);
+  //position: fixed;
+  //left: 0;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  border-right: 2px solid #ddd;
 }
 
-// Top & Bottom sections
-.topSection {
+.sidebar-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  flex-grow: 1; // chiếm toàn bộ khoảng trống để đẩy bottom xuống
+  height: 100%;
+  padding: 20px 0;
+  justify-content: space-between;
+  position: relative;
 }
 
-.bottomSection {
+.active-indicator {
+  position: absolute;
+  width: 54px;
+  height: 54px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: top 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 90px;
+}
+
+.sidebar-top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: auto; // ép sát lề dưới
+  gap: 20px;
 }
 
-// Sidebar Items
-.sidebarItem {
-  width: $sidebar-item-size;
-  height: $sidebar-item-size;
-  margin: 12px 0;
+.sidebar-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.sidebar-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: $border-radius;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  transition: $transition;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
 
   &:hover {
-    background: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.1);
     transform: scale(1.1);
   }
 
   &.active {
-    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+
+    .icon {
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
-// Icons
-.icon {
-  width: $icon-size;
-  height: $icon-size;
+.avatar-img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
   border-radius: 50%;
+  background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
   color: white;
+  font-weight: bold;
+  font-size: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
 
-  &.pdf {
-    background: #dc3545;
-    font-size: 14px;
-    font-weight: bold;
-  }
-
-  &.user {
-    background: none;
-    border: 2px solid white;
-  }
-}
-
-// Avatar (đồng bộ với icon)
-.avatar {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid white;
-}
-
-// Mobile Responsive
-@media (max-width: 768px) {
-  .sidebar {
-    width: 100%;
-    height: 80px;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 20px;
-    position: fixed;
-    bottom: 0;
-  }
-
-  .topSection,
-  .bottomSection {
-    flex-direction: row;
-  }
-
-  .sidebarItem {
-    margin: 0 8px;
+  img {
     width: 50px;
     height: 50px;
+    border-radius: 50%;
+  }
+}
+
+.icon {
+  width: 28px;
+  height: 28px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: bold;
+
+  svg {
+    width: 24px;
+    height: 24px;
   }
 
-  .avatar {
-    border: 2px solid white;
-    border-radius: 50%;
+  &.google-plus {
+    background: #dd4b39;
+    border-radius: 4px;
     width: 32px;
     height: 32px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Responsive
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+  
+  .sidebar-item {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .icon {
+    width: 24px;
+    height: 24px;
+    
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    
+    &.google-plus {
+      width: 28px;
+      height: 28px;
+      font-size: 12px;
+    }
+  }
+
+  .active-indicator {
+    width: 44px;
+    height: 44px;
   }
 }
