@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { UserPlus } from 'lucide-react';
 import classNames from "classnames/bind";
-import styles from "./Content.module.scss";
+import styles from "./Content2.module.scss";
 
 const cx = classNames.bind(styles);
 
@@ -34,7 +34,7 @@ const sentRequestsData = [
   { id: 8, name: "Phạm Văn Hùng", avatar: avatarIcon },
 ];
 
-function Content() {
+function Content2() {
   return (
     <div className={cx('content1')}>
       {/* Header */}
@@ -150,4 +150,4 @@ function Content() {
   );
 }
 
-export default Content;
+export default Content2;

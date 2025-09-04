@@ -26,8 +26,8 @@ function ChatList() {
       message: "Qeenlin: Dạ vâng a",
       time: "4 ngày",
       isPinned: true,
-      isGroup: false,
-      unreadCount: 0
+      //isGroup: true,
+      unreadCount: 10
     },
     {
       id: 3,
@@ -46,9 +46,9 @@ function ChatList() {
       message: "Cntt Pka: Ngó Minh Quân nhé",
       time: "4 ngày",
       isPinned: true,
-      isGroup: true,
+      //isGroup: true,
       unreadCount: 0,
-      groupMembers: ["https://via.placeholder.com/16x16/6b7280/ffffff", "https://via.placeholder.com/16x16/ef4444/ffffff"]
+      //groupMembers: ["https://via.placeholder.com/16x16/6b7280/ffffff", "https://via.placeholder.com/16x16/ef4444/ffffff"]
     },
     {
       id: 5,
@@ -59,7 +59,7 @@ function ChatList() {
       isPinned: false,
       isGroup: true,
       unreadCount: 1,
-      groupMembers: ["https://via.placeholder.com/16x16/6b7280/ffffff", "https://via.placeholder.com/16x16/ef4444/ffffff"],
+      //groupMembers: ["https://via.placeholder.com/16x16/6b7280/ffffff", "https://via.placeholder.com/16x16/ef4444/ffffff"],
       memberCount: "99+"
     },
     {
@@ -260,175 +260,6 @@ function ChatList() {
 
 export default ChatList;
 // //Danh sach Tin nhan
-
-
-
-
-
-
-// import React, { useState } from 'react';
-// import classNames from "classnames/bind";
-// import styles from "./chatList.module.scss";
-// import { Users, UserPlus, UsersRound, UserCheck } from 'lucide-react';
-
-// const cx = classNames.bind(styles);
-
-// function ChatList() {
-//   const [selectedItem, setSelectedItem] = useState(1);
-
-//   const menuItems = [
-//     {
-//       id: 1,
-//       icon: <Users size={20} />,
-//       title: "Danh sách bạn bè"
-//     },
-//     {
-//       id: 2,
-//       icon: <UsersRound size={20} />,
-//       title: "Danh sách nhóm và cộng đồng"
-//     },
-//     {
-//       id: 3,
-//       icon: <UserPlus size={20} />,
-//       title: "Lời mời kết bạn"
-//     },
-//     {
-//       id: 4,
-//       icon: <UserCheck size={20} />,
-//       title: "Lời mời vào nhóm và cộng đồng"
-//     }
-//   ];
-
-//   const handleItemClick = (itemId) => {
-//     setSelectedItem(itemId);
-//   };
-
-//   return (
-//     <div className={cx('chatList')}>
-//       <div className={cx('menu-container')}>
-//         {menuItems.map((item) => (
-//           <div 
-//             key={item.id} 
-//             className={cx('menu-item', { 'selected': selectedItem === item.id })}
-//             onClick={() => handleItemClick(item.id)}
-//           >
-//             <div className={cx('icon-wrapper')}>
-//               {item.icon}
-//             </div>
-//             <span className={cx('menu-title')}>{item.title}</span>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default ChatList;
-// // Menu 2
-
-
-
-// import React from 'react';
-// import classNames from "classnames/bind";
-// import styles from "./chatList.module.scss";
-// import { avatarIcon } from '../image';
-
-// const cx = classNames.bind(styles);
-
-// function ChatList() {
-//   const chatData = [
-//     {
-//       id: 1,
-//       avatar: avatarIcon,
-//       name: "Cục Quản lý đề điều và PCTT"
-//     },
-//     {
-//       id: 2,
-//       avatar: avatarIcon,
-//       name: "Minh Dương"
-//     },
-//     {
-//       id: 3,
-//       avatar: avatarIcon,
-//       name: "Tuấn Huy"
-//     },
-//     {
-//       id: 4,
-//       avatar: avatarIcon,
-//       name: "Giáp Vân Trang"
-//     },
-//     {
-//       id: 5,
-//       avatar: avatarIcon,
-//       name: "IF KOHOC RETURN 0"
-//     },
-//     {
-//       id: 6,
-//       avatar: avatarIcon,
-//       name: "SS-NHẬT"
-//     },
-//     {
-//       id: 7,
-//       avatar: avatarIcon,
-//       name: "Huy Hoàn"
-//     },
-//     {
-//       id: 8,
-//       avatar: avatarIcon,
-//       name: "Kiều Quân"
-//     },
-//     {
-//       id: 9,
-//       avatar: avatarIcon,
-//       name: "Quốc Thiện"
-//     },
-//     {
-//       id: 6,
-//       avatar: avatarIcon,
-//       name: "SS-NHẬT"
-//     },
-//     {
-//       id: 7,
-//       avatar: avatarIcon,
-//       name: "Huy Hoàn"
-//     },
-//     {
-//       id: 8,
-//       avatar: avatarIcon,
-//       name: "Kiều Quân"
-//     },
-//     {
-//       id: 9,
-//       avatar: avatarIcon,
-//       name: "Quốc Thiện"
-//     }
-//   ];
-
-//   return (
-//     <div className={cx('chatList')}>
-//       <div className={cx('chat-container')}>
-//         {chatData.map((chat) => (
-//           <div key={chat.id} className={cx('chat-item')}>
-//             <div className={cx('avatar-section')}>
-//               <img 
-//                 src={chat.avatar} 
-//                 alt={chat.name}
-//                 className={cx('avatar')}
-//               />
-//             </div>
-
-//             <div className={cx('content')}>
-//               <h3 className={cx('name')}>{chat.name}</h3>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default ChatList;
-// //Danh sach ban be
 
 
 

@@ -1,7 +1,9 @@
-
 // .list {
-//     flex: 4.5 0 0;
-//     display: flex;
-//     flex-direction: column;
-//     border-right: 2px solid #ddd;
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   max-width: 100vw; /* Giới hạn tối đa bằng viewport */
+//   overflow-x: hidden; /* Ngăn cuộn ngang */
+//   box-sizing: border-box;
+//   height: 100vh; /* Đảm bảo chiếm toàn bộ chiều cao viewport */
 // }
