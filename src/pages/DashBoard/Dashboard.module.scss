@@ -1,220 +1,12 @@
-// // // .container {
-// // //   display: flex;
-// // //   height: 100vh;
-// // //   width: 100vw;
-// // //   overflow: hidden;
-
-// // //   .sidebar {
-// // //     flex: 3;
-// // //     display: flex;
-// // //     flex-direction: column;
-// // //     border-right: 1px solid #ddd;
-// // //   }
-
-// // //   .content {
-// // //     flex: 17;
-// // //     display: flex;        // mặc định là row
-// // //     flex-direction: row;  // ngang
-// // //     overflow: hidden;     // tránh cuộn ngang toàn bộ
-
-// // //     .list {
-// // //       flex: 4.5; 
-// // //       border-right: 1px solid #ddd;
-// // //       overflow-y: auto;
-
-// // //       .userInfo {
-// // //         // SCSS trên đây sẽ áp dụng
-// // //       }
-
-// // //      .chatList {
-// // //         flex: 1;
-// // //         overflow-y: auto;
-// // //       }
-// // //     }
-
-// // //     .chat {
-// // //       flex: 8; 
-// // //       border-right: 1px solid #ddd;
-// // //       overflow-y: auto;
-// // //       display: flex;
-// // //       flex-direction: column; // để chia header, messages, input box
-// // //     }
-
-// // //     .detail {
-// // //       flex: 4.5;
-// // //       overflow-y: auto;
-// // //     }
-// // //   }
-// // // }
-
-
-
-// // .container {
-// //   display: flex;
-// //   height: 100vh;
-// //   width: 100vw;
-// //   overflow: hidden;
-
-// //   .sidebar {
-// //     flex: 1;
-// //     display: flex;
-// //     flex-direction: column;
-// //     border-right: 1px solid #ddd;
-// //   }
-
-// //   .content {
-// //     flex: 19;
-// //     display: flex; // mặc định row
-// //     flex-direction: row;
-// //     overflow: hidden;
-
-// //     .list {
-// //       flex: 4.5;
-// //       display: flex;
-// //       flex-direction: column; // chia dọc giữa userInfo và chatList
-// //       border-right: 1px solid #ddd;
-
-// //       .userInfo {
-// //         flex-shrink: 0;
-// //         height: 100px; // chiều cao cố định
-// //         border-bottom: 2px solid #ddd;
-// //         padding: 12px 16px;
-// //         background: white;
-// //         display: flex;
-// //         flex-direction: column;
-// //         gap: 12px;
-// //       }
-
-// //       .chatList {
-// //         flex: 1;
-// //         overflow-y: auto;
-// //       }
-// //     }
-
-// //     // .chat {
-// //     //   flex: 9;
-// //     //   display: flex;
-// //     //   flex-direction: column;
-// //     //   border-right: 1px solid #ddd;
-// //     //   overflow-y: auto;
-// //     // }
-
-// //     // .detail {
-// //     //   flex: 4.5;
-// //     //   overflow-y: auto;
-// //     // }
-
-// //     .content1 {
-// //       flex: 13.5;
-// //       border-left: 2px solid #ddd;
-// //       display: flex;
-// //       flex-direction: column;
-// //       overflow-y: auto;
-// //     }
-// //   }
-// // }
-
-
-
-// .container {
-//   display: flex;
-//   height: 100vh;
-//   width: 100vw;
-//   overflow: hidden;
-
-//   .sidebar {
-//     flex: 1;
-//     display: flex;
-//     flex-direction: column;
-//     border-right: 1px solid #ddd;
-//     background: #fff;
-//   }
-
-//   .content {
-//     flex: 19;
-//     display: flex;
-//     flex-direction: row;
-//     overflow: hidden;
-
-//     /* ===== LIST ===== */
-//     .list {
-//       flex: 4.5;
-//       display: flex;
-//       flex-direction: column;
-//       border-right: 1px solid #ddd;
-
-//       .userInfo {
-//         flex-shrink: 0;
-//         height: 100px; // cố định header
-//         border-bottom: 2px solid #ddd;
-//         padding: 12px 16px;
-//         background: white;
-//         display: flex;
-//         flex-direction: column;
-//         gap: 12px;
-//       }
-
-//       .chatList {
-//         flex: 1;
-//         overflow-y: auto;
-//       }
-//     }
-
-//     /* ===== CHAT ===== */
-//     .chat {
-//       flex: 9;
-//       display: flex;
-//       flex-direction: column;
-//       border-right: 1px solid #ddd;
-//       overflow-y: auto;
-//     }
-
-//     /* ===== DETAIL ===== */
-//     .detail {
-//       flex: 4.5;
-//       overflow-y: auto;
-//       border-left: 1px solid #ddd;
-//       background: #fafafa;
-//     }
-
-//     /* ===== CONTENT1 (cho Request hoặc các màn khác) ===== */
-//     .content1 {
-//       flex: 13.5;
-//       border-left: 2px solid #ddd;
-//       display: flex;
-//       flex-direction: column;
-//       overflow-y: auto;
-//       background: #fff;
-//     }
-//   }
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Dashboard.module.scss (thêm vào SCSS hiện tại của bạn)
 
 .container {
   display: flex;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
-  position: relative; // Thêm để floating overlay đè lên toàn bộ
-  
+  position: relative;
+
+  /* ===== SIDEBAR ===== */
   .sidebar {
     flex: 1;
     display: flex;
@@ -222,20 +14,23 @@
     border-right: 1px solid #ddd;
     background: #fff;
   }
-  
-  .content {
+
+  /* ===== CONTENT / CONTENT1 ===== */
+  .content,
+  .content1 {
     flex: 19;
     display: flex;
     flex-direction: row;
     overflow: hidden;
-    
+    background: #fff;
+
     /* ===== LIST ===== */
     .list {
       flex: 4.5;
       display: flex;
       flex-direction: column;
-      //border-right: 1px solid #ddd;
-      
+      border-right: 1px solid #ddd;
+
       .userInfo {
         flex-shrink: 0;
         height: 100px; // cố định header
@@ -246,55 +41,45 @@
         flex-direction: column;
         gap: 12px;
       }
-      
+
       .chatList {
         flex: 1;
         overflow-y: auto;
       }
     }
-    
+
     /* ===== CHAT ===== */
     .chat {
       flex: 9;
       display: flex;
       flex-direction: column;
-      //border-right: 1px solid #ddd;
+      border-right: 1px solid #ddd;
       overflow-y: auto;
     }
-    
+
     /* ===== DETAIL ===== */
     .detail {
-      flex: 4.5;
+      flex: 5.5;
       overflow-y: auto;
-      //border-left: 1px solid #ddd;
+      border-left: 1px solid #ddd;
       background: #fafafa;
     }
-    
-    /* ===== CONTENT1 (cho Request hoặc các màn khác) ===== */
-    .content1 {
-      flex: 13.5;
-      //border-left: 2px solid #ddd;
-      display: flex;
-      flex-direction: column;
-      overflow-y: auto;
-      background: #fff;
-    }
   }
-  
-  /* ===== FLOATING OVERLAY - ĐÈ LÊN TOÀN BỘ CONTAINER ===== */
+
+  /* ===== FLOATING OVERLAY ===== */
   .floating-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
     animation: fadeIn 0.3s ease-in-out;
-    
+
     .overlay-content {
       background: white;
       border-radius: 16px;
@@ -305,7 +90,7 @@
       position: relative;
       min-width: 700px;
       min-height: 500px;
-      
+
       .close-btn {
         position: absolute;
         top: 15px;
@@ -323,7 +108,7 @@
         align-items: center;
         justify-content: center;
         transition: all 0.2s ease;
-        
+
         &:hover {
           color: #000;
           background: rgba(0, 0, 0, 0.2);

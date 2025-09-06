@@ -10,17 +10,17 @@ const cx = classNames.bind(styles);
 const avatarIcon = "data:image/svg+xml,%3csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='20' cy='20' r='20' fill='%23e5e7eb'/%3e%3ccircle cx='20' cy='16' r='6' fill='%239ca3af'/%3e%3cpath d='M20 22c-6 0-11 3-11 7v3h22v-3c0-4-5-7-11-7z' fill='%239ca3af'/%3e%3c/svg%3e";
 
 const friendsData = [
-  { id: 1, name: "Bảo Khánh", avatar: avatarIcon },
-  { id: 2, name: "Bin Nhỏ", avatar: avatarIcon },
-  { id: 3, name: "Long", avatar: avatarIcon },
-  { id: 4, name: "Định Tiến Đạt", avatar: avatarIcon },
-  { id: 5, name: "Duy Mạnh", avatar: avatarIcon },
-  { id: 6, name: "Duy Tùng", avatar: avatarIcon },
-  { id: 7, name: "Gemm Linn", avatar: avatarIcon },
-  { id: 8, name: "Giáp Văn Trang", avatar: avatarIcon }
+  { id: 1, name: "Bảo Khánh", avatar: avatarIcon, phone: "0123456789", gender: "Nam", birthDate: "01/01/2000" },
+  { id: 2, name: "Bin Nhỏ", avatar: avatarIcon, phone: "0123456790", gender: "Nam", birthDate: "02/02/2001" },
+  { id: 3, name: "Long", avatar: avatarIcon, phone: "0123456791", gender: "Nam", birthDate: "03/03/2002" },
+  { id: 4, name: "Định Tiến Đạt", avatar: avatarIcon, phone: "0123456792", gender: "Nam", birthDate: "04/04/2003" },
+  { id: 5, name: "Duy Mạnh", avatar: avatarIcon, phone: "0123456793", gender: "Nam", birthDate: "05/05/2004" },
+  { id: 6, name: "Duy Tùng", avatar: avatarIcon, phone: "0123456794", gender: "Nam", birthDate: "06/06/2005" },
+  { id: 7, name: "Gemm Linn", avatar: avatarIcon, phone: "0123456795", gender: "Nữ", birthDate: "07/07/2006" },
+  { id: 8, name: "Giáp Văn Trang", avatar: avatarIcon, phone: "0123456796", gender: "Nam", birthDate: "08/08/2007" }
 ];
 
-function Content3() {
+function Content3({ onSelectFriend }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState("name");
 
@@ -123,6 +123,7 @@ function Content3() {
                   <div 
                     key={friend.id}
                     className={cx('friend-item')}
+                    onClick={() => onSelectFriend(friend)} // Gọi callback khi nhấn vào friend-item
                   >
                     <div className={cx('friend-info')}>
                       <div className={cx('avatar-wrapper')}>

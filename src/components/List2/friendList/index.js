@@ -1,6 +1,4 @@
 
-
-// FriendList.jsx
 import React from 'react';
 import classNames from "classnames/bind";
 import styles from "./friendList.module.scss";
@@ -8,7 +6,7 @@ import { avatarIcon } from '../image';
 
 const cx = classNames.bind(styles);
 
-function FriendList() {
+function FriendList({ onSelectFriend }) {
   const friends = [
     { id: 1, avatar: avatarIcon, name: "Cục Quản lý đề điều và PCTT" },
     { id: 2, avatar: avatarIcon, name: "Minh Dương" },
@@ -25,7 +23,11 @@ function FriendList() {
     <div className={cx('friendList')}>
       <div className={cx('friend-container')}>
         {friends.map((friend) => (
-          <div key={friend.id} className={cx('friend-item')}>
+          <div
+            key={friend.id}
+            className={cx('friend-item')}
+            onClick={() => onSelectFriend(friend)} // click chọn bạn
+          >
             <div className={cx('avatar-section')}>
               <img 
                 src={friend.avatar} 
