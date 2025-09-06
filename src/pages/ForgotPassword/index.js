@@ -62,7 +62,7 @@ function ForgotPassword() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Nhập email của bạn..."
                   className={cx("input")}
-                  autoComplete="email"
+                  autoComplete="off"
                 />
               </div>
             </div>
@@ -79,7 +79,7 @@ function ForgotPassword() {
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="Nhập số điện thoại của bạn..."
                   className={cx("input")}
-                  autoComplete="tel"
+                  autoComplete="off"
                 />
               </div>
             </div>
