@@ -1,7 +1,10 @@
+
+const { v4: uuidv4 } = require("uuid");
 const fs = require("fs");
 const path = require("path");
 const jwt = require("jsonwebtoken");
 const SECRET_KEY = "your_secret_key";
+
 
 // Đường dẫn file JSON
 const userFilePath = path.join(__dirname, "../models/Users.json");
@@ -38,7 +41,15 @@ const login = (req, res) => {
   // Trả về client thông tin user + token
   res.json({
     message: "Đăng nhập thành công",
-    user: { id: user.id, username: user.username, email: user.email },
+    user: { 
+      id: user.id,
+      username: user.username,
+      email: user.email,
+      avatar: user.avatar,
+      fullname: user.fullname,
+      gender: user.gender,
+      birthday: user.birthday,
+    },
     token: tokenJWT
   });
 };
@@ -80,10 +91,15 @@ const register = (req, res) => {
   }
 
   const newUser = {
-    id: users.length + 1,
+    id: uuidv4(),
     username: phone,
     email: email,
-    password: password
+    password: password,
+    avatar: null,
+    fullname: null,
+    gender: null,
+    birthday: null,
+    createdAt: new Date(),
   };
 
   users.push(newUser);
@@ -93,4 +109,71 @@ const register = (req, res) => {
   res.json({ message: "Đăng ký thành công" });
 };
 
-module.exports = { login, forgotPassword, resetPassword, register };
+const logout = (req, res) => {
+  res.clearCookie("token");
+  res.json({ message: "Đăng xuất thành công" });
+}
+
+const updateProFile = (req, res) => {
+  const { fullname, gender, birthday, username } = req.body;
+
+  console.log(fullname);
+  console.log(gender);
+  console.log(birthday);
+  console.log(username);
+
+  // Nếu có file mới thì lấy path, không thì dùng ảnh mặc định
+  const profileImage = req.file
+    ? `/uploads/${req.file.filename}`
+    : "/uploads/default-avatar.png"; // ảnh mặc định
+
+  console.log(profileImage);
+  const users = readUsers();
+  
+  const user = users.find(u => u.username === username);
+
+  user.avatar = profileImage;
+  user.fullname = fullname;
+  user.gender = gender;
+  user.birthday = birthday;
+
+  writeUsers(users);
+
+  const tokenJWT = jwt.sign(
+    { id: user.id, username: user.username },
+    SECRET_KEY,
+    { expiresIn: "7d" } // token hết hạn 7 ngày
+  );
+
+  res.json({
+    message: "Đăng nhập thành công",
+    user: { 
+      id: user.id,
+      username: user.username,
+      email: user.email,
+      avatar: user.avatar,
+      fullname: user.fullname,
+      gender: user.gender,
+      birthday: user.birthday,
+    },
+    token: tokenJWT
+  });
+};
+
+
+module.exports = {
+  login,
+  forgotPassword,
+  resetPassword,
+  register,
+  logout,
+  updateProFile,
+};
+
+
+
+
+
+
+
+

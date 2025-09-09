@@ -1,56 +1,46 @@
 [
   {
-    "id": 1,
-    "username": "0988010011",
-    "email": "admin@gmail.com",
-    "password": "admin123"
+    "id": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "username": "0389923022",
+    "email": "ngu3@gmail.com",
+    "password": "user1234",
+    "avatar": "/uploads/default-avatar.png",
+    "fullname": "Trịnh Như Nhất",
+    "gender": "female",
+    "birthday": "2025-09-04",
+    "createdAt": "2025-09-06T07:18:23.669Z"
   },
   {
-    "id": 2,
-    "username": "0389927069",
-    "email": "user1@gmail.com",
-    "password": "user1234"
+    "id": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "username": "0389923023",
+    "email": "ngu1@gmail.com",
+    "password": "nhat1234",
+    "avatar": "/uploads/1757214701806-521390106.png",
+    "fullname": "Nguyễn Diệu Lynh",
+    "gender": "female",
+    "birthday": "2006-12-06",
+    "createdAt": "2025-09-07T03:10:32.693Z"
   },
   {
-    "id": 3,
-    "username": "0123456789",
-    "email": "user2@gmail.com",
-    "password": "12121234z"
+    "id": "12b26abf-2857-4a4a-8662-3dc657fa0e9f",
+    "username": "0389923024",
+    "email": "ngu2@gmail.com",
+    "password": "nhat1234",
+    "avatar": "/uploads/default-avatar.png",
+    "fullname": "hello world",
+    "gender": "male",
+    "birthday": "2025-09-07",
+    "createdAt": "2025-09-07T03:12:34.397Z"
   },
   {
-    "id": 4,
-    "username": "0123456788",
-    "email": "user3@gmail.com",
-    "password": "12121234z"
-  },
-  {
-    "id": 5,
-    "username": "0123456787",
-    "email": "user4@gmail.com",
-    "password": "12121234z"
-  },
-  {
-    "id": 6,
-    "username": "0123456786",
-    "email": "user5@gmail.com",
-    "password": "12121234z"
-  },
-  {
-    "id": 7,
-    "username": "0123456785",
-    "email": "user6@gmail.com",
-    "password": "12121234z"
-  },
-  {
-    "id": 8,
-    "username": "0123456781",
-    "email": "user7@gmail.com",
-    "password": "nhat1234"
-  },
-  {
-    "id": 9,
-    "username": "0123456780",
-    "email": "user8@gmail.com",
-    "password": "nhat1234"
+    "id": "855a39b4-a79d-4900-a6c7-cc5f3f6366fb",
+    "username": "0487621578",
+    "email": "thththt@gmail.com",
+    "password": "45hoahong",
+    "avatar": "/uploads/1757382572972-44608106.png",
+    "fullname": "nguyen van tien",
+    "gender": "male",
+    "birthday": "2025-09-09",
+    "createdAt": "2025-09-09T01:45:39.928Z"
   }
 ]
