@@ -45,7 +45,25 @@ const uuidFunction1 = (req, res) => {
   });
 };
 
+const uuidFunction2 = (req, res) => {
+  const { data } = req.body;
+  const users = readUsers();
+
+  const user = users.find(u => u.id === data);
+
+  if (!user) {
+    return res.status(404).json({ message: "User not found" });
+  }
+
+  res.json({
+    message: "Success",
+    avatar: user.avatar,
+    fullname: user.fullname,
+  });
+};
+
 module.exports = {
     uuidFunction,
-    uuidFunction1
+    uuidFunction1,
+    uuidFunction2
 }

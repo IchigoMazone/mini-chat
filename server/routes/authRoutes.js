@@ -3,7 +3,7 @@ const express = require("express");
 const router = express.Router();
 const { login, forgotPassword, resetPassword, register, logout, updateProFile } = require("../controllers/authController");
 const { loginInput, forgotPasswordInput, resetPasswordInput, registerInput, verifyToken } = require("../middleware/authMiddleware");
-const { uuidFunction, uuidFunction1 } = require("../controllers/userController");
+const { uuidFunction, uuidFunction1, uuidFunction2 } = require("../controllers/userController");
 const upload = require("../middleware/upload");
 
 router.post("/login", loginInput, login);
@@ -27,6 +27,7 @@ router.post(
 
 router.post("/leak-id", uuidFunction);
 router.post("/leak-info", uuidFunction1);
+router.post("/leak-info1", uuidFunction2);
 
 module.exports = router;
 

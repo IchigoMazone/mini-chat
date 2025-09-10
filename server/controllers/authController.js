@@ -23,6 +23,64 @@ const writeUsers = (users) => {
   fs.writeFileSync(userFilePath, JSON.stringify(users, null, 2), "utf-8");
 };
 
+function createConversation(userId, content = "Xin chào bạn !") {
+  const now = new Date().toISOString();
+  
+  return {
+    id: "ctc_1",
+    type: "personal",
+    members: [
+      "global-id", // ID mặc định toàn hệ thống
+      userId
+    ],
+    last_message: {
+      content: content,
+      sender: "global-id",
+      timestamp: now,
+      message_type: "text"
+    },
+    created_at: now,
+    updated_at: now,
+    active: true
+  };
+}
+
+function saveConversation(userId, content) {
+  const conversation = createConversation(userId, content);
+
+  // đường dẫn tới models/chatList.json (ra ngoài controllers, rồi vào models)
+  const filePath = path.join(__dirname, "../models/chatList.json");
+
+  // đảm bảo thư mục models tồn tại
+  const dirPath = path.dirname(filePath);
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
+
+  // nếu file đã có thì đọc ra trước
+  let chatList = [];
+  if (fs.existsSync(filePath)) {
+    try {
+      const raw = fs.readFileSync(filePath, "utf-8");
+      if (raw.trim().length > 0) {
+        chatList = JSON.parse(raw);
+      }
+    } catch (err) {
+      console.error("Lỗi đọc chatList.json:", err);
+      chatList = [];
+    }
+  }
+
+  // thêm cuộc trò chuyện mới vào list
+  chatList.push(conversation);
+
+  // ghi lại file JSON
+  fs.writeFileSync(filePath, JSON.stringify(chatList, null, 2), "utf-8");
+
+  console.log("✅ Đã ghi vào chatList.json thành công!");
+}
+
+
 const login = (req, res) => {
   const { username, password } = req.body;
   const users = readUsers();
@@ -138,6 +196,8 @@ const updateProFile = (req, res) => {
   user.birthday = birthday;
 
   writeUsers(users);
+
+  saveConversation(user.id, "Xin chào bạn !");
 
   const tokenJWT = jwt.sign(
     { id: user.id, username: user.username },
