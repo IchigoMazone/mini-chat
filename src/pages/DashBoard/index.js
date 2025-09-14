@@ -1,5 +1,6 @@
 
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import classNames from "classnames/bind";
 import styles from "./Dashboard.module.scss";
 import Sidebar from "~/components/Sidebar";
@@ -13,6 +14,7 @@ import Chat from "~/components/Chat";
 import Detail from "~/components/Detail";
 import ProFile from "../ProFile";
 import Logout from "../Logout";
+import axios from "axios";
 
 const cx = classNames.bind(styles);
 
@@ -31,6 +33,33 @@ function DashBoard() {
   const [showDetail, setShowDetail] = useState(false);
   const [selectedItem, setSelectedItem] = useState(1);
   const [selectedFriend, setSelectedFriend] = useState(null);
+  const location = useLocation();
+  const username = location.state?.username;
+  const [userId, setUserId] = useState("");
+
+  console.log("Du lieu tu Dashboard: ", selectedFriend)
+
+  useEffect(() => {
+    if (!username) return;
+
+    const fetchUserId = async () => {
+      try {
+        const res = await axios.post("http://localhost:5000/api/auth/leak-id", {
+          username
+        });
+        if (res.status === 200) {
+          setUserId(res.data.userId);
+          console.log('User ID:', res.data.userId);
+        }
+      } catch (error) {
+        console.error('Error fetching user ID:', error);
+      }
+    };
+
+    fetchUserId();
+  }, [username]); // gọi lại nếu use
+
+  console.log("Username:", username); // Sửa lại cho đúng
 
   const handleToggleDetail = () => setShowDetail((prev) => !prev);
 
@@ -47,6 +76,7 @@ function DashBoard() {
 
   const handleSelectFriend = (friend) => {
     setSelectedFriend(friend);
+    console.log("Dashboard", friend)
   };
 
   useEffect(() => {
@@ -58,15 +88,29 @@ function DashBoard() {
   return (
     <div className={cx("container")}>
       {/* Sidebar */}
-      <Sidebar activeIndex={currentSidebarIndex} setActiveIndex={handleSidebarClick} />
+      <Sidebar 
+        activeIndex={currentSidebarIndex}
+        setActiveIndex={handleSidebarClick}
+        datax={userId} 
+      />
 
       {/* Main Content */}
       <div className={cx("content")}>
         {mainIndex === 1 && (
           <>
-            <List onSelectFriend={handleSelectFriend} selectedFriend={selectedFriend} />
-            <Chat friend={selectedFriend} onToggleDetail={handleToggleDetail} />
-            {showDetail && <Detail />}
+            <List 
+              onSelectFriend={handleSelectFriend}
+              selectedFriend={selectedFriend} 
+              datax={userId} 
+            />
+            <Chat 
+              friend={selectedFriend}
+              onToggleDetail={handleToggleDetail}
+            />
+            {showDetail && 
+              <Detail 
+                friend={selectedFriend}
+              />}
           </>
         )}
 
@@ -100,7 +144,11 @@ function DashBoard() {
       </div>
 
       {/* Overlays */}
-      {overlayIndex === 0 && <ProFile onClose={() => setOverlayIndex(null)} />}
+      {overlayIndex === 0 && 
+        <ProFile 
+          onClose={() => setOverlayIndex(null)} 
+          datax={userId}
+        />}
       {overlayIndex === 3 && <ProfileOverlay />}
       {overlayIndex === 4 && (
         <Logout
@@ -113,3 +161,4 @@ function DashBoard() {
 }
 
 export default DashBoard;
+

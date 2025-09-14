@@ -13,10 +13,10 @@
     //flex: 1; /* Giãn để lấp đầy không gian */
     overflow-y: auto; /* Cho phép cuộn nếu nội dung vượt quá */
     overflow-x: hidden;
-    width: 425px;
+    width: 100%;
     //max-width: 100%; /* Đảm bảo không vượt container */
     box-sizing: border-box;
-    padding: 0 10px; /* Khớp với .chat-container */
+    //padding: 0 10px; /* Khớp với .chat-container */
     min-height: 0; /* Đảm bảo flex hoạt động đúng */
 
     .menu-item {

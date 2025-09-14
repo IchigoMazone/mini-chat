@@ -1,6 +1,6 @@
 
 .friendList {
-  width: 425px;
+  width: 100%;
   background: white;
   display: flex;
   flex-direction: column;
@@ -18,7 +18,7 @@
     .friend-item {
       display: flex;
       align-items: center;
-      padding: 16px 20px;
+      padding: 6.5px 20px;
       cursor: pointer;
       border-bottom: 1px solid #f0f0f0;
       transition: background-color 0.2s;
@@ -34,7 +34,8 @@
 
       .avatar-section {
         position: relative;
-        margin-right: 16px;
+        margin-right: 14px;
+        margin-left: -10px;
         flex-shrink: 0;
 
         .avatar {

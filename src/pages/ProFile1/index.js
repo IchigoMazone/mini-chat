@@ -5,18 +5,21 @@ import styles from "./ProFile.module.scss";
 
 const cx = classNames.bind(styles);
 
-const ProFile1 = ({ onClose }) => {
+const ProFile1 = ({ datax, onClose }) => {
+
+  console.log("datax:", datax.gender);
+
   const selectedUser = {
-    name: "Ngọc Diệp",
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&h=100&q=80&crop=faces",
-    phone: "0919980850",
-    gender: "Nữ",
-    birthDate: "22/08/1997",
+    name: datax.name || "",
+    avatar: `http://localhost:5000${datax.avatar}`,
+    phone: "**********",
+    gender: datax.gender || "",
+    birthDate: "**/**/****",
   };
-  const selectedGender = "Nữ";
-  const birthDay = "22";
-  const birthMonth = "08";
-  const birthYear = "1997";
+  const selectedGender = datax.gender === "female" ? "Nữ" : "Nam";
+  const birthDay = "*";
+  const birthMonth = "*";
+  const birthYear = "*";
 
   const handleMessage = () => {
     // Tạm thời để trống vì không yêu cầu hành động cụ thể

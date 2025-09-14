@@ -46,8 +46,10 @@ import {
 
 const cx = classNames.bind(styles);
 
-function Detail() {
+function Detail({ friend }) {
   const [currentView, setCurrentView] = useState('main'); // 'main', 'media', 'files', 'links'
+
+  console.log("Detail Friend:", friend);
 
   const mediaItems = [
     { id: 1, type: 'image' },
@@ -157,7 +159,7 @@ function Detail() {
       <div className={cx('avatar-section')}>
         <div className={cx('avatar')}>
           <img 
-            src={avatarIcon}
+            src={friend ? `http://localhost:5000${friend.avatar}` : avatarIcon}
             alt="Avatar" 
             className={cx('avatar-img')}
           />
@@ -166,7 +168,7 @@ function Detail() {
 
       {/* Chat Name */}
       <div className={cx('chat-name')}>
-        <h3>Nguyen Dieu Lyng</h3>
+        <h3>{friend ? friend.name : 'Unknown User'}</h3>
       </div>
 
       {/* Action Button */}

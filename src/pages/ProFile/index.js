@@ -3,17 +3,74 @@ import React, { useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./ProFile.module.scss";
 import { Pencil, X, Camera, ChevronDown, ArrowLeft, Upload } from "lucide-react";
+import { useEffect } from "react";
+import axios from "axios";
+import { avatarIcon } from "~/components/List/image";
 
 const cx = classNames.bind(styles);
 
-function ProFile({ onClose }) {
+function ProFile({ onClose, datax }) {
   const [showEditInfo, setShowEditInfo] = useState(false);
   const [showEditAvatar, setShowEditAvatar] = useState(false);
-  const [selectedGender, setSelectedGender] = useState("Nam");
-  const [birthDay, setBirthDay] = useState("27");
-  const [birthMonth, setBirthMonth] = useState("02");
-  const [birthYear, setBirthYear] = useState("2005");
-  const [displayName, setDisplayName] = useState("Trịnh Như Nhất");
+  
+  const [userInfo, setUserInfo] = useState({ avatar: "" });
+
+  useEffect(() => {
+    if (!datax) return;
+
+    const fetchUserInfo = async () => {
+      try {
+        const res = await axios.post("http://localhost:5000/api/auth/leak-info", {
+          datax
+        });
+        if (res.status === 200) {
+          setUserInfo(res.data.userInfo);
+          console.log('User info:', res.data.userInfo);
+        }
+      } catch (error) {
+        console.error('Error fetching user info:', error);
+      }
+    };
+
+    fetchUserInfo();
+  }, [datax]);
+
+  const [selectedGender, setSelectedGender] = useState(null);
+  const [birthDay, setBirthDay] = useState(null);
+  const [birthMonth, setBirthMonth] = useState(null);
+  const [birthYear, setBirthYear] = useState(null);
+  const [displayName, setDisplayName] = useState(null);
+
+  console.log("ProFile :", datax)
+  console.log("ProFile :", userInfo.avatar)
+  console.log("ProFile :", userInfo.fullname)
+  console.log("ProFile :", userInfo.gender)
+  console.log("ProFile :", userInfo.birthday)
+  console.log("ProFile :", typeof userInfo.username)
+
+  //setDisplayName(userInfo.fullname);
+
+  useEffect(() => {
+  if (userInfo) {
+    setDisplayName(userInfo.fullname); // đúng tên thuộc tính
+
+    if (userInfo.gender === "male") {
+      setSelectedGender("Nam");
+    }
+    else {
+      setSelectedGender("Nữ");
+    }
+
+    if (userInfo.birthday) {
+      const [year, month, day] = userInfo.birthday.split("-");
+      setBirthDay(day);
+      setBirthMonth(month);
+      setBirthYear(year);
+    }
+
+
+  }
+}, [userInfo]);
 
   const days = Array.from({length: 31}, (_, i) => (i + 1).toString().padStart(2, '0'));
   const months = Array.from({length: 12}, (_, i) => (i + 1).toString().padStart(2, '0'));
@@ -192,8 +249,8 @@ function ProFile({ onClose }) {
               <div className={cx("avatar-display")}>
                 <img
                   className={cx("current-avatar")}
-                  src="https://i.pravatar.cc/80?img=32"
-                  alt="Current Avatar"
+                  src={userInfo.avatar ? `http://localhost:5000${userInfo.avatar}` : avatarIcon}
+                  alt="avatar"
                 />
               </div>
             </div>
@@ -228,8 +285,8 @@ function ProFile({ onClose }) {
             <div className={cx("avatar-wrapper")}>
               <img
                 className={cx("avatar")}
-                src="https://i.pravatar.cc/64?img=32"
-                alt="Avatar"
+                src={userInfo.avatar ? `http://localhost:5000${userInfo.avatar}` : avatarIcon} 
+                alt="avatar"
               />
               <button 
                 onClick={handleEditAvatarClick}
@@ -271,7 +328,9 @@ function ProFile({ onClose }) {
             
             <div className={cx("info-item")}>
               <span className={cx("info-label")}>Điện thoại</span>
-              <span className={cx("info-value")}>+84 389 927 069</span>
+              <span className={cx("info-value")}>
+                {userInfo.username ? userInfo.username.replace(/^0/, "+84") : ""}
+              </span>
             </div>
           </div>
 

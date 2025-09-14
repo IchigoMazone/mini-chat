@@ -1,11 +1,19 @@
 import React from "react";
 import classNames from "classnames/bind";
 import styles from "./Logout.module.scss"; 
+import { useNavigate } from "react-router-dom";
 import { X } from "lucide-react";
 
 const cx = classNames.bind(styles);
 
-function Logout({ onClose, onLogout }) {
+function Logout({ onClose }) {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/", { replace: true });
+  }
+
   return (
     <div className={cx("overlay")}>
       <div className={cx("modal")}>
@@ -20,7 +28,7 @@ function Logout({ onClose, onLogout }) {
         </div>
         <div className={cx("footer")}>
           <button onClick={onClose} className={cx("btn", "btn-secondary")}>Hủy</button>
-          <button onClick={onLogout} className={cx("btn", "btn-primary")}>Đăng xuất</button>
+          <button onClick={handleLogout} className={cx("btn", "btn-primary")}>Đăng xuất</button>
         </div>
       </div>
     </div>

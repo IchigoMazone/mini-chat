@@ -119,6 +119,15 @@ function FriendList({ onSelectFriend, selectedFriend }) {
     { id: 7, avatar: avatarIcon, name: "Huy Hoàn" },
     { id: 8, avatar: avatarIcon, name: "Kiều Quân" },
     { id: 9, avatar: avatarIcon, name: "Quốc Thiện" },
+    { id: 9, avatar: avatarIcon, name: "Quốc Thiện" },
+    { id: 2, avatar: avatarIcon, name: "Minh Dương" },
+    { id: 3, avatar: avatarIcon, name: "Tuấn Huy" },
+    { id: 4, avatar: avatarIcon, name: "Giáp Vân Trang" },
+    { id: 5, avatar: avatarIcon, name: "IF KOHOC RETURN 0" },
+    { id: 6, avatar: avatarIcon, name: "SS-NHẬT" },
+    { id: 7, avatar: avatarIcon, name: "Huy Hoàn" },
+    { id: 8, avatar: avatarIcon, name: "Kiều Quân" },
+    { id: 9, avatar: avatarIcon, name: "Quốc Thiện" },
   ];
 
   return (
