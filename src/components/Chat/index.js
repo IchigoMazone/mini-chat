@@ -1,244 +1,584 @@
 
-
-
 // import classNames from "classnames/bind";
 // import styles from "./Chat.module.scss";
-// import { useState } from "react";
-// import { avatarIcon, searchIcon } from "../List/image";
+// import { useState, useEffect, useRef } from "react";
+// import ProFile1 from "~/pages/ProFile1";
 
 // const cx = classNames.bind(styles);
 
-// function Chat({ onToggleDetail }) {
+// // ChatPreview component
+// function ChatPreview({ imageUrl, onClose }) {
+//   return (
+//     <div className={cx("image-preview")} onClick={onClose}>
+//       <img src={imageUrl} alt="preview" />
+//     </div>
+//   );
+// }
+
+// // FriendRequestBar component
+// function FriendRequestBar({ friend, onSendRequest, isVisible }) {
+//   const [isRequestSent, setIsRequestSent] = useState(false);
+//   const [isLoading, setIsLoading] = useState(false);
+
+//   const handleSendRequest = async () => {
+//     setIsLoading(true);
+//     try {
+//       // Giả lập gọi API gửi lời mời kết bạn
+//       setTimeout(() => {
+//         onSendRequest(friend.id, friend.name);
+//         setIsRequestSent(true);
+//         setIsLoading(false);
+//       }, 1000);
+//     } catch (error) {
+//       console.error("Lỗi khi gửi lời mời:", error);
+//       setIsLoading(false);
+//     }
+//   };
+
+//   if (!isVisible) return null;
+
+//   return (
+//     <div className={cx("friend-request-bar")}>
+//       <div className={cx("request-content")}>
+//         <div className={cx("user-icon")}>
+//           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+//             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+//           </svg>
+//         </div>
+//         <span className={cx("request-text")}>
+//           {isRequestSent 
+//             ? "Bạn đã gửi yêu cầu kết bạn và đang chờ người này đồng ý"
+//             : `Gửi yêu cầu kết bạn tới ${friend.name || "Người dùng"} `}
+//         </span>
+//       </div>
+//       <div className={cx("request-actions")}>
+//         {!isRequestSent && (
+//           <button 
+//             className={cx("send-request-btn", { loading: isLoading })}
+//             onClick={handleSendRequest}
+//             disabled={isLoading}
+//             aria-label="Gửi yêu cầu kết bạn"
+//           >
+//             {isLoading ? "Đang gửi..." : "Gửi kết bạn"}
+//           </button>
+//         )}
+//       </div>
+//     </div>
+//   );
+// }
+
+// // FriendRequestConfirmationBar
+// function FriendRequestConfirmationBar({ friend, onConfirmRequest, onRejectRequest, isVisible }) {
+//   const [isLoading, setIsLoading] = useState(false);
+//   const [feedback, setFeedback] = useState(null); // { type: "success" | "reject", message: string }
+//   const [show, setShow] = useState(isVisible); // kiểm soát hiển thị thanh
+
+//   const handleConfirmRequest = () => {
+//     setIsLoading(true);
+//     setTimeout(() => {
+//       onConfirmRequest(friend.id, friend.name);
+//       setIsLoading(false);
+//       setFeedback({ type: "success", message: `Kết bạn thành công với ${friend.name || "Người dùng"}!` });
+
+//       // Ẩn toàn bộ thanh sau 3 giây
+//       setTimeout(() => setShow(false), 3000);
+//     }, 1000);
+//   };
+
+//   const handleRejectRequest = () => {
+//     setTimeout(() => {
+//       onRejectRequest(friend.id, friend.name);
+//       setFeedback({ type: "reject", message: `Đã từ chối lời mời kết bạn của ${friend.name || "Người dùng"}!` });
+
+//       // Ẩn toàn bộ thanh sau 3 giây
+//       setTimeout(() => setShow(false), 3000);
+//     }, 500);
+//   };
+
+//   if (!show) return null;
+
+//   // Nếu đang hiển thị feedback
+//   if (feedback) {
+//     const isReject = feedback.type === "reject";
+//     return (
+//       <div className={cx("friend-request-bar", isReject ? "reject" : "success")}>
+//         <div className={cx("request-content")}>
+//           <div className={cx("user-icon", isReject ? "reject-icon" : "success-icon")}>
+//             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+//               {isReject ? (
+//                 <path d="M18.3 5.71L12 12l6.3 6.29-1.41 1.42L12 14.83l-6.29 6.3-1.42-1.41L10.59 12 4.29 5.71 5.71 4.3 12 10.59l6.29-6.3z"/>
+//               ) : (
+//                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+//               )}
+//             </svg>
+//           </div>
+//           <span className={cx("request-text", isReject ? "reject-text" : "success-text")}>
+//             {feedback.message}
+//           </span>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   // Thanh mặc định trước khi xác nhận/từ chối
+//   return (
+//     <div className={cx("friend-request-bar")}>
+//       <div className={cx("request-content")}>
+//         <div className={cx("user-icon")}>
+//           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+//             <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+//           </svg>
+//         </div>
+//         <span className={cx("request-text")}>
+//           {friend.name || "Người dùng"} đã gửi lời mời kết bạn tới bạn
+//         </span>
+//       </div>
+//       <div className={cx("request-actions")}>
+//         <button 
+//           className={cx("reject-request-btn")}
+//           onClick={handleRejectRequest}
+//           aria-label="Từ chối yêu cầu kết bạn"
+//         >
+//           Từ chối
+//         </button>
+//         <button 
+//           className={cx("confirm-request-btn", { loading: isLoading })}
+//           onClick={handleConfirmRequest}
+//           disabled={isLoading}
+//           aria-label="Xác nhận yêu cầu kết bạn"
+//         >
+//           {isLoading ? "Đang xác nhận..." : "Xác nhận"}
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// // ChatHeader component
+// function ChatHeader({ friend, onAvatarClick, onToggleDetail }) {
+//   return (
+//     <div className={cx("top")}>
+//       <div className={cx("user-info")}>
+//         <button 
+//           className={cx("avatar-button")} 
+//           onClick={onAvatarClick} 
+//           title="Xem thông tin người dùng" 
+//           aria-label="Xem thông tin người dùng"
+//         >
+//           <div className={cx("avatar-container")}>
+//             <img 
+//               src={friend.avatar
+//                 ? `${process.env.REACT_APP_API_URL || "http://localhost:5000"}${friend.avatar}`
+//                 : `${process.env.REACT_APP_API_URL || "http://localhost:5000"}/Uploads/default-avatar.png`}
+//               alt={friend.name ? `${friend.name}'s avatar` : "Ảnh đại diện người dùng"}
+//             />
+//             <div className={cx("online-status")}></div>
+//           </div>
+//         </button>
+//         <div className={cx("user-details")}>
+//           <h2>{friend.name || "Người dùng"}</h2>
+//           <span className={cx("status")}>Đang hoạt động</span>
+//         </div>
+//       </div>
+//       <div className={cx("actions")}>
+//         <button className={cx("action-btn")} title="Cuộc gọi thoại" aria-label="Cuộc gọi thoại">📞</button>
+//         <button className={cx("action-btn")} title="Video call" aria-label="Video call">🎥</button>
+//         <button className={cx("action-btn")} title="Thông tin cuộc trò chuyện" aria-label="Thông tin cuộc trò chuyện">ℹ️</button>
+//         <button className={cx("action-btn")} title="Tùy chọn khác" onClick={onToggleDetail} aria-label="Tùy chọn khác">⋮</button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// function Chat({ friend, onToggleDetail }) {
 //   const [open, setOpen] = useState(false);
 //   const [text, setText] = useState("");
+//   const [showProfile, setShowProFile] = useState(false);
+//   const [previewImage, setPreviewImage] = useState(null); // State for image preview
+//   const messagesContainerRef = useRef(null);
+
+//   // State để kiểm soát: true = hiện RequestBar, false = hiện ConfirmBar
+//   const [showSendRequestBar, setShowSendRequestBar] = useState(true); // Mặc định Confirm
+
 //   const [messages, setMessages] = useState([
-//     { 
-//       id: 1, 
-//       text: "Xin chào! Đây là tin nhắn test", 
+//     {
+//       id: 1,
+//       text: "Chat nhu loz",
 //       type: "received",
-//       timestamp: "10:30 AM"
+//       timestamp: new Date("2025-09-12T14:55:00"),
 //     },
-//     { 
-//       id: 2, 
-//       text: "Chào bạn! Bạn có khỏe không?", 
+//     {
+//       id: 2,
+//       text: "Chào bạn! Bạn có khỏe không? Check this out: https://example.com",
 //       type: "sent",
-//       timestamp: "10:31 AM"
+//       timestamp: new Date("2025-09-12T14:55:10"),
 //     },
 //     {
 //       id: 3,
 //       type: "received",
-//       timestamp: "10:32 AM",
-//       image: "https://picsum.photos/300/200?random=1"
+//       timestamp: new Date("2025-09-12T14:57:00"),
+//       image: "https://picsum.photos/300/200?random=1",
 //     },
 //     {
 //       id: 4,
 //       text: "Ảnh đẹp quá!",
 //       type: "sent",
-//       timestamp: "10:33 AM"
+//       timestamp: new Date("2025-09-12T14:58:00"),
 //     },
 //     {
 //       id: 5,
 //       type: "received",
-//       timestamp: "10:35 AM",
-//       video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+//       timestamp: new Date("2025-09-12T15:05:00"),
+//       video: `${process.env.REACT_APP_API_URL || "http://localhost:5000"}/Uploads/HelloScene.mp4`,
 //     },
 //     {
 //       id: 6,
 //       text: "Video hay đấy 😍",
 //       type: "sent",
-//       timestamp: "10:36 AM"
-//     }
+//       timestamp: new Date("2025-09-12T15:07:00"),
+//     },
 //   ]);
 
-//   // Mock emoji data
 //   const emojis = ["😀", "😂", "😍", "🥰", "😎", "🤔", "👍", "❤️", "🎉", "🔥", "💯", "✨"];
 
-//   // Hàm xử lý chọn emoji
+//   // Hàm cuộn xuống cuối
+//   const scrollToBottom = () => {
+//     if (messagesContainerRef.current) {
+//       messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+//     }
+//   };
+
+//   useEffect(() => {
+//     scrollToBottom();
+//   }, [messages]);
+
+//   useEffect(() => {
+//     scrollToBottom();
+//   }, []);
+
 //   const handleEmoji = (emoji) => {
 //     setText((prev) => prev + emoji);
 //     setOpen(false);
 //   };
 
-//   // Hàm xử lý gửi tin nhắn
 //   const handleSend = () => {
 //     if (text.trim()) {
 //       const newMessage = {
 //         id: Date.now(),
 //         text: text.trim(),
 //         type: "sent",
-//         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+//         timestamp: new Date(),
 //       };
-//       setMessages(prev => [...prev, newMessage]);
+//       setMessages((prev) => [...prev, newMessage]);
 //       setText("");
-//       console.log("Đã gửi tin nhắn:", text.trim());
 //     } else {
-//       // Gửi like khi không có text
 //       const likeMessage = {
 //         id: Date.now(),
 //         text: "👍",
 //         type: "sent",
-//         timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+//         timestamp: new Date(),
 //       };
-//       setMessages(prev => [...prev, likeMessage]);
-//       console.log("Đã gửi like");
+//       setMessages((prev) => [...prev, likeMessage]);
 //     }
 //   };
 
-//   // Hàm xử lý Enter key
 //   const handleKeyPress = (e) => {
-//     if (e.key === 'Enter') {
+//     if (e.key === "Enter") {
 //       handleSend();
 //     }
 //   };
 
-//   // Render message content
+//   const handleAvatarClick = () => {
+//     setShowProFile(true);
+//   };
+
+//   const handleMediaSelect = (e, mediaType) => {
+//     const file = e.target.files[0];
+//     if (!file) return;
+//     if (file.size > 5 * 1024 * 1024) {
+//       alert("Tệp quá lớn. Kích thước tối đa là 5MB.");
+//       return;
+//     }
+//     if (mediaType === "image" && !file.type.startsWith("image/")) {
+//       alert("Vui lòng chọn tệp hình ảnh.");
+//       return;
+//     }
+//     if (mediaType === "video" && !file.type.startsWith("video/")) {
+//       alert("Vui lòng chọn tệp video.");
+//       return;
+//     }
+//     try {
+//       const reader = new FileReader();
+//       reader.onload = () => {
+//         const newMessage = {
+//           id: Date.now(),
+//           type: "sent",
+//           timestamp: new Date(),
+//         };
+//         if (mediaType === "image") {
+//           newMessage.image = reader.result;
+//         } else if (mediaType === "video") {
+//           newMessage.video = reader.result;
+//         } else if (mediaType === "file") {
+//           newMessage.file = {
+//             name: file.name,
+//             url: reader.result,
+//           };
+//         }
+//         setMessages((prev) => [...prev, newMessage]);
+//       };
+//       reader.onerror = () => alert("Lỗi khi đọc tệp.");
+//       reader.readAsDataURL(file);
+//     } catch (error) {
+//       alert("Lỗi khi xử lý tệp.");
+//     }
+//   };
+
+//   const handleSendFriendRequest = (friendId, friendName) => {
+//     console.log(`Gửi lời mời kết bạn tới ID ${friendId}: ${friendName}`);
+//   };
+
+//   const handleConfirmFriendRequest = (friendId, friendName) => {
+//     console.log(`Xác nhận lời mời kết bạn từ ID ${friendId}: ${friendName}`);
+//   };
+
+//   const handleRejectFriendRequest = (friendId, friendName) => {
+//     console.log(`Từ chối lời mời kết bạn từ ID ${friendId}: ${friendName}`);
+//   };
+
+//   const handleClosePreview = () => {
+//     setPreviewImage(null);
+//   };
+
+//   const isValidUrl = (url) => {
+//     try {
+//       new URL(url);
+//       return true;
+//     } catch {
+//       return false;
+//     }
+//   };
+
 //   const renderMessageContent = (message) => {
 //     if (message.image) {
 //       return (
-//         <div className={cx("message-image")}>
-//           <img src={message.image} alt="Shared image" />
+//         <div className={cx("message-image")} onClick={() => setPreviewImage(message.image)}>
+//           <img src={message.image} alt="Nội dung được chia sẻ" style={{ maxWidth: "100%", borderRadius: "8px" }} />
 //         </div>
 //       );
 //     }
-    
 //     if (message.video) {
 //       return (
 //         <div className={cx("message-video")}>
-//           <video controls>
+//           <video controls style={{ maxWidth: "100%", borderRadius: "8px" }}>
 //             <source src={message.video} type="video/mp4" />
-//             Your browser does not support the video tag.
+//             Trình duyệt của bạn không hỗ trợ thẻ video.
 //           </video>
 //         </div>
 //       );
 //     }
-    
+//     if (message.file) {
+//       return (
+//         <div className={cx("message-file")}>
+//           <a href={message.file.url} download={message.file.name}>
+//             {message.file.name}
+//           </a>
+//         </div>
+//       );
+//     }
+//     if (message.text) {
+//       const urlRegex = /(https?:\/\/[^\s]+)/g;
+//       const parts = message.text.split(urlRegex);
+//       return (
+//         <span>
+//           {parts.map((part, index) => {
+//             if (part.match(urlRegex) && isValidUrl(part)) {
+//               return (
+//                 <a
+//                   key={index}
+//                   href={part}
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   style={{ color: "blue", textDecoration: "underline" }}
+//                 >
+//                   {part}
+//                 </a>
+//               );
+//             }
+//             return part;
+//           })}
+//         </span>
+//       );
+//     }
 //     return <span>{message.text}</span>;
 //   };
 
+//   const formatTime = (dateObj) => {
+//     return dateObj.toLocaleTimeString([], {
+//       hour: "2-digit",
+//       minute: "2-digit",
+//       hour12: true,
+//     });
+//   };
+
+//   const formatSeparator = (dateObj) => {
+//     return (
+//       dateObj.toLocaleDateString([], { day: "2-digit", month: "2-digit", year: "numeric" }) +
+//       " " +
+//       formatTime(dateObj)
+//     );
+//   };
+
+//   if (!friend) {
+//     return (
+//       <div className={cx("chat")}>
+//         <div className={cx("empty-state")}>
+//           <div className={cx("empty-content")}>
+//             <div className={cx("empty-icon")}>
+//               <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+//                 <path
+//                   d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
+//                   fill="currentColor"
+//                   opacity="0.3"
+//                 />
+//                 <circle cx="8" cy="12" r="1" fill="currentColor" />
+//                 <circle cx="12" cy="12" r="1" fill="currentColor" />
+//                 <circle cx="16" cy="12" r="1" fill="currentColor" />
+//               </svg>
+//             </div>
+//             <div className={cx("empty-text")}>
+//               <h2>Chọn một cuộc trò chuyện</h2>
+//               <p>Chọn một người bạn từ danh sách bên trái để bắt đầu nhắn tin</p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     );
+//   }
+
 //   return (
 //     <div className={cx("chat")}>
-//       {/* Top - Header */}
-//       <div className={cx("top")}>
-//         {/* Back Button */}
-//         <button className={cx("back-btn")}>
-//           <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-//             <path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"/>
-//           </svg>
-//         </button>
+//       <ChatHeader 
+//         friend={friend} 
+//         onAvatarClick={handleAvatarClick}
+//         onToggleDetail={onToggleDetail}
+//       />
 
-//         {/* User Info */}
-//         <div className={cx("user-info")}>
-//           <div className={cx("avatar-container")}>
-//             <img src={avatarIcon} alt="Avatar" />
-//             <div className={cx("online-status")}></div>
-//           </div>
-          
-//           <div className={cx("user-details")}>
-//             <h2>Nguyen Dieu Lyng</h2>
-//             <span className={cx("status")}>Đang hoạt động</span>
-//           </div>
-//         </div>
+//       {/* Conditional: Chỉ hiện 1 bar tại vị trí này */}
+//       {showSendRequestBar ? (
+//         <FriendRequestBar
+//           friend={friend}
+//           onSendRequest={handleSendFriendRequest}
+//           isVisible={false}
+//         />
+//       ) : (
+//         <FriendRequestConfirmationBar
+//           friend={friend}
+//           onConfirmRequest={handleConfirmFriendRequest}
+//           onRejectRequest={handleRejectFriendRequest}
+//           isVisible={false}
+//         />
+//       )}
 
-//         {/* Action Buttons */}
-//         <div className={cx("actions")}>
-//           <button className={cx("action-btn")} title="Cuộc gọi thoại">
-//             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-//               <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
-//             </svg>
-//           </button>
+//       <div className={cx("center")} ref={messagesContainerRef}>
+//         {messages.map((message, index) => {
+//           const prevMsg = messages[index - 1];
+//           const nextMsg = messages[index + 1];
+//           const currentTime = message.timestamp;
 
-//           <button className={cx("action-btn")} title="Video call">
-//             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-//               <path d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z"/>
-//             </svg>
-//           </button>
+//           let showSeparator = false;
+//           let showTime = false;
 
-//           <button className={cx("action-btn")} title="Thông tin cuộc trò chuyện">
-//             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-//               <path d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
-//             </svg>
-//           </button>
+//           if (!prevMsg) {
+//             showSeparator = true;
+//           } else {
+//             const diffMinutes = (currentTime - prevMsg.timestamp) / 1000 / 60;
+//             if (diffMinutes >= 10) {
+//               showSeparator = true;
+//             }
+//           }
 
-//           {/* <button className={cx("action-btn")} title="Tùy chọn khác">
-//             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-//               <path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"/>
-//             </svg>
-//           </button> */}
-//           <button
-//             className={cx("action-btn")}
-//             title="Tùy chọn khác"
-//             onClick={onToggleDetail}
-//           >
-//             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-//               <path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"/>
-//             </svg>
-//           </button>
-//         </div>
-//       </div>
+//           if (!nextMsg) {
+//             showTime = true;
+//           } else {
+//             const sameMinute =
+//               currentTime.getHours() === nextMsg.timestamp.getHours() &&
+//               currentTime.getMinutes() === nextMsg.timestamp.getMinutes();
+//             if (!sameMinute) {
+//               showTime = true;
+//             }
+//           }
 
-//       {/* Center - Messages */}
-//       <div className={cx("center")}>
-//         {messages.map((message) => (
-//           <div
-//             key={message.id}
-//             className={cx("message", message.type)}
-//           >
-//             <div className={cx("message-bubble", {
-//               'has-media': message.image || message.video
-//             })}>
-//               {renderMessageContent(message)}
-//               {message.text && (message.image || message.video) && (
-//                 <div className={cx("message-text")}>
-//                   {message.text}
+//           return (
+//             <div key={message.id}>
+//               {showSeparator && (
+//                 <div className={cx("time-separator")}>
+//                   <div className={cx("time-separator-content")}>
+//                     {formatSeparator(message.timestamp)}
+//                   </div>
 //                 </div>
 //               )}
+//               <div className={cx("message", message.type)}>
+//                 <div
+//                   className={cx("message-bubble", {
+//                     "has-media": message.image || message.video || message.file,
+//                   })}
+//                 >
+//                   {renderMessageContent(message)}
+//                   {message.text && (message.image || message.video || message.file) && (
+//                     <div className={cx("message-text")}>{message.text}</div>
+//                   )}
+//                 </div>
+//                 {showTime && (
+//                   <div className={cx("message-time")}>{formatTime(message.timestamp)}</div>
+//                 )}
+//               </div>
 //             </div>
-//             <div className={cx("message-timestamp")}>
-//               {message.timestamp}
-//             </div>
-//           </div>
-//         ))}
+//           );
+//         })}
 //       </div>
 
-//       {/* CR - 3 nút: ảnh, file, sticker */}
+//       {previewImage && (
+//         <ChatPreview imageUrl={previewImage} onClose={handleClosePreview} />
+//       )}
+
 //       <div className={cx("cr")}>
-//         {/* Nút Ảnh */}
-//         <button
-//           className={cx("cr-button")}
-//           onClick={() => console.log('Chọn ảnh')}
-//           title="Chọn ảnh"
-//         >
+//         <label className={cx("cr-button")} title="Chọn ảnh" aria-label="Chọn ảnh để gửi">
+//           <input
+//             type="file"
+//             accept="image/*"
+//             style={{ display: "none" }}
+//             onChange={(e) => handleMediaSelect(e, "image")}
+//           />
 //           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-//             <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+//             <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
 //           </svg>
-//         </button>
-
-//         {/* Nút File */}
-//         <button
-//           className={cx("cr-button")}
-//           onClick={() => console.log('Chọn file')}
-//           title="Chọn file"
-//         >
+//         </label>
+//         <label className={cx("cr-button")} title="Chọn file" aria-label="Chọn tệp để gửi">
+//           <input
+//             type="file"
+//             accept=".pdf,.doc,.docx,.txt"
+//             style={{ display: "none" }}
+//             onChange={(e) => handleMediaSelect(e, "file")}
+//           />
 //           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-//             <path d="M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6Z"/>
+//             <path d="M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6Z" />
 //           </svg>
-//         </button>
-
-//         {/* Nút Sticker */}
-//         <button
-//           className={cx("cr-button")}
-//           onClick={() => console.log('Chọn sticker')}
-//           title="Chọn sticker"
-//         >
+//         </label>
+//         <label className={cx("cr-button")} title="Chọn video" aria-label="Chọn video để gửi">
+//           <input
+//             type="file"
+//             accept="video/*"
+//             style={{ display: "none" }}
+//             onChange={(e) => handleMediaSelect(e, "video")}
+//           />
 //           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-//             <path d="M18.5,12A6.5,6.5 0 0,1 12,18.5A6.5,6.5 0 0,1 5.5,12A6.5,6.5 0 0,1 12,5.5A6.5,6.5 0 0,1 18.5,12M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M15.5,9C15.8,9 16,9.2 16,9.5C16,9.8 15.8,10 15.5,10C15.2,10 15,9.8 15,9.5C15,9.2 15.2,9 15.5,9M8.5,9C8.8,9 9,9.2 9,9.5C9,9.8 8.8,10 8.5,10C8.2,10 8,9.8 8,9.5C8,9.2 8.2,9 8.5,9M12,17.23C10.25,17.23 8.71,16.5 7.81,15.42L9.23,14C9.68,14.72 10.75,15.23 12,15.23C13.25,15.23 14.32,14.72 14.77,14L16.19,15.42C15.29,16.5 13.75,17.23 12,17.23Z"/>
+//             <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" />
 //           </svg>
-//         </button>
+//         </label>
 //       </div>
 
-//       {/* Input Area */}
 //       <div className={cx("input-area")}>
-//         {/* Input */}
 //         <input
 //           type="text"
 //           placeholder="Nhập tin nhắn..."
@@ -246,59 +586,48 @@
 //           onChange={(e) => setText(e.target.value)}
 //           onKeyPress={handleKeyPress}
 //           className={cx("message-input")}
+//           aria-label="Nhập tin nhắn"
 //         />
-        
-//         {/* Emoji Button */}
 //         <div className={cx("emoji-container")}>
-//           <button
-//             className={cx("emoji-button")}
-//             onClick={() => setOpen(prev => !prev)}
+//           <button 
+//             className={cx("emoji-button")} 
+//             onClick={() => setOpen((prev) => !prev)}
+//             aria-label="Mở bảng chọn emoji"
 //           >
 //             😊
 //           </button>
-          
-//           {/* Emoji Picker */}
-//           {open && (
-//             <div className={cx("emoji-picker")}>
-//               {emojis.map((emoji, index) => (
-//                 <button
-//                   key={index}
-//                   onClick={() => handleEmoji(emoji)}
-//                   className={cx("emoji-item")}
-//                 >
-//                   {emoji}
-//                 </button>
-//               ))}
-//             </div>
-//           )}
+//           <div className={cx("emoji-picker")} style={{ display: open ? "block" : "none" }}>
+//             {emojis.map((emoji, index) => (
+//               <button
+//                 key={index}
+//                 onClick={() => handleEmoji(emoji)}
+//                 className={cx("emoji-item")}
+//                 aria-label={`Chọn emoji ${emoji}`}
+//               >
+//                 {emoji}
+//               </button>
+//             ))}
+//           </div>
 //         </div>
-        
-//         {/* Send/Like Button */}
 //         <button 
-//           onClick={handleSend}
-//           className={cx("send-button", { "active": text.trim() })}
+//           onClick={handleSend} 
+//           className={cx("send-button", { active: text.trim() })}
+//           aria-label={text.trim() ? "Gửi tin nhắn" : "Gửi like"}
 //         >
 //           {text.trim() ? (
-//             // Send Icon
 //             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-//               <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+//               <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
 //             </svg>
 //           ) : (
-//             // Like Icon
 //             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-//               <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
+//               <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
 //             </svg>
 //           )}
 //         </button>
 //       </div>
 
-//       {/* Overlay để đóng emoji picker */}
-//       {open && (
-//         <div 
-//           className={cx("overlay")}
-//           onClick={() => setOpen(false)}
-//         />
-//       )}
+//       {open && <div className={cx("overlay")} onClick={() => setOpen(false)} />}
+//       {showProfile && <ProFile1 onClose={() => setShowProFile(false)} />}
 //     </div>
 //   );
 // }
@@ -308,246 +637,1552 @@
 
 
 
+
+// import classNames from "classnames/bind";
+// import styles from "./Chat.module.scss";
+// import { useState, useEffect, useRef, use } from "react";
+// import ProFile1 from "~/pages/ProFile1";
+// import ChatPreview from "./ChatPreview";
+// import FriendRequestBar from "./FriendRequestBar";
+// import FriendRequestConfirmationBar from "./FriendRequestConfirmationBar";
+// import ChatHeader from "./ChatHeader";
+// import axios from "axios";
+
+// const cx = classNames.bind(styles);
+
+// function Chat({ friend, onToggleDetail }) {
+//   const [open, setOpen] = useState(false);
+//   const [text, setText] = useState("");
+//   const [showProfile, setShowProFile] = useState(false);
+//   const [previewImage, setPreviewImage] = useState(null); // State for image preview
+//   const messagesContainerRef = useRef(null);
+  
+//   console.log("Rendering Chat component", friend);
+//   //console.log("Friend data in Chat component:", friend.id);
+//   const [messages, setMessages] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
+
+  
+//   console.log("Friend:", friend);
+//   console.log("Friend ID:", friend.id);
+
+//   useEffect(() => {
+//     const fetchMessages = async () => {
+//       if (!friend || !friend.id) return;
+
+//       try {
+//         const messagesApiUrl = await axios.post("http://localhost:5000/api/chat/messages/", {
+//           friendId: friend.id,
+//         });
+
+//         if (messagesApiUrl.status === 200) {
+//           setMessages(messagesApiUrl.data);
+//         } else {
+//           setError("Lỗi khi tải tin nhắn.");
+//         }
+//       } catch (err) {
+//         setError("Lỗi khi tải tin nhắn.");
+//         console.error(err);
+//       } finally {
+//         setLoading(false);
+//       }
+//     };
+
+//     fetchMessages();
+//   }, [friend]);
+
+//   // State để kiểm soát: true = hiện RequestBar, false = hiện ConfirmBar
+//   const [showSendRequestBar, setShowSendRequestBar] = useState(false); // Mặc định Confirm
+
+//   // Hàm toggle (gọi để switch giữa 2 bar, fix ESLint)
+//   const toggleRequestBar = () => {
+//     setShowSendRequestBar(prev => !prev);
+//   };
+
+//   // const [messages, setMessages] = useState([
+//   //   {
+//   //     id: 1,
+//   //     text: "Chat nhu loz",
+//   //     type: "received",
+//   //     timestamp: new Date("2025-09-12T14:55:00"),
+//   //   },
+//   //   {
+//   //     id: 2,
+//   //     text: "Chào bạn! Bạn có khỏe không? Check this out: https://example.com",
+//   //     type: "sent",
+//   //     timestamp: new Date("2025-09-12T14:55:10"),
+//   //   },
+//   //   {
+//   //     id: 3,
+//   //     type: "received",
+//   //     timestamp: new Date("2025-09-12T14:57:00"),
+//   //     image: "https://picsum.photos/300/200?random=1",
+//   //     video: null,
+//   //     file: null,
+//   //   },
+//   //   {
+//   //     id: 4,
+//   //     text: "Ảnh đẹp quá!",
+//   //     type: "sent",
+//   //     timestamp: new Date("2025-09-12T14:58:00"),
+//   //   },
+//   //   {
+//   //     id: 5,
+//   //     type: "received",
+//   //     timestamp: new Date("2025-09-12T15:05:00"),
+//   //     video: `${process.env.REACT_APP_API_URL || "http://localhost:5000"}/Uploads/HelloScene.mp4`,
+//   //   },
+//   //   {
+//   //     id: 6,
+//   //     text: "Video hay đấy 😍",
+//   //     type: "sent",
+//   //     timestamp: new Date("2025-09-12T15:07:00"),
+//   //   },
+//   // ]);
+
+//   const emojis = ["😀", "😂", "😍", "�0", "😎", "🤔", "👍", "❤️", "🎉", "🔥", "💯", "✨"];
+
+//   // Hàm cuộn xuống cuối
+//   const scrollToBottom = () => {
+//     if (messagesContainerRef.current) {
+//       messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+//     }
+//   };
+
+//   useEffect(() => {
+//     scrollToBottom();
+//   }, [messages]);
+
+//   useEffect(() => {
+//     scrollToBottom();
+//   }, []);
+
+//   const handleEmoji = (emoji) => {
+//     setText((prev) => prev + emoji);
+//     setOpen(false);
+//   };
+
+//   const handleSend = () => {
+//     if (text.trim()) {
+//       const newMessage = {
+//         id: Date.now(),
+//         text: text.trim(),
+//         type: "sent",
+//         timestamp: new Date(),
+//       };
+//       setMessages((prev) => [...prev, newMessage]);
+//       setText("");
+//     } else {
+//       const likeMessage = {
+//         id: Date.now(),
+//         text: "👍",
+//         type: "sent",
+//         timestamp: new Date(),
+//       };
+//       setMessages((prev) => [...prev, likeMessage]);
+//     }
+//   };
+
+//   const handleKeyPress = (e) => {
+//     if (e.key === "Enter") {
+//       handleSend();
+//     }
+//   };
+
+//   const handleAvatarClick = () => {
+//     setShowProFile(true);
+//   };
+
+//   const handleMediaSelect = (e, mediaType) => {
+//     const file = e.target.files[0];
+//     if (!file) return;
+//     if (file.size > 5 * 1024 * 1024) {
+//       alert("Tệp quá lớn. Kích thước tối đa là 5MB.");
+//       return;
+//     }
+//     if (mediaType === "image" && !file.type.startsWith("image/")) {
+//       alert("Vui lòng chọn tệp hình ảnh.");
+//       return;
+//     }
+//     if (mediaType === "video" && !file.type.startsWith("video/")) {
+//       alert("Vui lòng chọn tệp video.");
+//       return;
+//     }
+//     try {
+//       const reader = new FileReader();
+//       reader.onload = () => {
+//         const newMessage = {
+//           id: Date.now(),
+//           type: "sent",
+//           timestamp: new Date(),
+//         };
+//         if (mediaType === "image") {
+//           newMessage.image = reader.result;
+//         } else if (mediaType === "video") {
+//           newMessage.video = reader.result;
+//         } else if (mediaType === "file") {
+//           newMessage.file = {
+//             name: file.name,
+//             url: reader.result,
+//           };
+//         }
+//         setMessages((prev) => [...prev, newMessage]);
+//       };
+//       reader.onerror = () => alert("Lỗi khi đọc tệp.");
+//       reader.readAsDataURL(file);
+//     } catch (error) {
+//       alert("Lỗi khi xử lý tệp.");
+//     }
+//   };
+
+//   const handleSendFriendRequest = (friendId, friendName) => {
+//     console.log(`Gửi lời mời kết bạn tới ID ${friendId}: ${friendName}`);
+//   };
+
+//   const handleConfirmFriendRequest = (friendId, friendName) => {
+//     console.log(`Xác nhận lời mời kết bạn từ ID ${friendId}: ${friendName}`);
+//   };
+
+//   const handleRejectFriendRequest = (friendId, friendName) => {
+//     console.log(`Từ chối lời mời kết bạn từ ID ${friendId}: ${friendName}`);
+//   };
+
+//   const handleClosePreview = () => {
+//     setPreviewImage(null);
+//   };
+
+//   const isValidUrl = (url) => {
+//     try {
+//       new URL(url);
+//       return true;
+//     } catch {
+//       return false;
+//     }
+//   };
+
+//   const renderMessageContent = (message) => {
+//     if (message.image) {
+//       return (
+//         <div className={cx("message-image")} onClick={() => setPreviewImage(message.image)} aria-label="Xem trước hình ảnh">
+//           <img src={message.image} alt="Nội dung được chia sẻ" style={{ maxWidth: "100%", borderRadius: "8px" }} />
+//         </div>
+//       );
+//     }
+//     if (message.video) {
+//       return (
+//         <div className={cx("message-video")}>
+//           <video controls style={{ maxWidth: "100%", borderRadius: "8px" }}>
+//             <source src={message.video} type="video/mp4" />
+//             Trình duyệt của bạn không hỗ trợ thẻ video.
+//           </video>
+//         </div>
+//       );
+//     }
+//     if (message.file) {
+//       return (
+//         <div className={cx("message-file")}>
+//           <a href={message.file.url} download={message.file.name}>
+//             {message.file.name}
+//           </a>
+//         </div>
+//       );
+//     }
+//     if (message.text) {
+//       const urlRegex = /(https?:\/\/[^\s]+)/g;
+//       const parts = message.text.split(urlRegex);
+//       return (
+//         <span>
+//           {parts.map((part, index) => {
+//             if (part.match(urlRegex) && isValidUrl(part)) {
+//               return (
+//                 <a
+//                   key={index}
+//                   href={part}
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   style={{ color: "blue", textDecoration: "underline" }}
+//                 >
+//                   {part}
+//                 </a>
+//               );
+//             }
+//             return part;
+//           })}
+//         </span>
+//       );
+//     }
+//     return <span>{message.text}</span>;
+//   };
+
+//   const formatTime = (dateObj) => {
+//     return dateObj.toLocaleTimeString([], {
+//       hour: "2-digit",
+//       minute: "2-digit",
+//       hour12: true,
+//     });
+//   };
+
+//   const formatSeparator = (dateObj) => {
+//     return (
+//       dateObj.toLocaleDateString([], { day: "2-digit", month: "2-digit", year: "numeric" }) +
+//       " " +
+//       formatTime(dateObj)
+//     );
+//   };
+
+//   if (!friend) {
+//     return (
+//       <div className={cx("chat")}>
+//         <div className={cx("empty-state")}>
+//           <div className={cx("empty-content")}>
+//             <div className={cx("empty-icon")}>
+//               <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+//                 <path
+//                   d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
+//                   fill="currentColor"
+//                   opacity="0.3"
+//                 />
+//                 <circle cx="8" cy="12" r="1" fill="currentColor" />
+//                 <circle cx="12" cy="12" r="1" fill="currentColor" />
+//                 <circle cx="16" cy="12" r="1" fill="currentColor" />
+//               </svg>
+//             </div>
+//             <div className={cx("empty-text")}>
+//               <h2>Chọn một cuộc trò chuyện</h2>
+//               <p>Chọn một người bạn từ danh sách bên trái để bắt đầu nhắn tin</p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div className={cx("chat")}>
+//       <ChatHeader 
+//         friend={friend} 
+//         onAvatarClick={handleAvatarClick}
+//         onToggleDetail={onToggleDetail}
+//       />
+
+//       {/* Conditional: Chỉ hiện 1 bar tại vị trí này */}
+//       {showSendRequestBar ? (
+//         <FriendRequestBar
+//           friend={friend}
+//           onSendRequest={handleSendFriendRequest}
+//           isVisible={false}
+//         />
+//       ) : (
+//         <FriendRequestConfirmationBar
+//           friend={friend}
+//           onConfirmRequest={handleConfirmFriendRequest}
+//           onRejectRequest={handleRejectFriendRequest}
+//           isVisible={false}
+//         />
+//       )}
+
+//       <div className={cx("center")} ref={messagesContainerRef}>
+//         {messages.map((message, index) => {
+//           const prevMsg = messages[index - 1];
+//           const nextMsg = messages[index + 1];
+//           const currentTime = message.timestamp;
+
+//           let showSeparator = false;
+//           let showTime = false;
+
+//           if (!prevMsg) {
+//             showSeparator = true;
+//           } else {
+//             const diffMinutes = (currentTime - prevMsg.timestamp) / 1000 / 60;
+//             if (diffMinutes >= 10) {
+//               showSeparator = true;
+//             }
+//           }
+
+//           if (!nextMsg) {
+//             showTime = true;
+//           } else {
+//             const sameMinute =
+//               currentTime.getHours() === nextMsg.timestamp.getHours() &&
+//               currentTime.getMinutes() === nextMsg.timestamp.getMinutes();
+//             if (!sameMinute) {
+//               showTime = true;
+//             }
+//           }
+
+//           return (
+//             <div key={message.id}>
+//               {showSeparator && (
+//                 <div className={cx("time-separator")}>
+//                   <div className={cx("time-separator-content")}>
+//                     {formatSeparator(message.timestamp)}
+//                   </div>
+//                 </div>
+//               )}
+//               <div className={cx("message", message.type)}>
+//                 <div
+//                   className={cx("message-bubble", {
+//                     "has-media": message.image || message.video || message.file,
+//                   })}
+//                 >
+//                   {renderMessageContent(message)}
+//                   {message.text && (message.image || message.video || message.file) && (
+//                     <div className={cx("message-text")}>{message.text}</div>
+//                   )}
+//                 </div>
+//                 {showTime && (
+//                   <div className={cx("message-time")}>{formatTime(message.timestamp)}</div>
+//                 )}
+//               </div>
+//             </div>
+//           );
+//         })}
+//       </div>
+
+//       {previewImage && (
+//         <ChatPreview imageUrl={previewImage} onClose={handleClosePreview} />
+//       )}
+
+//       <div className={cx("cr")}>
+//         <label className={cx("cr-button")} title="Chọn ảnh" aria-label="Chọn ảnh để gửi">
+//           <input
+//             type="file"
+//             accept="image/*"
+//             style={{ display: "none" }}
+//             onChange={(e) => handleMediaSelect(e, "image")}
+//           />
+//           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+//             <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+//           </svg>
+//         </label>
+//         <label className={cx("cr-button")} title="Chọn file" aria-label="Chọn tệp để gửi">
+//           <input
+//             type="file"
+//             accept=".pdf,.doc,.docx,.txt"
+//             style={{ display: "none" }}
+//             onChange={(e) => handleMediaSelect(e, "file")}
+//           />
+//           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+//             <path d="M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6Z" />
+//           </svg>
+//         </label>
+//         <label className={cx("cr-button")} title="Chọn video" aria-label="Chọn video để gửi">
+//           <input
+//             type="file"
+//             accept="video/*"
+//             style={{ display: "none" }}
+//             onChange={(e) => handleMediaSelect(e, "video")}
+//           />
+//           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+//             <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" />
+//           </svg>
+//         </label>
+//       </div>
+
+//       <div className={cx("input-area")}>
+//         <input
+//           type="text"
+//           placeholder="Nhập tin nhắn..."
+//           value={text}
+//           onChange={(e) => setText(e.target.value)}
+//           onKeyPress={handleKeyPress}
+//           className={cx("message-input")}
+//           aria-label="Nhập tin nhắn"
+//         />
+//         <div className={cx("emoji-container")}>
+//           <button 
+//             className={cx("emoji-button")} 
+//             onClick={() => setOpen((prev) => !prev)}
+//             aria-label="Mở bảng chọn emoji"
+//           >
+//             😊
+//           </button>
+//           <div className={cx("emoji-picker")} style={{ display: open ? "block" : "none" }}>
+//             {emojis.map((emoji, index) => (
+//               <button
+//                 key={index}
+//                 onClick={() => handleEmoji(emoji)}
+//                 className={cx("emoji-item")}
+//                 aria-label={`Chọn emoji ${emoji}`}
+//               >
+//                 {emoji}
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+//         <button 
+//           onClick={handleSend} 
+//           className={cx("send-button", { active: text.trim() })}
+//           aria-label={text.trim() ? "Gửi tin nhắn" : "Gửi like"}
+//         >
+//           {text.trim() ? (
+//             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+//               <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+//             </svg>
+//           ) : (
+//             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+//               <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+//             </svg>
+//           )}
+//         </button>
+//       </div>
+
+//       {open && <div className={cx("overlay")} onClick={() => setOpen(false)} />}
+//       {showProfile && <ProFile1 onClose={() => setShowProFile(false)} />}
+//     </div>
+//   );
+// }
+
+// export default Chat;
+
+
+
+
+// import classNames from "classnames/bind";
+// import styles from "./Chat.module.scss";
+// import { useState, useEffect, useRef } from "react";
+// import ProFile1 from "~/pages/ProFile1";
+// import ChatPreview from "./ChatPreview";
+// import FriendRequestBar from "./FriendRequestBar";
+// import FriendRequestConfirmationBar from "./FriendRequestConfirmationBar";
+// import ChatHeader from "./ChatHeader";
+// import axios from "axios";
+
+// const cx = classNames.bind(styles);
+
+// function Chat({ friend, onToggleDetail }) {
+//   const [open, setOpen] = useState(false);
+//   const [text, setText] = useState("");
+//   const [showProfile, setShowProFile] = useState(false);
+//   const [previewImage, setPreviewImage] = useState(null);
+//   const messagesContainerRef = useRef(null);
+//   const [messages, setMessages] = useState([]);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
+//   const isInitialMount = useRef(true); // Dùng để kiểm tra mount lần đầu
+
+//   // Hàm cuộn xuống cuối
+//   const scrollToBottom = () => {
+//     if (messagesContainerRef.current) {
+//       messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+//     }
+//   };
+
+//   // Gộp hai useEffect thành một
+//   useEffect(() => {
+//     // Cuộn xuống cuối khi component mount lần đầu hoặc khi messages thay đổi
+//     scrollToBottom();
+//   }, [messages]);
+
+//   // Fetch tin nhắn từ API
+// useEffect(() => {
+//   const fetchMessages = async () => {
+//     if (!friend || !friend.id) {
+//       setLoading(false);
+//       return;
+//     }
+
+//     try {
+//       const response = await axios.post("http://localhost:5000/api/chat/messages/", {
+//         friendId: friend.id,
+//       });
+
+//       //console.log("Response from messages API:", response.data);
+
+//       if (response.status === 200 && Array.isArray(response.data)) {
+//         // Transform dữ liệu để khớp cấu trúc component
+//         const transformedMessages = response.data.map((msg) => ({
+//           id: msg.id,  // msg_5
+//           text: msg.message_type === "text" ? msg.content : null,  // Map content -> text cho text message
+//           type: msg.sender === "global-id" ? "sent" : "received",  // Map sender để quyết định type (giả sử global-id là user hiện tại)
+//           timestamp: new Date(msg.timestamp),  // Convert string ISO sang Date object
+//           // Thêm sau nếu API hỗ trợ media: image/video/file từ msg nếu message_type khác
+//         })).filter(msg => msg.text || msg.image || msg.video || msg.file);  // Lọc bỏ msg rỗng nếu cần
+
+//         setMessages(transformedMessages);
+//       } else {
+//         setError("Dữ liệu tin nhắn không hợp lệ.");
+//       }
+//     } catch (err) {
+//       setError("Lỗi khi tải tin nhắn: " + err.message);
+//       console.error("Error fetching messages:", err);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   fetchMessages();
+// }, [friend]);
+
+//   console.log("messages:", messages);
+
+//   // State để kiểm soát: true = hiện RequestBar, false = hiện ConfirmBar
+//   const [showSendRequestBar, setShowSendRequestBar] = useState(false);
+
+//   // Hàm toggle giữa RequestBar và ConfirmBar
+//   const toggleRequestBar = () => {
+//     setShowSendRequestBar((prev) => !prev);
+//   };
+
+//   const emojis = ["😀", "😂", "😍", "😊", "😎", "🤔", "👍", "❤️", "🎉", "🔥", "💯", "✨"];
+
+//   const handleEmoji = (emoji) => {
+//     setText((prev) => prev + emoji);
+//     setOpen(false);
+//   };
+
+//   const handleSend = () => {
+//     if (text.trim()) {
+//       const newMessage = {
+//         id: Date.now(),
+//         text: text.trim(),
+//         type: "sent",
+//         timestamp: new Date(),
+//       };
+//       setMessages((prev) => [...prev, newMessage]);
+//       setText("");
+//     } else {
+//       const likeMessage = {
+//         id: Date.now(),
+//         text: "👍",
+//         type: "sent",
+//         timestamp: new Date(),
+//       };
+//       setMessages((prev) => [...prev, likeMessage]);
+//     }
+//   };
+
+//   const handleKeyPress = (e) => {
+//     if (e.key === "Enter") {
+//       handleSend();
+//     }
+//   };
+
+//   const handleAvatarClick = () => {
+//     setShowProFile(true);
+//   };
+
+//   const handleMediaSelect = (e, mediaType) => {
+//     const file = e.target.files[0];
+//     if (!file) return;
+//     if (file.size > 5 * 1024 * 1024) {
+//       alert("Tệp quá lớn. Kích thước tối đa là 5MB.");
+//       return;
+//     }
+//     if (mediaType === "image" && !file.type.startsWith("image/")) {
+//       alert("Vui lòng chọn tệp hình ảnh.");
+//       return;
+//     }
+//     if (mediaType === "video" && !file.type.startsWith("video/")) {
+//       alert("Vui lòng chọn tệp video.");
+//       return;
+//     }
+//     try {
+//       const reader = new FileReader();
+//       reader.onload = () => {
+//         const newMessage = {
+//           id: Date.now(),
+//           type: "sent",
+//           timestamp: new Date(),
+//         };
+//         if (mediaType === "image") {
+//           newMessage.image = reader.result;
+//         } else if (mediaType === "video") {
+//           newMessage.video = reader.result;
+//         } else if (mediaType === "file") {
+//           newMessage.file = {
+//             name: file.name,
+//             url: reader.result,
+//           };
+//         }
+//         setMessages((prev) => [...prev, newMessage]);
+//       };
+//       reader.onerror = () => alert("Lỗi khi đọc tệp.");
+//       reader.readAsDataURL(file);
+//     } catch (error) {
+//       alert("Lỗi khi xử lý tệp.");
+//     }
+//   };
+
+//   const handleSendFriendRequest = (friendId, friendName) => {
+//     console.log(`Gửi lời mời kết bạn tới ID ${friendId}: ${friendName}`);
+//   };
+
+//   const handleConfirmFriendRequest = (friendId, friendName) => {
+//     console.log(`Xác nhận lời mời kết bạn từ ID ${friendId}: ${friendName}`);
+//   };
+
+//   const handleRejectFriendRequest = (friendId, friendName) => {
+//     console.log(`Từ chối lời mời kết bạn từ ID ${friendId}: ${friendName}`);
+//   };
+
+//   const handleClosePreview = () => {
+//     setPreviewImage(null);
+//   };
+
+//   const isValidUrl = (url) => {
+//     try {
+//       new URL(url);
+//       return true;
+//     } catch {
+//       return false;
+//     }
+//   };
+
+//   const renderMessageContent = (message) => {
+//     if (message.image) {
+//       return (
+//         <div className={cx("message-image")} onClick={() => setPreviewImage(message.image)} aria-label="Xem trước hình ảnh">
+//           <img src={message.image} alt="Nội dung được chia sẻ" style={{ maxWidth: "100%", borderRadius: "8px" }} />
+//         </div>
+//       );
+//     }
+//     if (message.video) {
+//       return (
+//         <div className={cx("message-video")}>
+//           <video controls style={{ maxWidth: "100%", borderRadius: "8px" }}>
+//             <source src={message.video} type="video/mp4" />
+//             Trình duyệt của bạn không hỗ trợ thẻ video.
+//           </video>
+//         </div>
+//       );
+//     }
+//     if (message.file) {
+//       return (
+//         <div className={cx("message-file")}>
+//           <a href={message.file.url} download={message.file.name}>
+//             {message.file.name}
+//           </a>
+//         </div>
+//       );
+//     }
+//     if (message.text) {
+//       const urlRegex = /(https?:\/\/[^\s]+)/g;
+//       const parts = message.text.split(urlRegex);
+//       return (
+//         <span>
+//           {parts.map((part, index) => {
+//             if (part.match(urlRegex) && isValidUrl(part)) {
+//               return (
+//                 <a
+//                   key={index}
+//                   href={part}
+//                   target="_blank"
+//                   rel="noopener noreferrer"
+//                   style={{ color: "blue", textDecoration: "underline" }}
+//                 >
+//                   {part}
+//                 </a>
+//               );
+//             }
+//             return part;
+//           })}
+//         </span>
+//       );
+//     }
+//     return <span>{message.text}</span>;
+//   };
+
+//   const formatTime = (dateObj) => {
+//     return dateObj.toLocaleTimeString([], {
+//       hour: "2-digit",
+//       minute: "2-digit",
+//       hour12: true,
+//     });
+//   };
+
+//   const formatSeparator = (dateObj) => {
+//     return (
+//       dateObj.toLocaleDateString([], { day: "2-digit", month: "2-digit", year: "numeric" }) +
+//       " " +
+//       formatTime(dateObj)
+//     );
+//   };
+
+//   if (!friend) {
+//     return (
+//       <div className={cx("chat")}>
+//         <div className={cx("empty-state")}>
+//           <div className={cx("empty-content")}>
+//             <div className={cx("empty-icon")}>
+//               <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+//                 <path
+//                   d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
+//                   fill="currentColor"
+//                   opacity="0.3"
+//                 />
+//                 <circle cx="8" cy="12" r="1" fill="currentColor" />
+//                 <circle cx="12" cy="12" r="1" fill="currentColor" />
+//                 <circle cx="16" cy="12" r="1" fill="currentColor" />
+//               </svg>
+//             </div>
+//             <div className={cx("empty-text")}>
+//               <h2>Chọn một cuộc trò chuyện</h2>
+//               <p>Chọn một người bạn từ danh sách bên trái để bắt đầu nhắn tin</p>
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div className={cx("chat")}>
+//       <ChatHeader 
+//         friend={friend} 
+//         onAvatarClick={handleAvatarClick}
+//         onToggleDetail={onToggleDetail}
+//       />
+
+//       {showSendRequestBar ? (
+//         <FriendRequestBar
+//           friend={friend}
+//           onSendRequest={handleSendFriendRequest}
+//           isVisible={false}
+//         />
+//       ) : (
+//         <FriendRequestConfirmationBar
+//           friend={friend}
+//           onConfirmRequest={handleConfirmFriendRequest}
+//           onRejectRequest={handleRejectFriendRequest}
+//           isVisible={false}
+//         />
+//       )}
+
+//       <div className={cx("center")} ref={messagesContainerRef}>
+//         {loading ? (
+//           <div>Loading...</div>
+//         ) : error ? (
+//           <div className={cx("error")}>{error}</div>
+//         ) : (
+//           messages.map((message, index) => {
+//             const prevMsg = messages[index - 1];
+//             const nextMsg = messages[index + 1];
+//             const currentTime = message.timestamp;
+
+//             let showSeparator = false;
+//             let showTime = false;
+
+//             if (!prevMsg) {
+//               showSeparator = true;
+//             } else {
+//               const diffMinutes = (currentTime - prevMsg.timestamp) / 1000 / 60;
+//               if (diffMinutes >= 10) {
+//                 showSeparator = true;
+//               }
+//             }
+
+//             if (!nextMsg) {
+//               showTime = true;
+//             } else {
+//               const sameMinute =
+//                 currentTime.getHours() === nextMsg.timestamp.getHours() &&
+//                 currentTime.getMinutes() === nextMsg.timestamp.getMinutes();
+//               if (!sameMinute) {
+//                 showTime = true;
+//               }
+//             }
+
+//             return (
+//               <div key={message.id}>
+//                 {showSeparator && (
+//                   <div className={cx("time-separator")}>
+//                     <div className={cx("time-separator-content")}>
+//                       {formatSeparator(message.timestamp)}
+//                     </div>
+//                   </div>
+//                 )}
+//                 <div className={cx("message", message.type)}>
+//                   <div
+//                     className={cx("message-bubble", {
+//                       "has-media": message.image || message.video || message.file,
+//                     })}
+//                   >
+//                     {renderMessageContent(message)}
+//                     {message.text && (message.image || message.video || message.file) && (
+//                       <div className={cx("message-text")}>{message.text}</div>
+//                     )}
+//                   </div>
+//                   {showTime && (
+//                     <div className={cx("message-time")}>{formatTime(message.timestamp)}</div>
+//                   )}
+//                 </div>
+//               </div>
+//             );
+//           })
+//         )}
+//       </div>
+
+//       {previewImage && (
+//         <ChatPreview imageUrl={previewImage} onClose={handleClosePreview} />
+//       )}
+
+//       <div className={cx("cr")}>
+//         <label className={cx("cr-button")} title="Chọn ảnh" aria-label="Chọn ảnh để gửi">
+//           <input
+//             type="file"
+//             accept="image/*"
+//             style={{ display: "none" }}
+//             onChange={(e) => handleMediaSelect(e, "image")}
+//           />
+//           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+//             <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
+//           </svg>
+//         </label>
+//         <label className={cx("cr-button")} title="Chọn file" aria-label="Chọn tệp để gửi">
+//           <input
+//             type="file"
+//             accept=".pdf,.doc,.docx,.txt"
+//             style={{ display: "none" }}
+//             onChange={(e) => handleMediaSelect(e, "file")}
+//           />
+//           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+//             <path d="M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6Z" />
+//           </svg>
+//         </label>
+//         <label className={cx("cr-button")} title="Chọn video" aria-label="Chọn video để gửi">
+//           <input
+//             type="file"
+//             accept="video/*"
+//             style={{ display: "none" }}
+//             onChange={(e) => handleMediaSelect(e, "video")}
+//           />
+//           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+//             <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" />
+//           </svg>
+//         </label>
+//       </div>
+
+//       <div className={cx("input-area")}>
+//         <input
+//           type="text"
+//           placeholder="Nhập tin nhắn..."
+//           value={text}
+//           onChange={(e) => setText(e.target.value)}
+//           onKeyPress={handleKeyPress}
+//           className={cx("message-input")}
+//           aria-label="Nhập tin nhắn"
+//         />
+//         <div className={cx("emoji-container")}>
+//           <button 
+//             className={cx("emoji-button")} 
+//             onClick={() => setOpen((prev) => !prev)}
+//             aria-label="Mở bảng chọn emoji"
+//           >
+//             😊
+//           </button>
+//           <div className={cx("emoji-picker")} style={{ display: open ? "block" : "none" }}>
+//             {emojis.map((emoji, index) => (
+//               <button
+//                 key={index}
+//                 onClick={() => handleEmoji(emoji)}
+//                 className={cx("emoji-item")}
+//                 aria-label={`Chọn emoji ${emoji}`}
+//               >
+//                 {emoji}
+//               </button>
+//             ))}
+//           </div>
+//         </div>
+//         <button 
+//           onClick={handleSend} 
+//           className={cx("send-button", { active: text.trim() })}
+//           aria-label={text.trim() ? "Gửi tin nhắn" : "Gửi like"}
+//         >
+//           {text.trim() ? (
+//             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+//               <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+//             </svg>
+//           ) : (
+//             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+//               <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
+//             </svg>
+//           )}
+//         </button>
+//       </div>
+
+//       {open && <div className={cx("overlay")} onClick={() => setOpen(false)} />}
+//       {showProfile && <ProFile1 onClose={() => setShowProFile(false)} />}
+//     </div>
+//   );
+// }
+
+// export default Chat;
+
+
+
 import classNames from "classnames/bind";
 import styles from "./Chat.module.scss";
-import { useState } from "react";
-import { avatarIcon, searchIcon } from "../List/image";
+import { useState, useEffect, useRef } from "react";
 import ProFile1 from "~/pages/ProFile1";
+import ChatPreview from "./ChatPreview";
+import FriendRequestBar from "./FriendRequestBar";
+import FriendRequestConfirmationBar from "./FriendRequestConfirmationBar";
+import ChatHeader from "./ChatHeader";
+import axios from "axios";
 
 const cx = classNames.bind(styles);
 
-function Chat({ onToggleDetail }) {
+function Chat({ friend, onToggleDetail }) {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
   const [showProfile, setShowProFile] = useState(false);
+  const [previewImage, setPreviewImage] = useState(null);
+  const messagesContainerRef = useRef(null);
+  const [messages, setMessages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  const [messages, setMessages] = useState([
-    { 
-      id: 1, 
-      text: "Xin chào! Đây là tin nhắn test", 
-      type: "received",
-      timestamp: "10:30 AM"
-    },
-    { 
-      id: 2, 
-      text: "Chào bạn! Bạn có khỏe không?", 
-      type: "sent",
-      timestamp: "10:31 AM"
-    },
-    {
-      id: 3,
-      type: "received",
-      timestamp: "10:32 AM",
-      image: "https://picsum.photos/300/200?random=1"
-    },
-    {
-      id: 4,
-      text: "Ảnh đẹp quá!",
-      type: "sent",
-      timestamp: "10:33 AM"
-    },
-    {
-      id: 5,
-      type: "received",
-      timestamp: "10:35 AM",
-      video: "https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
-    },
-    {
-      id: 6,
-      text: "Video hay đấy 😍",
-      type: "sent",
-      timestamp: "10:36 AM"
+  // Hàm cuộn xuống cuối
+  const scrollToBottom = () => {
+    if (messagesContainerRef.current) {
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
     }
-  ]);
+  };
 
-  // Mock emoji data
-  const emojis = ["😀", "😂", "😍", "🥰", "😎", "🤔", "👍", "❤️", "🎉", "🔥", "💯", "✨"];
+  // Cuộn xuống cuối khi messages thay đổi
+  useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
-  // Hàm xử lý chọn emoji
+  // Fetch tin nhắn từ API
+
+  console.log("Fetching messages for friend:", friend);
+
+  useEffect(() => {
+    const fetchMessages = async () => {
+      if (!friend || !friend.id) {
+        setLoading(false);
+        return;
+      }
+
+      try {
+        const response = await axios.post("http://localhost:5000/api/chat/messages/", {
+          friendId: friend.id,
+        });
+       
+        if (response.status === 200 && Array.isArray(response.data)) {
+          // Transform dữ liệu để khớp cấu trúc component
+          const transformedMessages = response.data.map((msg) => ({
+            id: msg.id, 
+            text: msg.message_type === "text" ? msg.content : null, // Map content -> text cho text message
+            type: msg.sender !== friend.member ? "sent" : "received", // Map sender để quyết định type
+            timestamp: new Date(msg.timestamp), // Convert string ISO sang Date object
+            image: msg.message_type === "image" ? `http://localhost:5000${msg.url}` : null, // Thêm host cho URL
+            video: msg.message_type === "video" ? `http://localhost:5000${msg.url}` : null, // Thêm host cho URL
+            file: msg.message_type === "file" ? { name: msg.content, url: `http://localhost:5000${msg.url}` } : null, // name từ content, url từ msg.url
+          })).filter(msg => msg.text || msg.image || msg.video || msg.file); // Lọc bỏ msg rỗng
+
+          console.log("Transformed messages:", transformedMessages);
+          console.log(friend.member)
+
+          setMessages(transformedMessages);
+        } else {
+          setError("Dữ liệu tin nhắn không hợp lệ.");
+        }
+      } catch (err) {
+        setError("Lỗi khi tải tin nhắn: " + err.message);
+        console.error("Error fetching messages:", err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchMessages();
+  }, [friend]);
+
+  // State để kiểm soát: true = hiện RequestBar, false = hiện ConfirmBar
+  const [showSendRequestBar, setShowSendRequestBar] = useState(false);
+
+  // Hàm toggle giữa RequestBar và ConfirmBar
+  const toggleRequestBar = () => {
+    setShowSendRequestBar((prev) => !prev);
+  };
+
+  const emojis = ["😀", "😂", "😍", "😊", "😎", "🤔", "👍", "❤️", "🎉", "🔥", "💯", "✨"];
+
   const handleEmoji = (emoji) => {
     setText((prev) => prev + emoji);
     setOpen(false);
   };
 
-  // Hàm xử lý gửi tin nhắn
-  const handleSend = () => {
+  const handleSend = async () => {
     if (text.trim()) {
       const newMessage = {
         id: Date.now(),
         text: text.trim(),
         type: "sent",
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        timestamp: new Date(),
       };
-      setMessages(prev => [...prev, newMessage]);
+      setMessages((prev) => [...prev, newMessage]);
       setText("");
-      console.log("Đã gửi tin nhắn:", text.trim());
+
+      console.log("Sending message to API:", {
+        friendId: friend.id,
+      })
+
+      try {
+        await axios.post("http://localhost:5000/api/chat/send-message/", {
+          id: "",
+          conversationId: friend.id,
+          sender: friend.sender,
+          content: text.trim(),
+          message_type: "text",
+          timestamp: new Date().toISOString(),
+          recipient: friend.member,
+        });
+      } catch (error) {
+        console.error("Error sending message:", error);
+      }
     } else {
-      // Gửi like khi không có text
       const likeMessage = {
         id: Date.now(),
         text: "👍",
         type: "sent",
-        timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
+        timestamp: new Date(),
       };
-      setMessages(prev => [...prev, likeMessage]);
-      console.log("Đã gửi like");
+      setMessages((prev) => [...prev, likeMessage]);
+
+      try {
+        await axios.post("http://localhost:5000/api/chat/send-message/", {
+          id: "",
+          conversationId: friend.id,
+          sender: friend.sender,
+          content: "👍",
+          message_type: "text",
+          timestamp: new Date().toISOString(),
+          recipient: friend.member,
+        });
+      } catch (error) {
+        console.error("Error sending like message:", error);
+      }
     }
   };
 
-  // Hàm xử lý Enter key
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       handleSend();
     }
   };
 
-  // Hàm xử lý click avatar
   const handleAvatarClick = () => {
     setShowProFile(true);
   };
 
-  // Render message content
+  // Hàm xử lý chọn file media
+  const handleMediaSelect = async (e, mediaType) => {
+    const file = e.target.files[0];
+    if (!file) {
+      console.log("Không có file được chọn");
+      return;
+    }
+    
+    if (file.size > 50 * 1024 * 1024) {
+      alert("Tệp quá lớn. Kích thước tối đa là 50MB.");
+      console.log("File quá lớn:", file.size);
+      return;
+    }
+    
+    if (mediaType === "image" && !file.type.startsWith("image/")) {
+      alert("Vui lòng chọn tệp hình ảnh.");
+      console.log("File không phải hình ảnh:", file.type);
+      return;
+    }
+    
+    if (mediaType === "video" && !file.type.startsWith("video/")) {
+      alert("Vui lòng chọn tệp video.");
+      console.log("File không phải video:", file.type);
+      return;
+    }
+    
+    // HIỂN THỊ TRƯỚC - Tạo preview local
+    const reader = new FileReader();
+    reader.onload = () => {
+      console.log("FileReader onload, preview URL:", reader.result.substring(0, 50) + "..."); // Log base64 (giới hạn để tránh dài)
+        
+      const tempMessage = {
+        id: Date.now() + Math.random(),
+        type: "sent",
+        timestamp: new Date(),
+        uploading: true, // Flag để show loading
+        fileName: file.name, // Lưu tên file gốc
+      };
+        
+      if (mediaType === "image") {
+        tempMessage.image = reader.result; // Local preview (base64)
+      } else if (mediaType === "video") {
+        tempMessage.video = reader.result; // Local preview (base64)
+      } else if (mediaType === "file") {
+        tempMessage.file = {
+          name: file.name, // Giữ tên file gốc
+          url: reader.result, // Local preview (base64)
+        };
+      }
+        
+      // Hiển thị ngay
+      setMessages((prev) => {
+        const newMessages = [...prev, tempMessage];
+        console.log("Messages updated:", newMessages); // Log state mới
+        return newMessages;
+      });
+        
+      // UPLOAD SAU - Async
+      uploadFileToServer(file, mediaType, tempMessage.id);
+    };
+    
+    reader.onerror = () => {
+      alert("Lỗi khi đọc tệp.");
+      console.error("FileReader lỗi:", reader.error);
+    };
+    reader.readAsDataURL(file);
+  };
+
+// Hàm upload file lên server
+  const uploadFileToServer = async (file, mediaType, messageId) => {
+    const formData = new FormData();
+    let endpoint;
+
+    // Thêm file vào FormData với tên gốc để hỗ trợ tiếng Việt
+    if (mediaType === "image") {
+      formData.append("file", file, file.name); // Gửi tên file gốc
+      endpoint = "/upload-file";
+    } else if (mediaType === "video") {
+      formData.append("video", file, file.name); // Gửi tên file gốc
+      endpoint = "/upload-video";
+    } else if (mediaType === "file") {
+      formData.append("file", file, file.name); // Gửi tên file gốc
+      endpoint = "/upload-file";
+    }
+
+    try {
+        // API 1: Upload file
+      console.log("⏳ Bắt đầu upload file:", file.name);
+      const uploadResponse = await axios.post(`http://localhost:5000${endpoint}`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+          "Accept": "application/json", // Đảm bảo response là JSON
+        },
+      });
+
+      if (uploadResponse.data.url) {
+        const filePath = uploadResponse.data.url.replace("http://localhost:5000", ""); // Lấy đường dẫn tương đối
+
+        // Cập nhật message với URL thật từ server
+        setMessages((prev) =>
+          prev.map((msg) => {
+            if (msg.id === messageId) {
+              const updatedMsg = { ...msg, uploading: false }; // Xóa flag loading
+
+              if (mediaType === "image") {
+                updatedMsg.image = uploadResponse.data.url; // URL đầy đủ cho preview
+                updatedMsg.fileName = file.name; // Lưu tên file gốc
+              } else if (mediaType === "video") {
+                updatedMsg.video = uploadResponse.data.url; // URL đầy đủ cho preview
+                updatedMsg.fileName = file.name; // Lưu tên file gốc
+              } else if (mediaType === "file") {
+                updatedMsg.file = {
+                  name: file.name, // Giữ tên file gốc
+                  url: uploadResponse.data.url, // URL đầy đủ cho preview
+                };
+              }
+
+              return updatedMsg;
+            }
+            return msg;
+          })
+        );
+
+        console.log("Upload thành công, URL:", uploadResponse.data.url);
+
+        // API 2: Gửi message lên server
+        try {
+          const messageResponse = await axios.post("http://localhost:5000/api/chat/send-message/", {
+            id: "",
+            conversationId: friend.id,
+            sender: friend.sender,
+            content: file.name, // Tên file gốc (ví dụ: "Hình ảnh đẹp.jpg")
+            message_type: mediaType,
+            timestamp: new Date().toISOString(),
+            recipient: friend.member,
+            url: filePath, // Đường dẫn tương đối (ví dụ: "/uploads/1231231232.jpg")
+          });
+          console.log("Message đã lưu server:", messageResponse.data);
+        } catch (messageError) {
+          console.error("Lỗi gửi message:", messageError);
+        }
+      }
+    } catch (uploadError) {
+      console.error("Upload lỗi:", uploadError);
+
+      // Đánh dấu message lỗi
+      setMessages((prev) =>
+        prev.map((msg) => {
+          if (msg.id === messageId) {
+            return {
+              ...msg,
+              uploading: false,
+              error: true, // Flag lỗi
+            };
+          }
+          return msg;
+        })
+      );
+
+      alert("Upload thất bại: " + (uploadError.response?.data?.error || uploadError.message));
+    }
+  };
+
+  const handleSendFriendRequest = (friendId, friendName) => {
+    console.log(`Gửi lời mời kết bạn tới ID ${friendId}: ${friendName}`);
+  };
+
+  const handleConfirmFriendRequest = (friendId, friendName) => {
+    console.log(`Xác nhận lời mời kết bạn từ ID ${friendId}: ${friendName}`);
+  };
+
+  const handleRejectFriendRequest = (friendId, friendName) => {
+    console.log(`Từ chối lời mời kết bạn từ ID ${friendId}: ${friendName}`);
+  };
+
+  const handleClosePreview = () => {
+    setPreviewImage(null);
+  };
+
+  const isValidUrl = (url) => {
+    try {
+      new URL(url);
+      return true;
+    } catch {
+      return false;
+    }
+  };
+
   const renderMessageContent = (message) => {
     if (message.image) {
       return (
-        <div className={cx("message-image")}>
-          <img src={message.image} alt="Shared image" />
+        <div className={cx("message-image")} onClick={() => setPreviewImage(message.image)} aria-label="Xem trước hình ảnh">
+          <img src={message.image} alt="Nội dung được chia sẻ" style={{ maxWidth: "100%", borderRadius: "8px" }} />
         </div>
       );
     }
-    
     if (message.video) {
       return (
         <div className={cx("message-video")}>
-          <video controls>
+          <video controls style={{ maxWidth: "100%", borderRadius: "8px" }}>
             <source src={message.video} type="video/mp4" />
-            Your browser does not support the video tag.
+            Trình duyệt của bạn không hỗ trợ thẻ video.
           </video>
         </div>
       );
     }
-    
+    if (message.file) {
+      return (
+        <div className={cx("message-file")}>
+          <a href={message.file.url} download={message.file.name}>
+            {message.file.name}
+          </a>
+        </div>
+      );
+    }
+    if (message.text) {
+      const urlRegex = /(https?:\/\/[^\s]+)/g;
+      const parts = message.text.split(urlRegex);
+      return (
+        <span>
+          {parts.map((part, index) => {
+            if (part.match(urlRegex) && isValidUrl(part)) {
+              return (
+                <a
+                  key={index}
+                  href={part}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "blue", textDecoration: "underline" }}
+                >
+                  {part}
+                </a>
+              );
+            }
+            return part;
+          })}
+        </span>
+      );
+    }
     return <span>{message.text}</span>;
   };
 
+  const formatTime = (dateObj) => {
+    return dateObj.toLocaleTimeString([], {
+      hour: "2-digit",
+      minute: "2-digit",
+      hour12: true,
+    });
+  };
+
+  const formatSeparator = (dateObj) => {
+    return (
+      dateObj.toLocaleDateString([], { day: "2-digit", month: "2-digit", year: "numeric" }) +
+      " " +
+      formatTime(dateObj)
+    );
+  };
+
+  if (!friend) {
+    return (
+      <div className={cx("chat")}>
+        <div className={cx("empty-state")}>
+          <div className={cx("empty-content")}>
+            <div className={cx("empty-icon")}>
+              <svg width="80" height="80" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"
+                  fill="currentColor"
+                  opacity="0.3"
+                />
+                <circle cx="8" cy="12" r="1" fill="currentColor" />
+                <circle cx="12" cy="12" r="1" fill="currentColor" />
+                <circle cx="16" cy="12" r="1" fill="currentColor" />
+              </svg>
+            </div>
+            <div className={cx("empty-text")}>
+              <h2>Chọn một cuộc trò chuyện</h2>
+              <p>Chọn một người bạn từ danh sách bên trái để bắt đầu nhắn tin</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={cx("chat")}>
-      {/* Top - Header */}
-      <div className={cx("top")}>
-        {/* User Info */}
-        <div className={cx("user-info")}>
-          <button 
-            className={cx("avatar-button")}
-            onClick={handleAvatarClick}
-            title="Xem thông tin người dùng"
-          >
-            <div className={cx("avatar-container")}>
-              <img src={avatarIcon} alt="Avatar" />
-              <div className={cx("online-status")}></div>
-            </div>
-          </button>
-          
-          <div className={cx("user-details")}>
-            <h2>Nguyen Dieu Lyng</h2>
-            <span className={cx("status")}>Đang hoạt động</span>
-          </div>
-        </div>
+      <ChatHeader 
+        friend={friend} 
+        onAvatarClick={handleAvatarClick}
+        onToggleDetail={onToggleDetail}
+      />
 
-        {/* Action Buttons */}
-        <div className={cx("actions")}>
-          <button className={cx("action-btn")} title="Cuộc gọi thoại">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
-            </svg>
-          </button>
+      {showSendRequestBar ? (
+        <FriendRequestBar
+          friend={friend}
+          onSendRequest={handleSendFriendRequest}
+          isVisible={false}
+        />
+      ) : (
+        <FriendRequestConfirmationBar
+          friend={friend}
+          onConfirmRequest={handleConfirmFriendRequest}
+          onRejectRequest={handleRejectFriendRequest}
+          isVisible={false}
+        />
+      )}
 
-          <button className={cx("action-btn")} title="Video call">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17,10.5V7A1,1 0 0,0 16,6H4A1,1 0 0,0 3,7V17A1,1 0 0,0 4,18H16A1,1 0 0,0 17,17V13.5L21,17.5V6.5L17,10.5Z"/>
-            </svg>
-          </button>
+      <div className={cx("center")} ref={messagesContainerRef}>
+        {loading ? (
+          <div>Loading...</div>
+        ) : error ? (
+          <div className={cx("error")}>{error}</div>
+        ) : (
+          messages.map((message, index) => {
+            const prevMsg = messages[index - 1];
+            const nextMsg = messages[index + 1];
+            const currentTime = message.timestamp;
 
-          <button className={cx("action-btn")} title="Thông tin cuộc trò chuyện">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M13,9H11V7H13M13,17H11V11H13M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2Z"/>
-            </svg>
-          </button>
+            let showSeparator = false;
+            let showTime = false;
 
-          <button
-            className={cx("action-btn")}
-            title="Tùy chọn khác"
-            onClick={onToggleDetail}
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12,16A2,2 0 0,1 14,18A2,2 0 0,1 12,20A2,2 0 0,1 10,18A2,2 0 0,1 12,16M12,10A2,2 0 0,1 14,12A2,2 0 0,1 12,14A2,2 0 0,1 10,12A2,2 0 0,1 12,10M12,4A2,2 0 0,1 14,6A2,2 0 0,1 12,8A2,2 0 0,1 10,6A2,2 0 0,1 12,4Z"/>
-            </svg>
-          </button>
-        </div>
-      </div>
+            if (!prevMsg) {
+              showSeparator = true;
+            } else {
+              const diffMinutes = (currentTime - prevMsg.timestamp) / 1000 / 60;
+              if (diffMinutes >= 10) {
+                showSeparator = true;
+              }
+            }
 
-      {/* Center - Messages */}
-      <div className={cx("center")}>
-        {messages.map((message) => (
-          <div
-            key={message.id}
-            className={cx("message", message.type)}
-          >
-            <div className={cx("message-bubble", {
-              'has-media': message.image || message.video
-            })}>
-              {renderMessageContent(message)}
-              {message.text && (message.image || message.video) && (
-                <div className={cx("message-text")}>
-                  {message.text}
+            if (!nextMsg) {
+              showTime = true;
+            } else {
+              const sameMinute =
+                currentTime.getHours() === nextMsg.timestamp.getHours() &&
+                currentTime.getMinutes() === nextMsg.timestamp.getMinutes();
+              if (!sameMinute) {
+                showTime = true;
+              }
+            }
+
+            return (
+              <div key={message.id}>
+                {showSeparator && (
+                  <div className={cx("time-separator")}>
+                    <div className={cx("time-separator-content")}>
+                      {formatSeparator(message.timestamp)}
+                    </div>
+                  </div>
+                )}
+                <div className={cx("message", message.type)}>
+                  <div
+                    className={cx("message-bubble", {
+                      "has-media": message.image || message.video || message.file,
+                    })}
+                  >
+                    {renderMessageContent(message)}
+                    {message.text && (message.image || message.video || message.file) && (
+                      <div className={cx("message-text")}>{message.text}</div>
+                    )}
+                  </div>
+                  {showTime && (
+                    <div className={cx("message-time")}>{formatTime(message.timestamp)}</div>
+                  )}
                 </div>
-              )}
-            </div>
-            <div className={cx("message-timestamp")}>
-              {message.timestamp}
-            </div>
-          </div>
-        ))}
+              </div>
+            );
+          })
+        )}
       </div>
 
-      {/* CR - 3 nút: ảnh, file, sticker */}
+      {previewImage && (
+        <ChatPreview imageUrl={previewImage} onClose={handleClosePreview} />
+      )}
+
       <div className={cx("cr")}>
-        {/* Nút Ảnh */}
-        <button
-          className={cx("cr-button")}
-          onClick={() => console.log('Chọn ảnh')}
-          title="Chọn ảnh"
-        >
+        <label className={cx("cr-button")} title="Chọn ảnh" aria-label="Chọn ảnh để gửi">
+          <input
+            type="file"
+            accept="image/*"
+            style={{ display: "none" }}
+            onChange={(e) => handleMediaSelect(e, "image")}
+          />
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+            <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" />
           </svg>
-        </button>
-
-        {/* Nút File */}
-        <button
-          className={cx("cr-button")}
-          onClick={() => console.log('Chọn file')}
-          title="Chọn file"
-        >
+        </label>
+        <label className={cx("cr-button")} title="Chọn file" aria-label="Chọn tệp để gửi">
+          <input
+            type="file"
+            accept=".pdf,.doc,.docx,.txt"
+            style={{ display: "none" }}
+            onChange={(e) => handleMediaSelect(e, "file")}
+          />
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6Z"/>
+            <path d="M6,2C4.89,2 4,2.89 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2H6Z" />
           </svg>
-        </button>
-
-        {/* Nút Sticker */}
-        <button
-          className={cx("cr-button")}
-          onClick={() => console.log('Chọn sticker')}
-          title="Chọn sticker"
-        >
+        </label>
+        <label className={cx("cr-button")} title="Chọn video" aria-label="Chọn video để gửi">
+          <input
+            type="file"
+            accept="video/*"
+            style={{ display: "none" }}
+            onChange={(e) => handleMediaSelect(e, "video")}
+          />
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M18.5,12A6.5,6.5 0 0,1 12,18.5A6.5,6.5 0 0,1 5.5,12A6.5,6.5 0 0,1 12,5.5A6.5,6.5 0 0,1 18.5,12M12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4M15.5,9C15.8,9 16,9.2 16,9.5C16,9.8 15.8,10 15.5,10C15.2,10 15,9.8 15,9.5C15,9.2 15.2,9 15.5,9M8.5,9C8.8,9 9,9.2 9,9.5C9,9.8 8.8,10 8.5,10C8.2,10 8,9.8 8,9.5C8,9.2 8.2,9 8.5,9M12,17.23C10.25,17.23 8.71,16.5 7.81,15.42L9.23,14C9.68,14.72 10.75,15.23 12,15.23C13.25,15.23 14.32,14.72 14.77,14L16.19,15.42C15.29,16.5 13.75,17.23 12,17.23Z"/>
+            <path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z" />
           </svg>
-        </button>
+        </label>
       </div>
 
-      {/* Input Area */}
       <div className={cx("input-area")}>
-        {/* Input */}
         <input
           type="text"
           placeholder="Nhập tin nhắn..."
@@ -555,60 +2190,52 @@ function Chat({ onToggleDetail }) {
           onChange={(e) => setText(e.target.value)}
           onKeyPress={handleKeyPress}
           className={cx("message-input")}
+          aria-label="Nhập tin nhắn"
         />
-        
-        {/* Emoji Button */}
         <div className={cx("emoji-container")}>
-          <button
-            className={cx("emoji-button")}
-            onClick={() => setOpen(prev => !prev)}
+          <button 
+            className={cx("emoji-button")} 
+            onClick={() => setOpen((prev) => !prev)}
+            aria-label="Mở bảng chọn emoji"
           >
             😊
           </button>
-          
-          {/* Emoji Picker */}
-          {open && (
-            <div className={cx("emoji-picker")}>
-              {emojis.map((emoji, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleEmoji(emoji)}
-                  className={cx("emoji-item")}
-                >
-                  {emoji}
-                </button>
-              ))}
-            </div>
-          )}
+          <div className={cx("emoji-picker")} style={{ display: open ? "block" : "none" }}>
+            {emojis.map((emoji, index) => (
+              <button
+                key={index}
+                onClick={() => handleEmoji(emoji)}
+                className={cx("emoji-item")}
+                aria-label={`Chọn emoji ${emoji}`}
+              >
+                {emoji}
+              </button>
+            ))}
+          </div>
         </div>
-        
-        {/* Send/Like Button */}
         <button 
-          onClick={handleSend}
-          className={cx("send-button", { "active": text.trim() })}
+          onClick={handleSend} 
+          className={cx("send-button", { active: text.trim() })}
+          aria-label={text.trim() ? "Gửi tin nhắn" : "Gửi like"}
         >
           {text.trim() ? (
-            // Send Icon
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+              <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
             </svg>
           ) : (
-            // Like Icon
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/>
+              <path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" />
             </svg>
           )}
         </button>
       </div>
 
-      {/* Overlay để đóng emoji picker */}
-      {open && (
-        <div 
-          className={cx("overlay")}
-          onClick={() => setOpen(false)}
-        />
-      )}
-      {showProfile && <ProFile1 onClose={() => setShowProFile(false)} />}
+      {open && <div className={cx("overlay")} onClick={() => setOpen(false)} />}
+      {showProfile && 
+        <ProFile1 
+          onClose={() => setShowProFile(false)} 
+          datax={friend}
+        />}
     </div>
   );
 }

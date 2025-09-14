@@ -59,6 +59,7 @@ const uuidFunction2 = (req, res) => {
     message: "Success",
     avatar: user.avatar,
     fullname: user.fullname,
+    gender: user.gender
   });
 };
 
