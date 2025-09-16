@@ -168,5 +168,445 @@
     "message_type": "text",
     "timestamp": "2025-09-14T10:12:22.506Z",
     "url": null
+  },
+  {
+    "id": "1757914938337",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "sdas",
+    "message_type": "text",
+    "timestamp": "2025-09-15T05:42:18.337Z",
+    "url": null
+  },
+  {
+    "id": "1757920775796",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Trịnh Như Nhất",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:19:35.796Z",
+    "url": null
+  },
+  {
+    "id": "1757920854955",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Trịnh Như Nhất",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:20:54.955Z",
+    "url": null
+  },
+  {
+    "id": "1757920920361",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "ádasda",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:22:00.361Z",
+    "url": null
+  },
+  {
+    "id": "1757921102793",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Heloo",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:25:02.793Z",
+    "url": null
+  },
+  {
+    "id": "1757921412954",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "đá",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:30:12.954Z",
+    "url": null
+  },
+  {
+    "id": "1757921462715",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Trịnh Như Nhất",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:31:02.715Z",
+    "url": null
+  },
+  {
+    "id": "1757921480624",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Nội dung đoạn văn bản của bạn.png",
+    "message_type": "image",
+    "timestamp": "2025-09-15T07:31:20.624Z",
+    "url": "/uploads/1757921480602-231189256.png"
+  },
+  {
+    "id": "1757921501886",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Sao",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:31:41.886Z",
+    "url": null
+  },
+  {
+    "id": "1757921513231",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "TuHOnTap.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-15T07:31:53.231Z",
+    "url": "/uploads/1757921513182-639491748.pdf"
+  },
+  {
+    "id": "1757921540858",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Hôm nay là thứ 7",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:32:20.858Z",
+    "url": null
+  },
+  {
+    "id": "1757921554235",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Mặt trời mùa hạ",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:32:34.235Z",
+    "url": null
+  },
+  {
+    "id": "1757921584422",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Vì sao em buồn",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:33:04.422Z",
+    "url": null
+  },
+  {
+    "id": "1757921610963",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Freee Fire lửa chùa",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:33:30.963Z",
+    "url": null
+  },
+  {
+    "id": "1757921619100",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Liên Quân game 3 nước",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:33:39.100Z",
+    "url": null
+  },
+  {
+    "id": "1757921649423",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Heheee ổn r",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:34:09.423Z",
+    "url": null
+  },
+  {
+    "id": "1757921657716",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Ổn gì",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:34:17.716Z",
+    "url": null
+  },
+  {
+    "id": "1757921762823",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Trịnh Như Nhất",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:36:02.823Z",
+    "url": null
+  },
+  {
+    "id": "1757921998399",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "https://github.com",
+    "message_type": "text",
+    "timestamp": "2025-09-15T07:39:58.399Z",
+    "url": null
+  },
+  {
+    "id": "1757924476490",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "dsada",
+    "message_type": "text",
+    "timestamp": "2025-09-15T08:21:16.490Z",
+    "url": null
+  },
+  {
+    "id": "1757924540529",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Hello",
+    "message_type": "text",
+    "timestamp": "2025-09-15T08:22:20.529Z",
+    "url": null
+  },
+  {
+    "id": "1757924559377",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "ádas",
+    "message_type": "text",
+    "timestamp": "2025-09-15T08:22:39.377Z",
+    "url": null
+  },
+  {
+    "id": "1757924567798",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Chào bạn",
+    "message_type": "text",
+    "timestamp": "2025-09-15T08:22:47.798Z",
+    "url": null
+  },
+  {
+    "id": "1757924616035",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "15:23 15/9",
+    "message_type": "text",
+    "timestamp": "2025-09-15T08:23:36.035Z",
+    "url": null
+  },
+  {
+    "id": "1757924664244",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Hnay là thứ mấy",
+    "message_type": "text",
+    "timestamp": "2025-09-15T08:24:24.244Z",
+    "url": null
+  },
+  {
+    "id": "1757924673382",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Hôm nay là thứ 2",
+    "message_type": "text",
+    "timestamp": "2025-09-15T08:24:33.382Z",
+    "url": null
+  },
+  {
+    "id": "1757924680400",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Làm sao thế",
+    "message_type": "text",
+    "timestamp": "2025-09-15T08:24:40.400Z",
+    "url": null
+  },
+  {
+    "id": "1757924698911",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Làm sao là lms thế",
+    "message_type": "text",
+    "timestamp": "2025-09-15T08:24:58.911Z",
+    "url": null
+  },
+  {
+    "id": "1757924710064",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "🤔",
+    "message_type": "text",
+    "timestamp": "2025-09-15T08:25:10.064Z",
+    "url": null
+  },
+  {
+    "id": "1757985258204",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Hello",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:14:18.204Z",
+    "url": null
+  },
+  {
+    "id": "1757985268447",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Chào bạn",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:14:28.447Z",
+    "url": null
+  },
+  {
+    "id": "1757985272047",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "DSDs",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:14:32.047Z",
+    "url": null
+  },
+  {
+    "id": "1757985452840",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Hellooo",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:17:32.840Z",
+    "url": null
+  },
+  {
+    "id": "1757986749098",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "đâsd",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:39:09.098Z",
+    "url": null
+  },
+  {
+    "id": "1757986755350",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "Trịn hNhdadasdsd",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:39:15.350Z",
+    "url": null
+  },
+  {
+    "id": "1757986774538",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Trịnh NHư Nhất  8:39",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:39:34.538Z",
+    "url": null
+  },
+  {
+    "id": "1757986782730",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "*:40",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:39:42.730Z",
+    "url": null
+  },
+  {
+    "id": "1757986816869",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "ádas",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:40:16.869Z",
+    "url": null
+  },
+  {
+    "id": "1757986927167",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "jjjj",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:42:07.167Z",
+    "url": null
+  },
+  {
+    "id": "1757986937178",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "llll",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:42:17.178Z",
+    "url": null
+  },
+  {
+    "id": "1757987461961",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "https://githu.com",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:51:01.961Z",
+    "url": null
+  },
+  {
+    "id": "1757987494665",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "https://github.com/IchigoMazone/mini-chat.git",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:51:34.665Z",
+    "url": null
+  },
+  {
+    "id": "1757987555604",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "https://github.com/IchigoMazone",
+    "message_type": "text",
+    "timestamp": "2025-09-16T01:52:35.604Z",
+    "url": null
+  },
+  {
+    "id": "1757988111874",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "👍",
+    "message_type": "text",
+    "timestamp": "2025-09-16T02:01:51.875Z",
+    "url": null
   }
 ]
