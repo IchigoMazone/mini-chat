@@ -1,58 +1,58 @@
-// const express = require("express");
-// const cors = require("cors");
-// const { Server } = require("socket.io");
-// const http = require("http");
-// const app = express();
+// // const express = require("express");
+// // const cors = require("cors");
+// // const { Server } = require("socket.io");
+// // const http = require("http");
+// // const app = express();
 
-// app.use(cors());
-// app.use(express.json());
+// // app.use(cors());
+// // app.use(express.json());
 
-// app.use("/uploads", express.static("uploads"));
-// app.use("/", require("./routes/uploadRoutes")); // Thêm dòng này
-// app.use("/api/auth", require("./routes/authRoutes"));
-// app.use("/api/chat", require("./routes/chatRoutes"));
+// // app.use("/uploads", express.static("uploads"));
+// // app.use("/", require("./routes/uploadRoutes")); // Thêm dòng này
+// // app.use("/api/auth", require("./routes/authRoutes"));
+// // app.use("/api/chat", require("./routes/chatRoutes"));
 
-// app.get("/", (req, res) => {
-//   res.send("Server is running");
-// });
+// // app.get("/", (req, res) => {
+// //   res.send("Server is running");
+// // });
 
-// const server = http.createServer(app);
+// // const server = http.createServer(app);
 
-// const io = new Server(server, {
-//   cors: {
-//     origin: "*", // Thay đổi nếu cần
-//   },
-// });
+// // const io = new Server(server, {
+// //   cors: {
+// //     origin: "*", // Thay đổi nếu cần
+// //   },
+// // });
 
-// const userSockets = new Map();
+// // const userSockets = new Map();
 
-// io.on("connection", (socket) => {
-//   const userId = socket.handshake.query.userId;
+// // io.on("connection", (socket) => {
+// //   const userId = socket.handshake.query.userId;
 
-//   console.log("✅ Client kết nối:");
-//   console.log("🔑 userId (từ client):", userId);
-//   console.log("🆔 socket.id (mặc định):", socket.id);
+// //   console.log("✅ Client kết nối:");
+// //   console.log("🔑 userId (từ client):", userId);
+// //   console.log("🆔 socket.id (mặc định):", socket.id);
 
-//   // lưu map userId -> socket
-//   if (userId) {
-//     userSockets.set(userId, socket);
-//   }
+// //   // lưu map userId -> socket
+// //   if (userId) {
+// //     userSockets.set(userId, socket);
+// //   }
 
-//   // thử gửi chào mừng lại client
-//   socket.emit("welcome", { msg: `Xin chào user ${userId}` });
+// //   // thử gửi chào mừng lại client
+// //   socket.emit("welcome", { msg: `Xin chào user ${userId}` });
 
-//   // xử lý disconnect
-//   socket.on("disconnect", () => {
-//     userSockets.delete(userId);
-//     console.log("❌ Client ngắt:", userId);
-//   });
-// });
+// //   // xử lý disconnect
+// //   socket.on("disconnect", () => {
+// //     userSockets.delete(userId);
+// //     console.log("❌ Client ngắt:", userId);
+// //   });
+// // });
 
 
-// const PORT = process.env.PORT || 5000;
-// app.listen(PORT, () => {
-//   console.log(`Server running on http://localhost:${PORT}`);
-// });
+// // const PORT = process.env.PORT || 5000;
+// // app.listen(PORT, () => {
+// //   console.log(`Server running on http://localhost:${PORT}`);
+// // });
 
 
 const express = require("express");

@@ -608,5 +608,2181 @@
     "message_type": "text",
     "timestamp": "2025-09-16T02:01:51.875Z",
     "url": null
+  },
+  {
+    "id": "1757994455996",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "dasd",
+    "message_type": "text",
+    "timestamp": "2025-09-16T03:47:35.996Z",
+    "url": null
+  },
+  {
+    "id": "1757994494278",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "dasd",
+    "message_type": "text",
+    "timestamp": "2025-09-16T03:48:14.278Z",
+    "url": null
+  },
+  {
+    "id": "1757994876269",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "dasdsa",
+    "message_type": "text",
+    "timestamp": "2025-09-16T03:54:36.269Z",
+    "url": null
+  },
+  {
+    "id": "1757994903707",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Trijnh NHuw wdasdsa",
+    "message_type": "text",
+    "timestamp": "2025-09-16T03:55:03.707Z",
+    "url": null
+  },
+  {
+    "id": "1757994925667",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "dasdas",
+    "message_type": "text",
+    "timestamp": "2025-09-16T03:55:25.667Z",
+    "url": null
+  },
+  {
+    "id": "1757994937467",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Untitled Diagram.drawio.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T03:55:37.467Z",
+    "url": "/uploads/1757994937393-532374031.png"
+  },
+  {
+    "id": "1757995076436",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T03:57:56.436Z",
+    "url": "/uploads/1757995076371-551350578.mp4"
+  },
+  {
+    "id": "1757995102138",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "hello bro",
+    "message_type": "text",
+    "timestamp": "2025-09-16T03:58:22.138Z",
+    "url": null
+  },
+  {
+    "id": "1757995132883",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Trijnh nHuw Nhasdas 10:58",
+    "message_type": "text",
+    "timestamp": "2025-09-16T03:58:52.883Z",
+    "url": null
+  },
+  {
+    "id": "1757995395508",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "TuHOnTap.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T04:03:15.508Z",
+    "url": "/uploads/1757995395353-436723637.pdf"
+  },
+  {
+    "id": "1757995430962",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "TuHOnTap.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T04:03:50.962Z",
+    "url": "/uploads/1757995430814-292335361.pdf"
+  },
+  {
+    "id": "1757996353277",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Untitled Diagram.drawio.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T04:19:13.277Z",
+    "url": "http://localhost:5000/uploads/1757996353185-570901119.png"
+  },
+  {
+    "id": "1757996543554",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Untitled Diagram.drawio.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T04:22:23.554Z",
+    "url": "http://localhost:5000/uploads/1757996543521-735677765.png"
+  },
+  {
+    "id": "1757996797886",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Helllo",
+    "message_type": "text",
+    "timestamp": "2025-09-16T04:26:37.886Z",
+    "url": null
+  },
+  {
+    "id": "1757996810522",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thiết kế chưa có tên(1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T04:26:50.522Z",
+    "url": "http://localhost:5000/uploads/1757996810446-765293344.png"
+  },
+  {
+    "id": "1757997011550",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "TuHOnTap.docx",
+    "message_type": "file",
+    "timestamp": "2025-09-16T04:30:11.550Z",
+    "url": "http://localhost:5000/uploads/1757997011453-639739323.docx"
+  },
+  {
+    "id": "1757997057384",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Lec07_openmp.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T04:30:57.384Z",
+    "url": "http://localhost:5000/uploads/1757997057313-596274308.pdf"
+  },
+  {
+    "id": "1758002841314",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "hello",
+    "message_type": "text",
+    "timestamp": "2025-09-16T06:07:21.314Z",
+    "url": null
+  },
+  {
+    "id": "1758002853830",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "TuHOnTap.docx",
+    "message_type": "file",
+    "timestamp": "2025-09-16T06:07:33.830Z",
+    "url": "http://localhost:5000/uploads/1758002853732-500777320.docx"
+  },
+  {
+    "id": "1758002867188",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T06:07:47.188Z",
+    "url": "http://localhost:5000/uploads/1758002867125-991710005.mp4"
+  },
+  {
+    "id": "1758003018824",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Lec07_openmp.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T06:10:18.824Z",
+    "url": [
+      "",
+      "/uploads/1758003018744-401626781.pdf"
+    ]
+  },
+  {
+    "id": "1758003095085",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Tuan3.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T06:11:35.085Z",
+    "url": "/uploads/1758003095018-430979764.pdf"
+  },
+  {
+    "id": "1758003221816",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "TuHOnTap.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T06:13:41.816Z",
+    "url": "/uploads/1758003221739-653297472.pdf"
+  },
+  {
+    "id": "1758003268507",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thiết kế chưa có tên(3).png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T06:14:28.507Z",
+    "url": "/uploads/1758003268437-559367036.png"
+  },
+  {
+    "id": "1758003282302",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T06:14:42.302Z",
+    "url": "/uploads/1758003282258-557307337.mp4"
+  },
+  {
+    "id": "1758003368277",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "uml.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T06:16:08.277Z",
+    "url": "/uploads/1758003368237-860225086.png"
+  },
+  {
+    "id": "1758003925551",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T06:25:25.551Z",
+    "url": "http://localhost:5000/uploads/1758003925523-630511865.mp4"
+  },
+  {
+    "id": "1758003947142",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "TuHOnTap.docx",
+    "message_type": "file",
+    "timestamp": "2025-09-16T06:25:47.143Z",
+    "url": "http://localhost:5000/uploads/1758003946999-555903077.docx"
+  },
+  {
+    "id": "1758013005778",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Hello",
+    "message_type": "text",
+    "timestamp": "2025-09-16T08:56:45.778Z",
+    "url": null
+  },
+  {
+    "id": "1758013025419",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "👍",
+    "message_type": "text",
+    "timestamp": "2025-09-16T08:57:05.419Z",
+    "url": null
+  },
+  {
+    "id": "1758013032362",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "👍",
+    "message_type": "text",
+    "timestamp": "2025-09-16T08:57:12.362Z",
+    "url": null
+  },
+  {
+    "id": "1758013035095",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "👍",
+    "message_type": "text",
+    "timestamp": "2025-09-16T08:57:15.095Z",
+    "url": null
+  },
+  {
+    "id": "1758013037350",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "👍",
+    "message_type": "text",
+    "timestamp": "2025-09-16T08:57:17.350Z",
+    "url": null
+  },
+  {
+    "id": "1758013122044",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "uml(1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T08:58:42.044Z",
+    "url": [
+      "",
+      "/uploads/1758013121976-694221593.png"
+    ]
+  },
+  {
+    "id": "1758013171155",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "uml(1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T08:59:31.155Z",
+    "url": "/uploads/1758013171099-89976843.png"
+  },
+  {
+    "id": "1758013204467",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "lab3.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T09:00:04.467Z",
+    "url": "/uploads/1758013204368-663024108.pdf"
+  },
+  {
+    "id": "1758013259521",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T09:00:59.521Z",
+    "url": "/uploads/1758013259444-321430161.mp4"
+  },
+  {
+    "id": "1758013366258",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "TuHOnTap.docx",
+    "message_type": "file",
+    "timestamp": "2025-09-16T09:02:46.258Z",
+    "url": "/uploads/1758013366190-833637459.docx"
+  },
+  {
+    "id": "1758013405910",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Untitled Diagram.drawio.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T09:03:25.910Z",
+    "url": "/uploads/1758013405811-187147377.png"
+  },
+  {
+    "id": "1758013442972",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T09:04:02.972Z",
+    "url": "/uploads/1758013442885-636637866.mp4"
+  },
+  {
+    "id": "1758013515635",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Untitled Diagram.drawio.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T09:05:15.635Z",
+    "url": "/uploads/1758013515572-641556705.png"
+  },
+  {
+    "id": "1758013572002",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T09:06:12.002Z",
+    "url": "/uploads/1758013571912-771642304.mp4"
+  },
+  {
+    "id": "1758013588021",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "TrinhNhuNhat_23010600.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T09:06:28.021Z",
+    "url": "/uploads/1758013587934-934626422.pdf"
+  },
+  {
+    "id": "1758013621496",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thiết kế chưa có tên(5) (1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T09:07:01.496Z",
+    "url": "/uploads/1758013621430-351024448.png"
+  },
+  {
+    "id": "1758013671702",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Untitled Diagram.drawio.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T09:07:51.702Z",
+    "url": "/uploads/1758013671614-992054020.png"
+  },
+  {
+    "id": "1758013692052",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "baitap.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T09:08:12.052Z",
+    "url": "/uploads/1758013691931-818949273.pdf"
+  },
+  {
+    "id": "1758013726167",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T09:08:46.167Z",
+    "url": "/uploads/1758013726093-137682166.mp4"
+  },
+  {
+    "id": "1758014282870",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Untitled Diagram.drawio.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T09:18:02.870Z",
+    "url": "/uploads/1758014282745-434172589.png"
+  },
+  {
+    "id": "1758014343514",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "1758013366190-833637459(4).docx",
+    "message_type": "file",
+    "timestamp": "2025-09-16T09:19:03.514Z",
+    "url": "/uploads/1758014343343-111652993.docx"
+  },
+  {
+    "id": "1758014358953",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T09:19:18.953Z",
+    "url": "/uploads/1758014358828-660922834.mp4"
+  },
+  {
+    "id": "1758015030906",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Lec07_openmp.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T09:30:30.906Z",
+    "url": "/http://localhost:5000/uploads/1758015030612-990969338.pdf"
+  },
+  {
+    "id": "1758015071005",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "fresh.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T09:31:11.005Z",
+    "url": "/http://localhost:5000/uploads/1758015070802-757490607.png"
+  },
+  {
+    "id": "1758015123261",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T09:32:03.261Z",
+    "url": "/http://localhost:5000/uploads/1758015123112-234661701.mp4"
+  },
+  {
+    "id": "1758015251806",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T09:34:11.806Z",
+    "url": "/http://localhost:5000/uploads/1758015251594-396009550.mp4"
+  },
+  {
+    "id": "1758015718230",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "sdasdas",
+    "message_type": "text",
+    "timestamp": "2025-09-16T09:41:58.230Z",
+    "url": null
+  },
+  {
+    "id": "1758016217448",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "TuHOnTap.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T09:50:17.448Z",
+    "url": "/uploads/1758016217266-935260307.pdf"
+  },
+  {
+    "id": "1758016250763",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Thiết kế chưa có tên(5).png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T09:50:50.763Z",
+    "url": "/uploads/1758016250689-362078952.png"
+  },
+  {
+    "id": "1758016268441",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T09:51:08.441Z",
+    "url": "/uploads/1758016268359-863774010.mp4"
+  },
+  {
+    "id": "1758016338957",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "TuHOnTap.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T09:52:18.957Z",
+    "url": "/uploads/1758016338864-491756623.pdf"
+  },
+  {
+    "id": "1758016426139",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T09:53:46.139Z",
+    "url": "/uploads/1758016426055-192870650.mp4"
+  },
+  {
+    "id": "1758016541724",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Untitled Diagram.drawio(2).png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T09:55:41.724Z",
+    "url": "/uploads/1758016541570-960634053.png"
+  },
+  {
+    "id": "1758016681530",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Untitled Diagram.drawio.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T09:58:01.530Z",
+    "url": "/uploads/1758016681334-223893339.png"
+  },
+  {
+    "id": "1758016948923",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "gradient_descent.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T10:02:28.923Z",
+    "url": "/uploads/1758016948668-265596764.pdf"
+  },
+  {
+    "id": "1758016991644",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "fresh.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T10:03:11.644Z",
+    "url": "/uploads/1758016991354-895401728.png"
+  },
+  {
+    "id": "1758017039006",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Untitled Diagram.drawio.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T10:03:59.006Z",
+    "url": "/uploads/1758017038828-49853010.png"
+  },
+  {
+    "id": "1758017451650",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "uml(1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T10:10:51.650Z",
+    "url": "/uploads/1758017451455-410885167.png"
+  },
+  {
+    "id": "1758017490081",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Tuan3.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T10:11:30.081Z",
+    "url": "/uploads/1758017489857-609150552.pdf"
+  },
+  {
+    "id": "1758018292279",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "dsadsasd",
+    "message_type": "text",
+    "timestamp": "2025-09-16T10:24:52.279Z",
+    "url": null
+  },
+  {
+    "id": "1758018378467",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Nhất",
+    "message_type": "text",
+    "timestamp": "2025-09-16T10:26:18.467Z",
+    "url": null
+  },
+  {
+    "id": "1758018486741",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "đá",
+    "message_type": "text",
+    "timestamp": "2025-09-16T10:28:06.741Z",
+    "url": null
+  },
+  {
+    "id": "1758018493931",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "đá",
+    "message_type": "text",
+    "timestamp": "2025-09-16T10:28:13.931Z",
+    "url": null
+  },
+  {
+    "id": "1758018516962",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "ádda",
+    "message_type": "text",
+    "timestamp": "2025-09-16T10:28:36.962Z",
+    "url": null
+  },
+  {
+    "id": "1758018526278",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "ádad",
+    "message_type": "text",
+    "timestamp": "2025-09-16T10:28:46.278Z",
+    "url": null
+  },
+  {
+    "id": "1758018569607",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "đasa",
+    "message_type": "text",
+    "timestamp": "2025-09-16T10:29:29.607Z",
+    "url": null
+  },
+  {
+    "id": "1758018590395",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Nhất",
+    "message_type": "text",
+    "timestamp": "2025-09-16T10:29:50.395Z",
+    "url": null
+  },
+  {
+    "id": "1758018827305",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Trinh Nhu Nhat",
+    "message_type": "text",
+    "timestamp": "2025-09-16T10:33:47.305Z",
+    "url": null
+  },
+  {
+    "id": "1758019067416",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "5:37",
+    "message_type": "text",
+    "timestamp": "2025-09-16T10:37:47.416Z",
+    "url": null
+  },
+  {
+    "id": "1758019079640",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "avatar.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T10:37:59.640Z",
+    "url": "/uploads/1758019079445-733977273.png"
+  },
+  {
+    "id": "1758019107116",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "1757842855620-545841328.docx",
+    "message_type": "file",
+    "timestamp": "2025-09-16T10:38:27.116Z",
+    "url": "/uploads/1758019107008-136030219.docx"
+  },
+  {
+    "id": "1758019135057",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T10:38:55.057Z",
+    "url": "/uploads/1758019134958-937315503.mp4"
+  },
+  {
+    "id": "1758019341245",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "rotten.png",
+    "message_type": "image",
+    "timestamp": "2025-09-16T10:42:21.245Z",
+    "url": "/uploads/1758019341149-90541748.png"
+  },
+  {
+    "id": "1758019359346",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Tuan3.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-16T10:42:39.346Z",
+    "url": "/uploads/1758019359201-713861069.pdf"
+  },
+  {
+    "id": "1758019392118",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T10:43:12.118Z",
+    "url": "/uploads/1758019392004-515942363.mp4"
+  },
+  {
+    "id": "1758019440902",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T10:44:00.902Z",
+    "url": "/uploads/1758019440782-18285607.mp4"
+  },
+  {
+    "id": "1758019463310",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "1757842855620-545841328.docx",
+    "message_type": "file",
+    "timestamp": "2025-09-16T10:44:23.310Z",
+    "url": "/uploads/1758019463204-561019733.docx"
+  },
+  {
+    "id": "1758019481054",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T10:44:41.054Z",
+    "url": "/uploads/1758019480888-115361040.mp4"
+  },
+  {
+    "id": "1758019511921",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "34a261fd3723807dd932(1).jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-16T10:45:11.921Z",
+    "url": "/uploads/1758019511809-299877800.jpg"
+  },
+  {
+    "id": "1758019774375",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "34a261fd3723807dd932(1).jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-16T10:49:34.375Z",
+    "url": "/uploads/1758019774287-640457208.jpg"
+  },
+  {
+    "id": "1758019811856",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-16T10:50:11.856Z",
+    "url": "/uploads/1758019811737-704388217.mp4"
+  },
+  {
+    "id": "1758096390674",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Xin chào bạn",
+    "message_type": "text",
+    "timestamp": "2025-09-17T08:06:30.674Z",
+    "url": null
+  },
+  {
+    "id": "1758096491794",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Hôm nay ngày 17/9",
+    "message_type": "text",
+    "timestamp": "2025-09-17T08:08:11.794Z",
+    "url": null
+  },
+  {
+    "id": "1758096548238",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Bạn có ở đó kh",
+    "message_type": "text",
+    "timestamp": "2025-09-17T08:09:08.238Z",
+    "url": null
+  },
+  {
+    "id": "1758096696214",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Bạn oiii",
+    "message_type": "text",
+    "timestamp": "2025-09-17T08:11:36.214Z",
+    "url": null
+  },
+  {
+    "id": "1758096719190",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Bạn oii x1",
+    "message_type": "text",
+    "timestamp": "2025-09-17T08:11:59.190Z",
+    "url": null
+  },
+  {
+    "id": "1758096955459",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thay dc tin nhắn r",
+    "message_type": "text",
+    "timestamp": "2025-09-17T08:15:55.459Z",
+    "url": null
+  },
+  {
+    "id": "1758097308879",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thêm tiêu đề phụ.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:21:48.879Z",
+    "url": "/uploads/1758097308784-530012985.png"
+  },
+  {
+    "id": "1758098102347",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "90c24e2089de3d8064cf(1).jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:35:02.347Z",
+    "url": "/uploads/1758098102210-608216125.jpg"
+  },
+  {
+    "id": "1758098158726",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "fresh.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:35:58.726Z",
+    "url": "/uploads/1758098158527-321426363.png"
+  },
+  {
+    "id": "1758098200215",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "BaiToanQuyetDinh-1.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-17T08:36:40.215Z",
+    "url": "/uploads/1758098200081-378857997.pdf"
+  },
+  {
+    "id": "1758098225258",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thêm tiêu đề phụ.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:37:05.258Z",
+    "url": "/uploads/1758098225058-993414816.png"
+  },
+  {
+    "id": "1758098236180",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-17T08:37:16.180Z",
+    "url": "/uploads/1758098236077-270907729.mp4"
+  },
+  {
+    "id": "1758098428197",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "3ff69cee554dde13875c.jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:40:28.197Z",
+    "url": "/uploads/1758098427924-65625456.jpg"
+  },
+  {
+    "id": "1758098565896",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "982c08b1c212494c1003.jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:42:45.896Z",
+    "url": "/uploads/1758098565496-407569397.jpg"
+  },
+  {
+    "id": "1758098596056",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "90c24e2089de3d8064cf.jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:43:16.056Z",
+    "url": "/uploads/1758098595843-747018358.jpg"
+  },
+  {
+    "id": "1758098610120",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-16 13-42-20.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:43:30.120Z",
+    "url": "/uploads/1758098609731-281206269.png"
+  },
+  {
+    "id": "1758098628471",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-17 15-25-26.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:43:48.471Z",
+    "url": "/uploads/1758098628064-471516101.png"
+  },
+  {
+    "id": "1758098641611",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "982c08b1c212494c1003.jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:44:01.611Z",
+    "url": "/uploads/1758098641238-530586923.jpg"
+  },
+  {
+    "id": "1758098650578",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-17 15-25-26.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:44:10.578Z",
+    "url": "/uploads/1758098650281-311630728.png"
+  },
+  {
+    "id": "1758098659324",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-13 23-30-04.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:44:19.324Z",
+    "url": "/uploads/1758098658913-296051538.png"
+  },
+  {
+    "id": "1758098668382",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "3ff69cee554dde13875c.jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:44:28.382Z",
+    "url": "/uploads/1758098667946-215145238.jpg"
+  },
+  {
+    "id": "1758098696224",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "34a261fd3723807dd932(1).jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:44:56.224Z",
+    "url": "/uploads/1758098695823-602085414.jpg"
+  },
+  {
+    "id": "1758098703862",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "4f09a45575f6fea8a7e7.jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:45:03.862Z",
+    "url": "/uploads/1758098703493-959155873.jpg"
+  },
+  {
+    "id": "1758098718088",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "4f09a45575f6fea8a7e7.jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:45:18.088Z",
+    "url": "/uploads/1758098717743-356577288.jpg"
+  },
+  {
+    "id": "1758098728335",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "982c08b1c212494c1003.jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:45:28.335Z",
+    "url": "/uploads/1758098727989-504034332.jpg"
+  },
+  {
+    "id": "1758098751651",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-13 23-30-04.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:45:51.651Z",
+    "url": "/uploads/1758098751227-665819209.png"
+  },
+  {
+    "id": "1758098867775",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-17T08:47:47.775Z",
+    "url": "/uploads/1758098867281-481343930.mp4"
+  },
+  {
+    "id": "1758099234486",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thiết kế chưa có tên(1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:53:54.486Z",
+    "url": "/uploads/1758099234129-8128543.png"
+  },
+  {
+    "id": "1758099272569",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thiết kế chưa có tên(1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:54:32.569Z",
+    "url": "/uploads/1758099272146-283156250.png"
+  },
+  {
+    "id": "1758099291764",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "avatar.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:54:51.764Z",
+    "url": "/uploads/1758099291442-931179833.png"
+  },
+  {
+    "id": "1758099465458",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Nội dung đoạn văn bản của bạn.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:57:45.458Z",
+    "url": "/uploads/1758099465070-262010385.png"
+  },
+  {
+    "id": "1758099562518",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "avatar.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:59:22.518Z",
+    "url": "/uploads/1758099562057-683008386.png"
+  },
+  {
+    "id": "1758099571505",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-12 15-19-36.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:59:31.505Z",
+    "url": "/uploads/1758099571044-587289245.png"
+  },
+  {
+    "id": "1758099581100",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "fresh.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T08:59:41.100Z",
+    "url": "/uploads/1758099580692-650765622.png"
+  },
+  {
+    "id": "1758099882217",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "content.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:04:42.217Z",
+    "url": "/uploads/1758099882045-785055168.png"
+  },
+  {
+    "id": "1758100107355",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "avatar.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:08:27.355Z",
+    "url": "/uploads/1758100107114-156404431.png"
+  },
+  {
+    "id": "1758100266845",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-16 16-32-22.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:11:06.845Z",
+    "url": "/uploads/1758100266694-841992805.png"
+  },
+  {
+    "id": "1758100387038",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-16 16-32-22.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:13:07.038Z",
+    "url": "/uploads/1758100386937-418625424.png"
+  },
+  {
+    "id": "1758100602212",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-16 16-59-30.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:16:42.213Z",
+    "url": "/uploads/1758100602058-459334767.png"
+  },
+  {
+    "id": "1758100676882",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-16 16-32-22.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:17:56.882Z",
+    "url": "/uploads/1758100676750-979923567.png"
+  },
+  {
+    "id": "1758100688581",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1757842855620-545841328 (1).docx",
+    "message_type": "file",
+    "timestamp": "2025-09-17T09:18:08.581Z",
+    "url": "/uploads/1758100688459-98651584.docx"
+  },
+  {
+    "id": "1758100729715",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-12 15-11-47.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:18:49.715Z",
+    "url": "/uploads/1758100729607-590215990.png"
+  },
+  {
+    "id": "1758101097935",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-07-19 21-20-15.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:24:57.935Z",
+    "url": "/uploads/1758101097835-847032042.png"
+  },
+  {
+    "id": "1758101108402",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-16 16-59-30.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:25:08.402Z",
+    "url": "/uploads/1758101108280-729220037.png"
+  },
+  {
+    "id": "1758101500186",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-17T09:31:40.186Z",
+    "url": "/uploads/1758101500085-837639281.mp4"
+  },
+  {
+    "id": "1758101518740",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1757842855620-545841328.docx",
+    "message_type": "file",
+    "timestamp": "2025-09-17T09:31:58.740Z",
+    "url": "/uploads/1758101518589-833179954.docx"
+  },
+  {
+    "id": "1758101539744",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "content.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:32:19.744Z",
+    "url": "/uploads/1758101539644-647253800.png"
+  },
+  {
+    "id": "1758101800894",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Nội dung đoạn văn bản của bạn.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:36:40.894Z",
+    "url": "/uploads/1758101800775-492147696.png"
+  },
+  {
+    "id": "1758101823273",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-17 16-26-01.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:37:03.273Z",
+    "url": "/uploads/1758101823134-787988915.png"
+  },
+  {
+    "id": "1758102325781",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-16 16-59-30.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:45:25.781Z",
+    "url": "/uploads/1758102325642-317560275.png"
+  },
+  {
+    "id": "1758102785527",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-16 16-59-30.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T09:53:05.527Z",
+    "url": "/uploads/1758102785444-573490922.png"
+  },
+  {
+    "id": "1758103224254",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-05-30 16-32-30.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T10:00:24.255Z",
+    "url": "/uploads/1758103224179-424939919.png"
+  },
+  {
+    "id": "1758103255644",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-16 13-42-20.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T10:00:55.644Z",
+    "url": "/uploads/1758103255523-808105216.png"
+  },
+  {
+    "id": "1758103263698",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Nhóm 8 - Đề tài 3 - Quản lý đặt phòng khách sạn.docx",
+    "message_type": "file",
+    "timestamp": "2025-09-17T10:01:03.698Z",
+    "url": "/uploads/1758103263567-541380918.docx"
+  },
+  {
+    "id": "1758103275162",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "hello",
+    "message_type": "text",
+    "timestamp": "2025-09-17T10:01:15.162Z",
+    "url": null
+  },
+  {
+    "id": "1758103314339",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-12 14-54-39.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T10:01:54.339Z",
+    "url": "/uploads/1758103314238-264936719.png"
+  },
+  {
+    "id": "1758103527501",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-16 16-59-30.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T10:05:27.501Z",
+    "url": "/uploads/1758103527402-537384512.png"
+  },
+  {
+    "id": "1758103664085",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-09-16 16-32-22.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T10:07:44.085Z",
+    "url": "/uploads/1758103663959-918140578.png"
+  },
+  {
+    "id": "1758103767318",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-06-04 17-32-26.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T10:09:27.318Z",
+    "url": "/uploads/1758103767235-565506766.png"
+  },
+  {
+    "id": "1758103785929",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-06-07 18-25-51.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T10:09:45.929Z",
+    "url": "/uploads/1758103785839-5963789.png"
+  },
+  {
+    "id": "1758104475008",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "90c24e2089de3d8064cf.jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-17T10:21:15.008Z",
+    "url": "/uploads/1758104474784-811449126.jpg"
+  },
+  {
+    "id": "1758104745193",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "avatar.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T10:25:45.193Z",
+    "url": "/uploads/1758104744831-493094755.png"
+  },
+  {
+    "id": "1758104781020",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-06-04 17-32-26.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T10:26:21.020Z",
+    "url": "/uploads/1758104780808-928358690.png"
+  },
+  {
+    "id": "1758104829173",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Screenshot from 2025-06-04 17-32-06.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T10:27:09.173Z",
+    "url": "/uploads/1758104829085-480554169.png"
+  },
+  {
+    "id": "1758104870293",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1758013366190-833637459.docx",
+    "message_type": "file",
+    "timestamp": "2025-09-17T10:27:50.293Z",
+    "url": "/uploads/1758104870156-522275640.docx"
+  },
+  {
+    "id": "1758104876595",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1758019811737-704388217.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-17T10:27:56.595Z",
+    "url": "/uploads/1758104876484-496106973.mp4"
+  },
+  {
+    "id": "1758104885613",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "fresh.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T10:28:05.613Z",
+    "url": "/uploads/1758104885514-452283092.png"
+  },
+  {
+    "id": "1758111499000",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Trịnh NHư Nhất",
+    "message_type": "text",
+    "timestamp": "2025-09-17T12:18:19.000Z",
+    "url": null
+  },
+  {
+    "id": "1758111508272",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Hello Banj nhaaa",
+    "message_type": "text",
+    "timestamp": "2025-09-17T12:18:28.272Z",
+    "url": null
+  },
+  {
+    "id": "1758111515272",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1758019107008-136030219 (1).docx",
+    "message_type": "file",
+    "timestamp": "2025-09-17T12:18:35.272Z",
+    "url": "/uploads/1758111515154-502191286.docx"
+  },
+  {
+    "id": "1758111525187",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "avatar.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T12:18:45.187Z",
+    "url": "/uploads/1758111524876-25756340.png"
+  },
+  {
+    "id": "1758111555832",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-17T12:19:15.832Z",
+    "url": "/uploads/1758111555680-346023119.mp4"
+  },
+  {
+    "id": "1758111726364",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "http://localhost:3000/dashboard",
+    "message_type": "text",
+    "timestamp": "2025-09-17T12:22:06.364Z",
+    "url": null
+  },
+  {
+    "id": "1758111864593",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "avatar.png",
+    "message_type": "image",
+    "timestamp": "2025-09-17T12:24:24.593Z",
+    "url": "/uploads/1758111864483-40714726.png"
+  },
+  {
+    "id": "1758112383765",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Chat cùi vãi ò",
+    "message_type": "text",
+    "timestamp": "2025-09-17T12:33:03.765Z",
+    "url": null
+  },
+  {
+    "id": "1758114403808",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "982c08b1c212494c1003.jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-17T13:06:43.808Z",
+    "url": "/uploads/1758114403718-110455041.jpg"
+  },
+  {
+    "id": "1758177077084",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thiết kế chưa có tên(1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:31:17.084Z",
+    "url": "/uploads/1758177076967-925729914.png"
+  },
+  {
+    "id": "1758177101682",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Nội dung đoạn văn bản của bạn.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:31:41.682Z",
+    "url": "/uploads/1758177101542-783176334.png"
+  },
+  {
+    "id": "1758177121890",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "edit.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:32:01.890Z",
+    "url": "/uploads/1758177121760-891104522.png"
+  },
+  {
+    "id": "1758177138334",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "avatar.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:32:18.334Z",
+    "url": "/uploads/1758177138204-461103032.png"
+  },
+  {
+    "id": "1758177420935",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "hLPDRnCn4BtlhnZbWeGK2Quhj6eBI4GgfQ95ukfu9yIgrrxy8HH2_plEPfsTc4b1eJqatV7pxBmtp-DS-21SY9skhkmIvWrSQYKHQbYZrhQwGDEcnGdb7vJfXHCTI2sylmp1gMKCk93MtAcV2A-gQbY1AsiJzXjiAu0vt0MtUrZkWukM1gD7ToCwf35dRJUYhgqK-fq8UAyw1Bb6-R0mfrO-nK3JfBf3z4EajN6f4KHdemdxxSg7DxVel3.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:37:00.935Z",
+    "url": "/uploads/1758177420780-628048532.png"
+  },
+  {
+    "id": "1758177426698",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "home_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:37:06.698Z",
+    "url": "/uploads/1758177426585-104264076.png"
+  },
+  {
+    "id": "1758177799370",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Thiết kế chưa có tên(1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:43:19.370Z",
+    "url": "/uploads/1758177799242-192158063.png"
+  },
+  {
+    "id": "1758177822036",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thiết kế chưa có tên(1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:43:42.036Z",
+    "url": "/uploads/1758177821892-834770048.png"
+  },
+  {
+    "id": "1758178029769",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-18T06:47:09.769Z",
+    "url": "/uploads/1758178029506-374696019.mp4"
+  },
+  {
+    "id": "1758178229049",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "edit.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:50:29.049Z",
+    "url": "/uploads/1758178228882-114902379.png"
+  },
+  {
+    "id": "1758178253071",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thiết kế chưa có tên(1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:50:53.071Z",
+    "url": "/uploads/1758178252947-93774811.png"
+  },
+  {
+    "id": "1758178316012",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "content.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:51:56.012Z",
+    "url": "/uploads/1758178315865-510424848.png"
+  },
+  {
+    "id": "1758178396527",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "fresh.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:53:16.527Z",
+    "url": "/uploads/1758178396303-552134896.png"
+  },
+  {
+    "id": "1758178574223",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Nội dung đoạn văn bản của bạn.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:56:14.223Z",
+    "url": "/uploads/1758178574064-180549542.png"
+  },
+  {
+    "id": "1758178709302",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "90c24e2089de3d8064cf(1).jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-18T06:58:29.302Z",
+    "url": "/uploads/1758178709167-55989379.jpg"
+  },
+  {
+    "id": "1758179065553",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "fresh.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:04:25.553Z",
+    "url": "/uploads/1758179065373-52449082.png"
+  },
+  {
+    "id": "1758179169138",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Nội dung đoạn văn bản của bạn.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:06:09.138Z",
+    "url": "/uploads/1758179168844-442760092.png"
+  },
+  {
+    "id": "1758179451025",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "90c24e2089de3d8064cf(1).jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:10:51.025Z",
+    "url": "/uploads/1758179450729-936498708.jpg"
+  },
+  {
+    "id": "1758179678667",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Nội dung đoạn văn bản của bạn.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:14:38.667Z",
+    "url": "/uploads/1758179678313-341724125.png"
+  },
+  {
+    "id": "1758179692318",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "fresh.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:14:52.318Z",
+    "url": "/uploads/1758179692032-767868176.png"
+  },
+  {
+    "id": "1758180497957",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Nội dung đoạn văn bản của bạn.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:28:17.957Z",
+    "url": "/uploads/1758180497843-529864347.png"
+  },
+  {
+    "id": "1758180555701",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-18T07:29:15.701Z",
+    "url": "/uploads/1758180555502-227173212.mp4"
+  },
+  {
+    "id": "1758180622869",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "BaiToanQuyetDinh.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-18T07:30:22.869Z",
+    "url": "/uploads/1758180622694-529705218.pdf"
+  },
+  {
+    "id": "1758180677315",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "https://github.com",
+    "message_type": "text",
+    "timestamp": "2025-09-18T07:31:17.315Z",
+    "url": null
+  },
+  {
+    "id": "1758180708817",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Thiết kế chưa có tên(2).png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:31:48.817Z",
+    "url": "/uploads/1758180708617-183590520.png"
+  },
+  {
+    "id": "1758180744186",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "fresh.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:32:24.186Z",
+    "url": "/uploads/1758180744042-988007625.png"
+  },
+  {
+    "id": "1758180849809",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "minus.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:34:09.809Z",
+    "url": "/uploads/1758180849674-743228461.png"
+  },
+  {
+    "id": "1758180888077",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "34a261fd3723807dd932(1).jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:34:48.077Z",
+    "url": "/uploads/1758180887898-163431185.jpg"
+  },
+  {
+    "id": "1758180922386",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "hello",
+    "message_type": "text",
+    "timestamp": "2025-09-18T07:35:22.386Z",
+    "url": null
+  },
+  {
+    "id": "1758181842974",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thiết kế chưa có tên(1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:50:42.974Z",
+    "url": "/uploads/1758181842792-146594147.png"
+  },
+  {
+    "id": "1758182318254",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Thiết kế chưa có tên(1).png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:58:38.254Z",
+    "url": "/uploads/1758182318100-365116609.png"
+  },
+  {
+    "id": "1758182383619",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Nội dung đoạn văn bản của bạn.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T07:59:43.619Z",
+    "url": "/uploads/1758182383431-744258786.png"
+  },
+  {
+    "id": "1758182849426",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "fresh.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T08:07:29.426Z",
+    "url": "/uploads/1758182849111-191106147.png"
+  },
+  {
+    "id": "1758184185785",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Thiết kế chưa có tên.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T08:29:45.785Z",
+    "url": "/uploads/1758184185662-121855907.png"
+  },
+  {
+    "id": "1758184204959",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "search.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T08:30:04.959Z",
+    "url": "/uploads/1758184204800-16879418.png"
+  },
+  {
+    "id": "1758184445115",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "fresh.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T08:34:05.116Z",
+    "url": "/uploads/1758184444989-722527639.png"
+  },
+  {
+    "id": "1758184469732",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "plus.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T08:34:29.732Z",
+    "url": "/uploads/1758184469561-859205932.png"
+  },
+  {
+    "id": "1758184490120",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-18T08:34:50.120Z",
+    "url": "/uploads/1758184489824-227361638.mp4"
+  },
+  {
+    "id": "1758184719400",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "edit.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T08:38:39.400Z",
+    "url": "/uploads/1758184719253-26098596.png"
+  },
+  {
+    "id": "1758184729808",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-18T08:38:49.809Z",
+    "url": "/uploads/1758184729638-169628913.mp4"
+  },
+  {
+    "id": "1758184741074",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "1758103263567-541380918.docx",
+    "message_type": "file",
+    "timestamp": "2025-09-18T08:39:01.074Z",
+    "url": "/uploads/1758184740937-952171740.docx"
+  },
+  {
+    "id": "1758184757320",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "hello",
+    "message_type": "text",
+    "timestamp": "2025-09-18T08:39:17.320Z",
+    "url": null
+  },
+  {
+    "id": "1758184866099",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "👍",
+    "message_type": "text",
+    "timestamp": "2025-09-18T08:41:06.099Z",
+    "url": null
+  },
+  {
+    "id": "1758185010566",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-18T08:43:30.566Z",
+    "url": "/uploads/1758185010386-830033902.mp4"
+  },
+  {
+    "id": "1758185028142",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Lec07_openmp.pdf",
+    "message_type": "file",
+    "timestamp": "2025-09-18T08:43:48.142Z",
+    "url": "/uploads/1758185027971-677765089.pdf"
+  },
+  {
+    "id": "1758185242124",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "3ff69cee554dde13875c.jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-18T08:47:22.124Z",
+    "url": "/uploads/1758185241961-930293166.jpg"
+  },
+  {
+    "id": "1758185249560",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-18T08:47:29.560Z",
+    "url": "/uploads/1758185249387-353247527.mp4"
+  },
+  {
+    "id": "1758185729856",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Nội dung đoạn văn bản của bạn.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T08:55:29.856Z",
+    "url": "/uploads/1758185729710-719535095.png"
+  },
+  {
+    "id": "1758185759729",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1757842855620-545841328 (1).docx",
+    "message_type": "file",
+    "timestamp": "2025-09-18T08:55:59.729Z",
+    "url": "/uploads/1758185759547-941503365.docx"
+  },
+  {
+    "id": "1758185809689",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "HelloScene.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-18T08:56:49.689Z",
+    "url": "/uploads/1758185809557-196625630.mp4"
+  },
+  {
+    "id": "1758185820320",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "preview-image.png",
+    "message_type": "image",
+    "timestamp": "2025-09-18T08:57:00.320Z",
+    "url": "/uploads/1758185820163-953994493.png"
+  },
+  {
+    "id": "1758185828680",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "1758013366190-833637459(4).docx",
+    "message_type": "file",
+    "timestamp": "2025-09-18T08:57:08.680Z",
+    "url": "/uploads/1758185828476-596153334.docx"
   }
 ]

@@ -15,6 +15,7 @@ import Detail from "~/components/Detail";
 import ProFile from "../ProFile";
 import Logout from "../Logout";
 import axios from "axios";
+import { io } from "socket.io-client";
 
 const cx = classNames.bind(styles);
 
