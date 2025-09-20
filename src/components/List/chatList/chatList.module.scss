@@ -539,3 +539,12 @@
     }
   }
 }
+
+.message-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.message-icon {
+  flex-shrink: 0;
+}
