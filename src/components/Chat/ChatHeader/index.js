@@ -29,9 +29,9 @@ function ChatHeader({ friend, onAvatarClick, onToggleDetail }) {
         </div>
       </div>
       <div className={cx("actions")}>
-        <button className={cx("action-btn")} title="Cuộc gọi thoại" aria-label="Cuộc gọi thoại">📞</button>
+        {/* <button className={cx("action-btn")} title="Cuộc gọi thoại" aria-label="Cuộc gọi thoại">📞</button> */}
         <button className={cx("action-btn")} title="Video call" aria-label="Video call">🎥</button>
-        <button className={cx("action-btn")} title="Thông tin cuộc trò chuyện" aria-label="Thông tin cuộc trò chuyện">ℹ️</button>
+        {/* <button className={cx("action-btn")} title="Thông tin cuộc trò chuyện" aria-label="Thông tin cuộc trò chuyện">ℹ️</button> */}
         <button className={cx("action-btn")} title="Tùy chọn khác" onClick={onToggleDetail} aria-label="Tùy chọn khác">⋮</button>
       </div>
     </div>

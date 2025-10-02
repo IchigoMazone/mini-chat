@@ -42,27 +42,23 @@ function ProFile({ onClose, datax }) {
   const [displayName, setDisplayName] = useState(null);
 
   console.log("ProFile :", datax)
-  console.log("ProFile :", userInfo.avatar)
-  console.log("ProFile :", userInfo.fullname)
-  console.log("ProFile :", userInfo.gender)
-  console.log("ProFile :", userInfo.birthday)
-  console.log("ProFile :", typeof userInfo.username)
+  console.log("ProFile :", userInfo._doc)
 
   //setDisplayName(userInfo.fullname);
 
   useEffect(() => {
-  if (userInfo) {
-    setDisplayName(userInfo.fullname); // đúng tên thuộc tính
+  if (userInfo._doc) {
+    setDisplayName(userInfo._doc.fullname); // đúng tên thuộc tính
 
-    if (userInfo.gender === "male") {
+    if (userInfo._doc.gender === "male") {
       setSelectedGender("Nam");
     }
     else {
       setSelectedGender("Nữ");
     }
 
-    if (userInfo.birthday) {
-      const [year, month, day] = userInfo.birthday.split("-");
+    if (userInfo._doc.birthday) {
+      const [year, month, day] = userInfo._doc?.birthday.split("-");
       setBirthDay(day);
       setBirthMonth(month);
       setBirthYear(year);
@@ -249,7 +245,7 @@ function ProFile({ onClose, datax }) {
               <div className={cx("avatar-display")}>
                 <img
                   className={cx("current-avatar")}
-                  src={userInfo.avatar ? `http://localhost:5000${userInfo.avatar}` : avatarIcon}
+                  src={userInfo._doc?.avatar ? `http://localhost:5000${userInfo._doc?.avatar}` : avatarIcon}
                   alt="avatar"
                 />
               </div>
@@ -285,7 +281,7 @@ function ProFile({ onClose, datax }) {
             <div className={cx("avatar-wrapper")}>
               <img
                 className={cx("avatar")}
-                src={userInfo.avatar ? `http://localhost:5000${userInfo.avatar}` : avatarIcon} 
+                src={userInfo._doc?.avatar ? `http://localhost:5000${userInfo._doc?.avatar}` : avatarIcon} 
                 alt="avatar"
               />
               <button 
@@ -329,7 +325,7 @@ function ProFile({ onClose, datax }) {
             <div className={cx("info-item")}>
               <span className={cx("info-label")}>Điện thoại</span>
               <span className={cx("info-value")}>
-                {userInfo.username ? userInfo.username.replace(/^0/, "+84") : ""}
+                {userInfo._doc?.username ? userInfo._doc?.username.replace(/^0/, "+84") : ""}
               </span>
             </div>
           </div>

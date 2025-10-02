@@ -1175,7 +1175,7 @@ function Chat({ friend, onToggleDetail, onUpdateChat }) {
 
   const [showProfile, setShowProFile] = useState(false);
   const [previewImage, setPreviewImage] = useState(null);
-  const [showSendRequestBar, setShowSendRequestBar] = useState(false);
+  const [showSendRequestBar, setShowSendRequestBar] = useState(true);
   
 
   // Các hàm callback và logic khác giữ nguyên, chỉ sửa phần liên quan đến emoji
@@ -1204,9 +1204,8 @@ function Chat({ friend, onToggleDetail, onUpdateChat }) {
   }, []);
 
   
-  if (!friend) {
-    return <EmptyState />;
-  }
+  if (!friend) return <EmptyState />;
+
 
   return (
     <div className={cx("chat")}>
@@ -1241,17 +1240,8 @@ function Chat({ friend, onToggleDetail, onUpdateChat }) {
       />
       <MediaUploadBar onMediaSelect={handleMediaSelect} />
       <ChatInput onSend={handleSend} />
-
-      {showProfile && 
-        <ProFile1 
-          onClose={() => setShowProFile(false)} 
-          datax={friend} 
-        />}
-      {previewImage && 
-        <ChatPreview 
-          imageUrl={previewImage} 
-          onClose={handleClosePreview} 
-        />}
+      {showProfile && <ProFile1 onClose={() => setShowProFile(false)} datax={friend} />}
+      {previewImage && <ChatPreview imageUrl={previewImage} onClose={handleClosePreview} />}
     </div>
   );
 }

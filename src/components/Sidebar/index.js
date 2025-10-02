@@ -54,7 +54,7 @@ function Sidebar({ activeIndex, setActiveIndex, datax }) {
             onClick={() => handleSetActive(0)}
           >
             <div className={cx('avatar-img')}>
-              <img src={userInfo.avatar ? `http://localhost:5000${userInfo.avatar}` : avatarIcon} alt="avatar" />
+              <img src={userInfo._doc?.avatar ? `http://localhost:5000${userInfo._doc.avatar}` : avatarIcon} alt="avatar" />
             </div>
           </div>
 

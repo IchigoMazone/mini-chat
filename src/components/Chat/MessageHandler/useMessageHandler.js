@@ -19,18 +19,22 @@ function useMessagesHandler(friend) {
     try {
       const payload = {
         friendId: friend.id,
-        limit: 50,
+        limit: 30,
       };
       if (before) {
         payload.before = before;
       }
-
+      
+      console.log('[FetchMessages] Sending payload:', payload); // Log payload
       const response = await axios.post("http://localhost:5000/api/chat/messages/", payload);
+      console.log('[FetchMessages] Raw response:', response); // Log toàn bộ response
+      console.log('[FetchMessages] Response data:', response.data.data); // Log data
 
-      if (response.status === 200 && Array.isArray(response.data)) {
-        const transformedMessages = response.data
+      if (response.status === 200) {
+        console.log("API cua message hien thi", response.data)
+        const transformedMessages = response.data.data
           .map((msg) => ({
-            id: msg.id,
+            id: msg._id,
             text: msg.message_type === "text" && typeof msg.content === "string" ? msg.content : "",
             type: msg.sender === friend.sender ? "sent" : "received",
             timestamp: new Date(msg.timestamp),

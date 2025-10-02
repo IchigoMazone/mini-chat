@@ -77,23 +77,63 @@ function saveConversation(userId, content) {
   // ghi lại file JSON
   fs.writeFileSync(filePath, JSON.stringify(chatList, null, 2), "utf-8");
 
-  console.log("✅ Đã ghi vào chatList.json thành công!");
+  console.log("Đã ghi vào chatList.json thành công!");
 }
 
 
-const login = (req, res) => {
-  const { username, password } = req.body;
-  const users = readUsers();
+// const login = (req, res) => {
+//   const { username, password } = req.body;
+//   const users = readUsers();
 
-  const user = users.find(u => u.username === username && u.password === password);
-  if (!user) {
+//   const user = users.find(u => u.username === username && u.password === password);
+//   if (!user) {
+//     return res.status(401).json({ message: "Sai tài khoản hoặc mật khẩu" });
+//   }
+
+//   const tokenJWT = jwt.sign(
+//     { id: user.id, username: user.username },
+//     SECRET_KEY,
+//     { expiresIn: "7d" } // token hết hạn 7 ngày
+//   );
+
+//   // Trả về client thông tin user + token
+//   res.json({
+//     message: "Đăng nhập thành công",
+//     user: { 
+//       id: user.id,
+//       username: user.username,
+//       email: user.email,
+//       avatar: user.avatar,
+//       fullname: user.fullname,
+//       gender: user.gender,
+//       birthday: user.birthday,
+//     },
+//     token: tokenJWT
+//   });
+// };
+
+
+const connectDB = require("../models/connectDB");
+const User = require("../models/userModel");
+
+const login = async (req, res) => {
+  const { username, password } = req.body;
+  
+  await connectDB ();
+
+  const user = await User.findOne({ username });
+
+  if (!user || user.password !== password) {
     return res.status(401).json({ message: "Sai tài khoản hoặc mật khẩu" });
   }
 
-  const tokenJWT = jwt.sign(
-    { id: user.id, username: user.username },
+    
+  const tokenJWT = jwt.sign({ 
+    id: user.id, 
+    username: user.username 
+  },
     SECRET_KEY,
-    { expiresIn: "7d" } // token hết hạn 7 ngày
+    { expiresIn: "7d" } 
   );
 
   // Trả về client thông tin user + token

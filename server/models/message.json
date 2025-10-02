@@ -4344,5 +4344,645 @@
     "message_type": "text",
     "timestamp": "2025-09-20T14:29:41.511Z",
     "url": null
+  },
+  {
+    "id": "1758379324124",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-09-20T14:42:04.124Z",
+    "url": null
+  },
+  {
+    "id": "1758379455439",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "2_1622800570007_369788.jpg",
+    "message_type": "image",
+    "timestamp": "2025-09-20T14:44:15.439Z",
+    "url": "/uploads/1758379455030-377049410.jpg"
+  },
+  {
+    "id": "1758380345989",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-09-20T14:59:05.989Z",
+    "url": null
+  },
+  {
+    "id": "1758521456463",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Nhất",
+    "message_type": "text",
+    "timestamp": "2025-09-22T06:10:56.463Z",
+    "url": null
+  },
+  {
+    "id": "1758521470183",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Nhất",
+    "message_type": "text",
+    "timestamp": "2025-09-22T06:11:10.183Z",
+    "url": null
+  },
+  {
+    "id": "1758521518197",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Hello",
+    "message_type": "text",
+    "timestamp": "2025-09-22T06:11:58.197Z",
+    "url": null
+  },
+  {
+    "id": "1758521532127",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "hello",
+    "message_type": "text",
+    "timestamp": "2025-09-22T06:12:12.127Z",
+    "url": null
+  },
+  {
+    "id": "1758521552971",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "ád",
+    "message_type": "text",
+    "timestamp": "2025-09-22T06:12:32.971Z",
+    "url": null
+  },
+  {
+    "id": "1758521562784",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "dá",
+    "message_type": "text",
+    "timestamp": "2025-09-22T06:12:42.784Z",
+    "url": null
+  },
+  {
+    "id": "1758521571374",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "11",
+    "message_type": "text",
+    "timestamp": "2025-09-22T06:12:51.375Z",
+    "url": null
+  },
+  {
+    "id": "1758521577462",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "11",
+    "message_type": "text",
+    "timestamp": "2025-09-22T06:12:57.462Z",
+    "url": null
+  },
+  {
+    "id": "1758521624908",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Nội dung đoạn văn bản của bạn.png",
+    "message_type": "image",
+    "timestamp": "2025-09-22T06:13:44.908Z",
+    "url": "/uploads/1758521624671-885023205.png"
+  },
+  {
+    "id": "1758521642180",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Trịnh NHư Nhats",
+    "message_type": "text",
+    "timestamp": "2025-09-22T06:14:02.180Z",
+    "url": null
+  },
+  {
+    "id": "1758521812832",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Screenshot from 2025-09-22 11-03-08.png",
+    "message_type": "image",
+    "timestamp": "2025-09-22T06:16:52.832Z",
+    "url": "/uploads/1758521812606-732825453.png"
+  },
+  {
+    "id": "1758521812833",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Day la link: https://github.com va https://facebook.com",
+    "message_type": "text",
+    "timestamp": "2025-09-22T06:16:52.832Z",
+    "url": null
+  },
+  {
+    "id": "1759223314860",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-09-30T09:08:34.861Z",
+    "url": null
+  },
+  {
+    "id": "1759225230280",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "1758013726093-137682166.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-30T09:40:30.280Z",
+    "url": "/uploads/1759225230232-326807814.mp4"
+  },
+  {
+    "id": "1759225249827",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "https://github.com",
+    "message_type": "text",
+    "timestamp": "2025-09-30T09:40:49.827Z",
+    "url": null
+  },
+  {
+    "id": "1759225714117",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "13691-251858985_medium.mp4",
+    "message_type": "video",
+    "timestamp": "2025-09-30T09:48:34.117Z",
+    "url": "/uploads/1759225714054-742941666.mp4"
+  },
+  {
+    "id": "1759250963300",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Trịnh Như Nhất",
+    "message_type": "text",
+    "timestamp": "2025-09-30T16:49:23.300Z",
+    "url": null
+  },
+  {
+    "id": "1759291629848",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "v1Gasx23FQhvX921v1HqLd98jGhw0as(1).rar",
+    "message_type": "file",
+    "timestamp": "2025-10-01T04:07:09.848Z",
+    "url": "/uploads/1759291629554-847321627.rar"
+  },
+  {
+    "id": "1759292574310",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "https://chatgpt.com/c/68dc9d71-c4ec-8320-a0f7-52cc1666a6ee",
+    "message_type": "text",
+    "timestamp": "2025-10-01T04:22:54.310Z",
+    "url": null
+  },
+  {
+    "id": "1759296395246",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Trịnh Như Nhát 12:26",
+    "message_type": "text",
+    "timestamp": "2025-10-01T05:26:35.246Z",
+    "url": null
+  },
+  {
+    "id": "1759296565399",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Trịnh Như Nhất",
+    "message_type": "text",
+    "timestamp": "2025-10-01T05:29:25.399Z",
+    "url": null
+  },
+  {
+    "id": "1759296587136",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-10-01T05:29:47.136Z",
+    "url": null
+  },
+  {
+    "id": "1759296699707",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-10-01T05:31:39.707Z",
+    "url": null
+  },
+  {
+    "id": "1759297241720",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-10-01T05:40:41.720Z",
+    "url": null
+  },
+  {
+    "id": "1759297268927",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-10-01T05:41:08.927Z",
+    "url": null
+  },
+  {
+    "id": "1759297407702",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-10-01T05:43:27.702Z",
+    "url": null
+  },
+  {
+    "id": "1759297525188",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-10-01T05:45:25.188Z",
+    "url": null
+  },
+  {
+    "id": "1759298053217",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-10-01T05:54:13.217Z",
+    "url": null
+  },
+  {
+    "id": "1759298071631",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "voting-AdaBoost.pdf",
+    "message_type": "file",
+    "timestamp": "2025-10-01T05:54:31.631Z",
+    "url": "/uploads/1759298071432-327897979.pdf"
+  },
+  {
+    "id": "1759298396901",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-10-01T05:59:56.901Z",
+    "url": null
+  },
+  {
+    "id": "1759298405783",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "1758019811737-704388217 (1).mp4",
+    "message_type": "video",
+    "timestamp": "2025-10-01T06:00:05.783Z",
+    "url": "/uploads/1759298405705-365394697.mp4"
+  },
+  {
+    "id": "1759298486450",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Helllo",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:01:26.450Z",
+    "url": null
+  },
+  {
+    "id": "1759298508948",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Hello World",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:01:48.948Z",
+    "url": null
+  },
+  {
+    "id": "1759298522005",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Chào  bạn",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:02:02.005Z",
+    "url": null
+  },
+  {
+    "id": "1759298533715",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Untitled Diagram.drawio(2).png",
+    "message_type": "image",
+    "timestamp": "2025-10-01T06:02:13.715Z",
+    "url": "/uploads/1759298533421-11762354.png"
+  },
+  {
+    "id": "1759298544322",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Được đấy",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:02:24.322Z",
+    "url": null
+  },
+  {
+    "id": "1759298555614",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Thiết kế chưa có tên.zip",
+    "message_type": "file",
+    "timestamp": "2025-10-01T06:02:35.614Z",
+    "url": "/uploads/1759298555416-700969423.zip"
+  },
+  {
+    "id": "1759298562487",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Xem ổn kh",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:02:42.487Z",
+    "url": null
+  },
+  {
+    "id": "1759298581938",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "13691-251858985_medium.mp4",
+    "message_type": "video",
+    "timestamp": "2025-10-01T06:03:01.938Z",
+    "url": "/uploads/1759298581668-605176476.mp4"
+  },
+  {
+    "id": "1759298610101",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "hay lag vc",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:03:30.101Z",
+    "url": null
+  },
+  {
+    "id": "1759298619017",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "13691-251858985_medium.mp4",
+    "message_type": "video",
+    "timestamp": "2025-10-01T06:03:39.017Z",
+    "url": "/uploads/1759298618809-914145328.mp4"
+  },
+  {
+    "id": "1759298664766",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "TuHOnTap.pdf",
+    "message_type": "file",
+    "timestamp": "2025-10-01T06:04:24.766Z",
+    "url": "/uploads/1759298664517-662862251.pdf"
+  },
+  {
+    "id": "1759298672023",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "13691-251858985_medium.mp4",
+    "message_type": "video",
+    "timestamp": "2025-10-01T06:04:32.023Z",
+    "url": "/uploads/1759298671819-758618933.mp4"
+  },
+  {
+    "id": "1759298724719",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Xin Chào",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:05:24.719Z",
+    "url": null
+  },
+  {
+    "id": "1759298740310",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "Xin chào",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:05:40.310Z",
+    "url": null
+  },
+  {
+    "id": "1759298756274",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "Lỗi lolll",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:05:56.274Z",
+    "url": null
+  },
+  {
+    "id": "1759298765486",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "13691-251858985_medium.mp4",
+    "message_type": "video",
+    "timestamp": "2025-10-01T06:06:05.486Z",
+    "url": "/uploads/1759298765319-899288213.mp4"
+  },
+  {
+    "id": "1759298806178",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1758019811737-704388217 (1).mp4",
+    "message_type": "video",
+    "timestamp": "2025-10-01T06:06:46.178Z",
+    "url": "/uploads/1759298805953-735762030.mp4"
+  },
+  {
+    "id": "1759298849068",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1758019811737-704388217 (1).mp4",
+    "message_type": "video",
+    "timestamp": "2025-10-01T06:07:29.068Z",
+    "url": "/uploads/1759298848834-225398582.mp4"
+  },
+  {
+    "id": "1759298862259",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "1758019811737-704388217 (1).mp4",
+    "message_type": "video",
+    "timestamp": "2025-10-01T06:07:42.259Z",
+    "url": "/uploads/1759298862016-199772825.mp4"
+  },
+  {
+    "id": "1759298871266",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Chào bạn",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:07:51.266Z",
+    "url": null
+  },
+  {
+    "id": "1759298880165",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "đá",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:08:00.165Z",
+    "url": null
+  },
+  {
+    "id": "1759298884891",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "hả",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:08:04.891Z",
+    "url": null
+  },
+  {
+    "id": "1759298901041",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "Untitled Diagram.drawio(1).png",
+    "message_type": "image",
+    "timestamp": "2025-10-01T06:08:21.041Z",
+    "url": "/uploads/1759298900825-246243984.png"
+  },
+  {
+    "id": "1759298911726",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "1758019463204-561019733.docx",
+    "message_type": "file",
+    "timestamp": "2025-10-01T06:08:31.726Z",
+    "url": "/uploads/1759298911499-993491872.docx"
+  },
+  {
+    "id": "1759299155493",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "https://youtube.com/PHDTroll",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:12:35.493Z",
+    "url": null
+  },
+  {
+    "id": "1759299198161",
+    "conversation_id": "ctc_2",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:13:18.161Z",
+    "url": null
+  },
+  {
+    "id": "1759299236755",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "1",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:13:56.755Z",
+    "url": null
+  },
+  {
+    "id": "1759299240491",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "2",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:14:00.491Z",
+    "url": null
+  },
+  {
+    "id": "1759299256749",
+    "conversation_id": "ctc_1",
+    "sender": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "recipient": "global-id",
+    "content": "2",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:14:16.749Z",
+    "url": null
+  },
+  {
+    "id": "1759299263569",
+    "conversation_id": "ctc_2",
+    "sender": "12053cae-9ca7-4cb0-b546-56d7070d216f",
+    "recipient": "1678b960-7ad1-43ff-8837-42477418b8f9",
+    "content": "3",
+    "message_type": "text",
+    "timestamp": "2025-10-01T06:14:23.569Z",
+    "url": null
   }
 ]

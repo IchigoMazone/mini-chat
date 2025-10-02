@@ -69,6 +69,7 @@ app.use("/uploads", express.static("uploads"));
 app.use("/", require("./routes/uploadRoutes"));
 app.use("/api/auth", require("./routes/authRoutes"));
 app.use("/api/chat", require("./routes/chatRoutes"));
+app.use("/api/storage", require("./routes/fileRoutes"));
 
 app.get("/", (req, res) => {
   res.send("Server is running");
