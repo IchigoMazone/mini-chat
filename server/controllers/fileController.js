@@ -154,7 +154,7 @@ async function readConversationData(conversationId) {
           if (url.startsWith("http")) {
             size = "remote file";
           } else {
-            const fullPath = path.resolve(__dirname, "../models", url);
+            const fullPath = path.resolve(__dirname, "../uploads", url);
             if (fs.existsSync(fullPath)) {
               const stats = fs.statSync(fullPath);
               size = (stats.size / 1024).toFixed(2) + " KB";
@@ -187,11 +187,6 @@ async function readConversationData(conversationId) {
         });
       }
     }
-
-    // console.log(`🔗 ${conversationId} <-> I34_Vmeg4WURXtSQAAAH`);
-    // console.log("Text links:", textLinks);
-    // console.log("Files:", files);
-    // console.log("Images/Videos:", imagesVideos);
 
     return { textLinks, files, imagesVideos };
 

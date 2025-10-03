@@ -17,21 +17,6 @@ const useChatActions = (friend, onUpdateChat, setMessages, socketRef) => {
         };
         setMessages((prev) => [...prev, newMessage]);
 
-        if (onUpdateChat) {
-          console.log("Gọi onUpdateChat từ handleSend:", friend.id, {
-            content: newMessage.text,
-            sender: friend.sender,
-            timestamp: newMessage.timestamp.toISOString(),
-            message_type: "text",
-          });
-          onUpdateChat(friend.id, {
-            content: newMessage.text,
-            sender: friend.sender,
-            timestamp: newMessage.timestamp.toISOString(),
-            message_type: "text",
-          });
-        }
-
         if (socketRef.current) {
           socketRef.current.emit("sendMessage", {
             toUserId: friend.member,
@@ -40,6 +25,20 @@ const useChatActions = (friend, onUpdateChat, setMessages, socketRef) => {
               conversation_id: friend.id,
               sender: friend.sender,
               recipient: friend.member,
+              content: newMessage.text,
+              message_type: "text",
+              timestamp: newMessage.timestamp.toISOString(),
+              url: null,
+            },
+          });
+
+          socketRef.current.emit("sendMessage", {
+            toUserId: friend.sender,
+            message: {
+              id: newMessage.id,
+              conversation_id: friend.id,
+              sender: friend.sender,
+              recipient: friend.sender,
               content: newMessage.text,
               message_type: "text",
               timestamp: newMessage.timestamp.toISOString(),
@@ -71,21 +70,6 @@ const useChatActions = (friend, onUpdateChat, setMessages, socketRef) => {
         };
         setMessages((prev) => [...prev, likeMessage]);
 
-        if (onUpdateChat) {
-          console.log("Gọi onUpdateChat từ handleSend (like):", friend.id, {
-            content: likeMessage.text,
-            sender: friend.sender,
-            timestamp: likeMessage.timestamp.toISOString(),
-            message_type: "text",
-          });
-          onUpdateChat(friend.id, {
-            content: likeMessage.text,
-            sender: friend.sender,
-            timestamp: likeMessage.timestamp.toISOString(),
-            message_type: "text",
-          });
-        }
-
         if (socketRef.current) {
           socketRef.current.emit("sendMessage", {
             toUserId: friend.member,
@@ -94,6 +78,20 @@ const useChatActions = (friend, onUpdateChat, setMessages, socketRef) => {
               conversation_id: friend.id,
               sender: friend.sender,
               recipient: friend.member,
+              content: "👍",
+              message_type: "text",
+              timestamp: likeMessage.timestamp.toISOString(),
+              url: null,
+            },
+          });
+
+          socketRef.current.emit("sendMessage", {
+            toUserId: friend.sender,
+            message: {
+              id: likeMessage.id,
+              conversation_id: friend.id,
+              sender: friend.sender,
+              recipient: friend.sender,
               content: "👍",
               message_type: "text",
               timestamp: likeMessage.timestamp.toISOString(),
@@ -172,21 +170,6 @@ const useChatActions = (friend, onUpdateChat, setMessages, socketRef) => {
 
           setMessages((prev) => [...prev, tempMessage]);
 
-          if (onUpdateChat) {
-            console.log("Gọi onUpdateChat từ handleMediaSelect:", friend.id, {
-              content: file.name,
-              sender: friend.sender,
-              timestamp: new Date().toISOString(),
-              message_type: mediaType,
-            });
-            onUpdateChat(friend.id, {
-              content: file.name,
-              sender: friend.sender,
-              timestamp: new Date().toISOString(),
-              message_type: mediaType,
-            });
-          }
-
           if (socketRef.current) {
             socketRef.current.emit("sendMessage", {
               toUserId: friend.member,
@@ -195,6 +178,21 @@ const useChatActions = (friend, onUpdateChat, setMessages, socketRef) => {
                 conversation_id: friend.id,
                 sender: friend.sender,
                 recipient: friend.member,
+                content: file.name,
+                message_type: mediaType,
+                timestamp: new Date().toISOString(),
+                url: null,
+                base64Data: base64Data,
+              },
+            });
+
+            socketRef.current.emit("sendMessage", {
+              toUserId: friend.sender,
+              message: {
+                id: tempMessageId,
+                conversation_id: friend.id,
+                sender: friend.sender,
+                recipient: friend.sender,
                 content: file.name,
                 message_type: mediaType,
                 timestamp: new Date().toISOString(),
@@ -233,21 +231,6 @@ const useChatActions = (friend, onUpdateChat, setMessages, socketRef) => {
       };
       setMessages((prev) => [...prev, uploadingMessage]);
 
-      if (onUpdateChat) {
-        console.log("Gọi onUpdateChat từ uploadFileDirectly:", friend.id, {
-          content: decodeURIComponent(file.name),
-          sender: friend.sender,
-          timestamp: new Date().toISOString(),
-          message_type: mediaType,
-        });
-        onUpdateChat(friend.id, {
-          content: decodeURIComponent(file.name),
-          sender: friend.sender,
-          timestamp: new Date().toISOString(),
-          message_type: mediaType,
-        });
-      }
-
       const uploadResponse = await axios.post(`http://localhost:5000/upload-file`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
@@ -281,21 +264,6 @@ const useChatActions = (friend, onUpdateChat, setMessages, socketRef) => {
           })
         );
 
-        if (onUpdateChat) {
-          console.log("Gọi onUpdateChat từ uploadFileDirectly (success):", friend.id, {
-            content: decodeURIComponent(file.name),
-            sender: friend.sender,
-            timestamp: new Date().toISOString(),
-            message_type: mediaType,
-          });
-          onUpdateChat(friend.id, {
-            content: decodeURIComponent(file.name),
-            sender: friend.sender,
-            timestamp: new Date().toISOString(),
-            message_type: mediaType,
-          });
-        }
-
         if (socketRef.current) {
           socketRef.current.emit("sendMessage", {
             toUserId: friend.member,
@@ -304,6 +272,20 @@ const useChatActions = (friend, onUpdateChat, setMessages, socketRef) => {
               conversation_id: friend.id,
               sender: friend.sender,
               recipient: friend.member,
+              content: decodeURIComponent(file.name),
+              message_type: mediaType,
+              timestamp: new Date().toISOString(),
+              url: filePath,
+            },
+          });
+
+          socketRef.current.emit("sendMessage", {
+            toUserId: friend.sender,
+            message: {
+              id: messageId,
+              conversation_id: friend.id,
+              sender: friend.sender,
+              recipient: friend.sender,
               content: decodeURIComponent(file.name),
               message_type: mediaType,
               timestamp: new Date().toISOString(),
@@ -387,28 +369,33 @@ const useChatActions = (friend, onUpdateChat, setMessages, socketRef) => {
           })
         );
 
-        if (onUpdateChat) {
-          console.log("Gọi onUpdateChat từ uploadFileToServer:", friend.id, {
-            content: decodeURIComponent(file.name),
-            sender: friend.sender,
-            timestamp: new Date().toISOString(),
-            message_type: mediaType,
-          });
-          onUpdateChat(friend.id, {
-            content: decodeURIComponent(file.name),
-            sender: friend.sender,
-            timestamp: new Date().toISOString(),
-            message_type: mediaType,
-          });
-        }
-
         if (socketRef.current) {
+          // Gửi updateMessage tới người nhận
           socketRef.current.emit("updateMessage", {
             toUserId: friend.member,
             message: {
               id: messageId,
               conversation_id: friend.id,
               message_type: mediaType,
+              content: decodeURIComponent(file.name),
+              sender: friend.sender,
+              recipient: friend.member,
+              timestamp: new Date().toISOString(),
+              url: filePath,
+            },
+          });
+
+          // Gửi sendMessage tới chính người gửi
+          socketRef.current.emit("sendMessage", {
+            toUserId: friend.sender,
+            message: {
+              id: messageId,
+              conversation_id: friend.id,
+              sender: friend.sender,
+              recipient: friend.sender,
+              content: decodeURIComponent(file.name),
+              message_type: mediaType,
+              timestamp: new Date().toISOString(),
               url: filePath,
             },
           });

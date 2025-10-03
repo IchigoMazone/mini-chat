@@ -123,6 +123,8 @@ function useSocketHandler(friend, onUpdateChat, setMessages) {
       socketRef.current.emit("joinChat", friend.id);
       console.log("Join chat room:", friend.id);
       
+      socketRef.current.emit("receiveMessage")
+
       return () => {
         if (socketRef.current && friend?.id) {
           socketRef.current.emit("leaveChat", friend.id);

@@ -297,7 +297,7 @@ function Detail({ friend }) {
                     rel="noopener noreferrer"
                     download
                   >
-                    <file.icon size={20} />
+                    <file.icon size={20} color='white'/>
                   </a>
                 </div>
                 <div className={cx('file-info')}>
@@ -474,7 +474,7 @@ function Detail({ friend }) {
                 rel="noopener noreferrer"
                 download
               >
-                <FileText size={24} />
+                <FileText size={24} color='white'/>
               </a>
             </div>
             <div className={cx('file-info')}>

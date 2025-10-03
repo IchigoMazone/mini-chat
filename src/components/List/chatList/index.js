@@ -1,9 +1,11 @@
 
-import React, { useEffect, useState } from 'react';
+
+import React, { useEffect, useState, useRef } from 'react';
 import classNames from 'classnames/bind';
 import styles from './chatList.module.scss';
 import { Pin, Users, File, Image, Video } from 'lucide-react';
 import axios from 'axios';
+import { io } from 'socket.io-client';
 
 const cx = classNames.bind(styles);
 
@@ -11,7 +13,8 @@ function ChatList({ onSelectFriend, chatData1, setUpdateChatList }) {
   const [userChats, setUserChats] = useState([]);
   const [leakInfoMap, setLeakInfoMap] = useState({});
   const [selectedChatId, setSelectedChatId] = useState(null);
-  const [currentTime, setCurrentTime] = useState(new Date()); // Track current time for real-time updates
+  const [currentTime, setCurrentTime] = useState(new Date());
+  const socketRef = useRef(null);
 
   // Lấy danh sách chat
   useEffect(() => {
@@ -32,9 +35,6 @@ function ChatList({ onSelectFriend, chatData1, setUpdateChatList }) {
     fetchChats();
   }, [chatData1]);
 
-
-  console.log("0: ", userChats)
-
   // Lấy thông tin người dùng
   useEffect(() => {
     const fetchAll = async () => {
@@ -44,7 +44,6 @@ function ChatList({ onSelectFriend, chatData1, setUpdateChatList }) {
         );
 
         const uniqueUserIds = [...new Set(userIdsToFetch)].filter(userId => !(userId in leakInfoMap));
-
 
         if (uniqueUserIds.length === 0) return;
 
@@ -72,30 +71,109 @@ function ChatList({ onSelectFriend, chatData1, setUpdateChatList }) {
     }
   }, [userChats, chatData1, leakInfoMap]);
 
+  // Xử lý WebSocket để lắng nghe tin nhắn
+  useEffect(() => {
+    if (!chatData1) return;
 
+    socketRef.current = io("http://localhost:5000", {
+      query: { userId: chatData1 },
+    });
 
+    // Lắng nghe tin nhắn từ người khác (receiveMessage hoặc privateMessage)
+    socketRef.current.on("receiveMessage", (data) => {
+      console.log("📩 Nhận receiveMessage trong ChatList:", data);
+      if (data.message && data.message.conversation_id) {
+        updateChatInList(data.message.conversation_id, {
+          content: data.message.content,
+          sender: data.message.sender,
+          timestamp: data.message.timestamp,
+          message_type: data.message.message_type,
+          url: data.message.url || null,
+        });
+      } else {
+        console.warn('[ChatList] Dữ liệu receiveMessage không hợp lệ:', data);
+      }
+    });
+
+    socketRef.current.on("privateMessage", (data) => {
+      console.log("📩 Nhận privateMessage trong ChatList:", data);
+      if (data.message && data.message.conversation_id) {
+        updateChatInList(data.message.conversation_id, {
+          content: data.message.content,
+          sender: data.message.sender,
+          timestamp: data.message.timestamp,
+          message_type: data.message.message_type,
+          url: data.message.url || null,
+        });
+      } else {
+        console.warn('[ChatList] Dữ liệu privateMessage không hợp lệ:', data);
+      }
+    });
+
+    // Lắng nghe tin nhắn do chính mình gửi (selfMessage)
+    socketRef.current.on("selfMessage", (data) => {
+      console.log("📩 Tin nhắn do tôi gửi trong ChatList:", data);
+      if (data.message && data.message.conversation_id) {
+        updateChatInList(data.message.conversation_id, {
+          content: data.message.content,
+          sender: data.message.sender,
+          timestamp: data.message.timestamp,
+          message_type: data.message.message_type,
+          url: data.message.url || null,
+        });
+      } else {
+        console.warn('[ChatList] Dữ liệu selfMessage không hợp lệ:', data);
+      }
+    });
+
+    // Lắng nghe cập nhật tin nhắn media (updateMessage)
+    socketRef.current.on("updateMessage", (data) => {
+      console.log("📩 Nhận updateMessage trong ChatList:", data);
+      if (data.message && data.message.conversation_id) {
+        updateChatInList(data.message.conversation_id, {
+          content: data.message.content || data.message.message_type,
+          sender: data.message.sender || chatData1,
+          timestamp: data.message.timestamp || new Date().toISOString(),
+          message_type: data.message.message_type,
+          url: data.message.url || null,
+        });
+      } else {
+        console.warn('[ChatList] Dữ liệu updateMessage không hợp lệ:', data);
+      }
+    });
+
+    return () => {
+      if (socketRef.current) {
+        socketRef.current.disconnect();
+      }
+    };
+  }, [chatData1]);
 
   // Hàm cập nhật chat khi có tin nhắn mới
   const updateChatInList = (chatId, messageData) => {
     console.log('[ChatList] updateChatInList được gọi với:', { chatId, messageData });
     setUserChats((prevChats) => {
-      const chatExists = prevChats.find((chat) => chat.id === chatId);
+      const chatExists = prevChats.find((chat) => chat.id === chatId || chat._id === chatId);
       if (!chatExists) {
         console.warn('[ChatList] ChatId không tồn tại:', chatId);
         return prevChats;
       }
 
       const updatedChats = prevChats.map((chat) =>
-        chat.id === chatId
+        chat.id === chatId || chat._id === chatId
           ? {
               ...chat,
               last_message: {
-                content: messageData.message_type === 'text'
-                  ? messageData.content
-                  : messageData.message_type,
+                content:
+                  messageData.message_type === 'text'
+                    ? messageData.content
+                    : messageData.url
+                    ? decodeURIComponent(messageData.content)
+                    : messageData.message_type,
                 sender: messageData.sender,
                 timestamp: messageData.timestamp,
                 message_type: messageData.message_type,
+                url: messageData.url,
               },
             }
           : chat
@@ -127,9 +205,9 @@ function ChatList({ onSelectFriend, chatData1, setUpdateChatList }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTime(new Date());
-    }, 60000); // Cập nhật mỗi phút
+    }, 60000);
 
-    return () => clearInterval(interval); // Dọn dẹp interval khi component unmount
+    return () => clearInterval(interval);
   }, []);
 
   // Xử lý khi chọn một friend
@@ -139,8 +217,6 @@ function ChatList({ onSelectFriend, chatData1, setUpdateChatList }) {
     console.log('[ChatList] Đã chọn chat:', { chatId: chat.id, name: chat.name });
   };
 
-  console.log(userChats)
-
   // Logic xử lý dữ liệu chat
   const chatData = userChats.map((chat) => {
     const otherUserId = chat.members.find((member) => member !== chatData1);
@@ -148,7 +224,7 @@ function ChatList({ onSelectFriend, chatData1, setUpdateChatList }) {
 
     const timel = chat.last_message?.timestamp;
     const dateToCheck = new Date(timel);
-    const now = currentTime; // Sử dụng currentTime để tính thời gian real-time
+    const now = currentTime;
     const diffMs = now - dateToCheck;
 
     let tx = '';
@@ -191,19 +267,17 @@ function ChatList({ onSelectFriend, chatData1, setUpdateChatList }) {
       name: userInfo.fullname || 'Đang tải...',
       message: msg,
       time: tx,
-      //isPinned: true,
       unreadCount: 0,
       member: chat.members[0] === chatData1 ? chat.members[1] : chat.members[0],
       gender: userInfo.gender,
       sender: chatData1,
-      messageType: messageType, // Lưu message_type để sử dụng trong render
-      timestamp: chat.last_message.timestamp,
+      messageType: messageType,
+      timestamp: chat.last_message?.timestamp,
     };
-  })
-  .sort((a, b) => {
+  }).sort((a, b) => {
     const timeA = new Date(a.timestamp || 0).getTime();
     const timeB = new Date(b.timestamp || 0).getTime();
-    return timeB - timeA; // Sắp xếp giảm dần theo timestamp
+    return timeB - timeA;
   });
 
   const renderGroupMembers = (chat) => {

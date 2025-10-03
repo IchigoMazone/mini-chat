@@ -1,10 +1,14 @@
 
 import classNames from "classnames/bind";
 import styles from "./ChatHeader.module.scss";
+import { Users, Search, Video, PanelRight, PanelLeft } from "lucide-react";
+import { useState } from "react";
 
 const cx = classNames.bind(styles);
 
 function ChatHeader({ friend, onAvatarClick, onToggleDetail }) {
+  const [pressed, setPressed] = useState(false);
+
   return (
     <div className={cx("top")}>
       <div className={cx("user-info")}>
@@ -29,10 +33,25 @@ function ChatHeader({ friend, onAvatarClick, onToggleDetail }) {
         </div>
       </div>
       <div className={cx("actions")}>
-        {/* <button className={cx("action-btn")} title="Cuộc gọi thoại" aria-label="Cuộc gọi thoại">📞</button> */}
-        <button className={cx("action-btn")} title="Video call" aria-label="Video call">🎥</button>
-        {/* <button className={cx("action-btn")} title="Thông tin cuộc trò chuyện" aria-label="Thông tin cuộc trò chuyện">ℹ️</button> */}
-        <button className={cx("action-btn")} title="Tùy chọn khác" onClick={onToggleDetail} aria-label="Tùy chọn khác">⋮</button>
+        <button className={cx("action-btn")} title="Cuộc gọi thoại" aria-label="Cuộc gọi thoại">
+          <Users size={16} />
+        </button>
+        <button className={cx("action-btn")} title="Video call" aria-label="Video call">
+          <Search size={16} />
+        </button>
+        <button className={cx("action-btn")} title="Thông tin cuộc trò chuyện" aria-label="Thông tin cuộc trò chuyện">
+          <Video size={16} />
+        </button>
+        <button className={cx("action-btn", "private", { active: pressed })} 
+          aria-pressed={pressed}
+          title="Tùy chọn khác" 
+          onClick={(e) => {
+            setPressed((prev) => !prev);
+            onToggleDetail(e);
+          }}
+          aria-label="Tùy chọn khác">
+            {pressed ? <PanelRight size={16}/> :< PanelLeft size={16}/>}
+        </button>
       </div>
     </div>
   );

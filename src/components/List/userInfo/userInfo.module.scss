@@ -787,8 +787,8 @@
   flex: 1;
   display: flex;
   align-items: center;
-  background: #f8f9fa;
-  border-radius: 20px;
+  background: #eceff1;
+  border-radius: 5px;
   padding: 0 12px;
   height: 36px;
   transition: all 0.2s;
@@ -828,8 +828,8 @@
   width: 36px;
   height: 36px;
   border: none;
-  background: #f8f9fa;
-  border-radius: 50%;
+  background: transparent;
+  border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -837,17 +837,17 @@
   transition: background-color 0.2s;
 
   &:hover {
-    background: #e9ecef;
+    background: #eceff1;
   }
 }
 
 .closeBtnWide {
   height: 36px;
-  background: #f8f9fa;
+  background: transparent;
   border: none;
   color: #d32f2f;
   cursor: pointer;
-  border-radius: 20px; /* dạng pill */
+  border-radius: 5px; /* dạng pill */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -858,7 +858,7 @@
   width: calc(36px * 2 + 8px);
 
   &:hover {
-    background-color: #e9ecef;
+    background-color: #eceff1;
   }
 }
 
