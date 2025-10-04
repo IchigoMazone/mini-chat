@@ -1,3 +1,28 @@
+# # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# # dependencies
+# /node_modules
+# /.pnp
+# .pnp.js
+
+# # testing
+# /coverage
+
+# # production
+# /build
+
+# # misc
+# .DS_Store
+# .env.local
+# .env.development.local
+# .env.test.local
+# .env.production.local
+
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+
+
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -10,14 +35,38 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
+# Bỏ qua file .env chính
+.env
+backend/.env
+#frontend/.env  (comment vì không dùng)
+# Bỏ qua file .env mặc định
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
+# logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+# Dockerfile.lock  (comment vì không cần)
+.dockerignore
+
+# Python (comment vì không dùng)
+# __pycache__
+# *.pyc
+
+# Optional: Thêm nếu dùng công cụ khác
+# .eslintcache
+# .prettierrc
