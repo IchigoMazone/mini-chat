@@ -5,6 +5,7 @@ import { Users, Search, Video, PanelRight, PanelLeft } from "lucide-react";
 import { useState } from "react";
 
 const cx = classNames.bind(styles);
+const buckets = "ichigomazone";
 
 function ChatHeader({ friend, onAvatarClick, onToggleDetail }) {
   const [pressed, setPressed] = useState(false);
@@ -21,8 +22,9 @@ function ChatHeader({ friend, onAvatarClick, onToggleDetail }) {
           <div className={cx("avatar-container")}>
             <img 
               src={friend.avatar
-                ? `${process.env.REACT_APP_API_URL || "http://localhost:5000"}${friend.avatar}`
-                : `${process.env.REACT_APP_API_URL || "http://localhost:5000"}/Uploads/default-avatar.png`}
+                ? `https://${buckets}.s3.amazonaws.com/${friend.avatar}`
+                : `https://${buckets}.s3.amazonaws.com/doraemon.png`
+              }
             />
             <div className={cx("online-status")}></div>
           </div>

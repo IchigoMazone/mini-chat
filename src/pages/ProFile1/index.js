@@ -4,14 +4,12 @@ import classNames from "classnames/bind";
 import styles from "./ProFile.module.scss";
 
 const cx = classNames.bind(styles);
+const buckets = "ichigomazone";
 
 const ProFile1 = ({ datax, onClose }) => {
-
-  console.log("datax:", datax.gender);
-
   const selectedUser = {
     name: datax.name || "",
-    avatar: `http://localhost:5000${datax.avatar}`,
+    avatar: `https://${buckets}.s3.amazonaws.com/${datax.avatar}`,
     phone: "**********",
     gender: datax.gender || "",
     birthDate: "**/**/****",
@@ -67,11 +65,11 @@ const ProFile1 = ({ datax, onClose }) => {
             </div>
             <div className={cx("info-item")}>
               <span className={cx("info-label")}>Ngày sinh</span>
-              <span className={cx("info-value")}>{birthDay} tháng {birthMonth}, {birthYear}</span>
+              <span className={cx("info-value")}>N/A</span>
             </div>
             <div className={cx("info-item")}>
               <span className={cx("info-label")}>Điện thoại</span>
-              <span className={cx("info-value")}>+84 {selectedUser.phone.slice(1)}</span>
+              <span className={cx("info-value")}>N/A</span>
             </div>
           </div>
           <p className={cx("privacy-note")}>

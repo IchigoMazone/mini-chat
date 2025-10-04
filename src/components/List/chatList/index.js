@@ -317,7 +317,11 @@ function ChatList({ onSelectFriend, chatData1, setUpdateChatList }) {
             }}
           >
             <div className={cx('avatar-section')}>
-              <img src={`http://localhost:5000${chat.avatar}`} alt={chat.name} className={cx('avatar')} />
+              <img 
+                src={`https://ichigomazone.s3.amazonaws.com/${chat.avatar}`} 
+                alt={chat.name} 
+                className={cx('avatar')} 
+              />
               {chat.isOfficial && (
                 <div className={cx('official-badge')}>
                   <span>Z</span>

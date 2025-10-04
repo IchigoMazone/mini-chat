@@ -38,9 +38,9 @@ function useMessagesHandler(friend) {
             text: msg.message_type === "text" && typeof msg.content === "string" ? msg.content : "",
             type: msg.sender === friend.sender ? "sent" : "received",
             timestamp: new Date(msg.timestamp),
-            image: msg.message_type === "image" ? `http://localhost:5000${msg.url}` : null,
-            video: msg.message_type === "video" ? `http://localhost:5000${msg.url}` : null,
-            file: msg.message_type === "file" ? { name: msg.content, url: `http://localhost:5000${msg.url}` } : null,
+            image: msg.message_type === "image" ? msg.url : null,
+            video: msg.message_type === "video" ? msg.url : null,
+            file: msg.message_type === "file" ? { name: msg.content, url: msg.url } : null,
             isTemporary: false,
           }))
           .filter((msg) => msg.text || msg.image || msg.video || msg.file);

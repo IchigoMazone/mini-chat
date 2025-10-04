@@ -8,6 +8,7 @@ import axios from "axios";
 import { avatarIcon } from "~/components/List/image";
 
 const cx = classNames.bind(styles);
+const buckets = "ichigomazone";
 
 function ProFile({ onClose, datax }) {
   const [showEditInfo, setShowEditInfo] = useState(false);
@@ -245,7 +246,7 @@ function ProFile({ onClose, datax }) {
               <div className={cx("avatar-display")}>
                 <img
                   className={cx("current-avatar")}
-                  src={userInfo._doc?.avatar ? `http://localhost:5000${userInfo._doc?.avatar}` : avatarIcon}
+                  src={userInfo._doc?.avatar ? `https://${buckets}.s3.amazonaws.com/${userInfo._doc?.avatar}` : avatarIcon}
                   alt="avatar"
                 />
               </div>
@@ -281,7 +282,7 @@ function ProFile({ onClose, datax }) {
             <div className={cx("avatar-wrapper")}>
               <img
                 className={cx("avatar")}
-                src={userInfo._doc?.avatar ? `http://localhost:5000${userInfo._doc?.avatar}` : avatarIcon} 
+                src={userInfo._doc?.avatar ? `https://${buckets}.s3.amazonaws.com/${userInfo._doc?.avatar}` : avatarIcon} 
                 alt="avatar"
               />
               <button 

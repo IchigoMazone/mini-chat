@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 
 const cx = classNames.bind(styles);
+const buckets = "ichigomazone";
 
 function Detail({ friend }) {
   const [currentView, setCurrentView] = useState('main');
@@ -129,6 +130,24 @@ function Detail({ friend }) {
     setFailedMedia((prev) => new Set([...prev, id]));
   };
 
+  const handleDownload = async (s3Key, filename) => {
+    try {
+      const url = `https://${buckets}.s3.amazonaws.com/${s3Key}`;
+      const response = await fetch(url);
+      const blob = await response.blob();
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(link.href);
+    } catch (error) {
+      console.error('Download failed:', error);
+      alert('Không thể tải file. Vui lòng thử lại.');
+    }
+  };
+
   // Render modal preview cho ảnh và video
   const renderPreviewModal = () => {
     if (!previewItem) return null;
@@ -140,7 +159,7 @@ function Detail({ friend }) {
             <div className={cx('media-placeholder')}>Unavailable</div>
           ) : (
             <img
-              src={`http://localhost:5000${previewItem.url}`}
+              src={`https://${buckets}.s3.amazonaws.com/${previewItem.url}`}
               className={cx('media-img')}
               onError={() => handleMediaError(previewItem.id)}
             />
@@ -150,7 +169,7 @@ function Detail({ friend }) {
             <div className={cx('media-placeholder')}>Unavailable</div>
           ) : (
             <video
-              src={`http://localhost:5000${previewItem.url}`}
+              src={`https://${buckets}.s3.amazonaws.com/${previewItem.url}`}
               controls
               playsInline
               autoPlay
@@ -172,7 +191,7 @@ function Detail({ friend }) {
         <div className={cx('avatar')}>
           {friend?.avatar && !failedMedia.has('avatar') ? (
             <img
-              src={`http://localhost:5000${friend.avatar}`}
+              src={`https://${buckets}.s3.amazonaws.com/${friend.avatar}`}
               alt="Avatar"
               className={cx('avatar-img')}
               onError={() => handleMediaError('avatar')}
@@ -230,7 +249,7 @@ function Detail({ friend }) {
                     <div className={cx('media-placeholder')}>Unavailable</div>
                   ) : (
                     <img
-                      src={`http://localhost:5000${item.url}`}
+                      src={`https://${buckets}.s3.amazonaws.com/${item.url}`}
                       className={cx('media-img')}
                       onError={() => handleMediaError(item.id)}
                       onClick={() => handlePreview(item)}
@@ -245,7 +264,7 @@ function Detail({ friend }) {
                       onClick={() => handlePreview(item)}
                     >
                       <video
-                        src={`http://localhost:5000${item.url}`}
+                        src={`https://${buckets}.s3.amazonaws.com/${item.url}`}
                         className={cx('media-video')}
                         playsInline
                         preload="metadata"
@@ -292,7 +311,7 @@ function Detail({ friend }) {
               <div key={index} className={cx('file-item')}>
                 <div className={cx('file-icon', file.bgColor)}>
                   <a
-                    href={`http://localhost:5000${file.url}`}
+                    href={`https://${buckets}.s3.amazonaws.com/${file.url}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     download
@@ -302,7 +321,7 @@ function Detail({ friend }) {
                 </div>
                 <div className={cx('file-info')}>
                   <a
-                    href={`http://localhost:5000${file.url}`}
+                    href={`https://${buckets}.s3.amazonaws.com/${file.url}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={cx('file-name')}
@@ -422,7 +441,7 @@ function Detail({ friend }) {
                 <div className={cx('media-placeholder')}>Unavailable</div>
               ) : (
                 <img
-                  src={`http://localhost:5000${item.url}`}
+                  src={`https://${buckets}.s3.amazonaws.com/${item.url}`}
                   className={cx('media-img')}
                   onError={() => handleMediaError(index)}
                   onClick={() => handlePreview({ id: index, type: item.type, url: item.url })}
@@ -437,7 +456,7 @@ function Detail({ friend }) {
                   onClick={() => handlePreview({ id: index, type: item.type, url: item.url })}
                 >
                   <video
-                    src={`http://localhost:5000${item.url}`}
+                    src={`https://${buckets}.s3.amazonaws.com/${item.url}`}
                     className={cx('media-video')}
                     playsInline
                     preload="metadata"
@@ -469,21 +488,21 @@ function Detail({ friend }) {
           <div key={index} className={cx('file-item-full')}>
             <div className={cx('file-icon-large', 'blue')}>
               <a
-                href={`http://localhost:5000${file.url}`}
+                href={`https://${buckets}.s3.amazonaws.com/${file.url}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                download
+                download={file.content}
               >
                 <FileText size={24} color='white'/>
               </a>
             </div>
             <div className={cx('file-info')}>
               <a
-                href={`http://localhost:5000${file.url}`}
+                href={`https://${buckets}.s3.amazonaws.com/${file.url}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={cx('file-name')}
-                download
+                download={file.content}
               >
                 {file.content}
               </a>

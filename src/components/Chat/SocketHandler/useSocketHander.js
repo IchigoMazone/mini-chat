@@ -21,12 +21,12 @@ function useSocketHandler(friend, onUpdateChat, setMessages) {
         type: data.message.sender === friend.sender ? "sent" : "received",
         timestamp: new Date(data.message.timestamp),
         temporaryImage: data.message.message_type === "image" && data.message.base64Data ? data.message.base64Data : null,
-        image: data.message.message_type === "image" && data.message.url ? `http://localhost:5000${data.message.url}` : null,
+        image: data.message.message_type === "image" && data.message.url ? data.message.url : null,
         temporaryVideo: data.message.message_type === "video" && data.message.base64Data ? data.message.base64Data : null,
-        video: data.message.message_type === "video" && data.message.url ? `http://localhost:5000${data.message.url}` : null,
+        video: data.message.message_type === "video" && data.message.url ? data.message.url : null,
         file: data.message.message_type === "file" ? {
           name: data.message.content,
-          url: data.message.url ? `http://localhost:5000${data.message.url}` : null,
+          url: data.message.url ? data.message.url : null,
         } : null,
         isTemporary: data.message.message_type === "file" ? false : !!data.message.base64Data,
       };
@@ -83,7 +83,7 @@ function useSocketHandler(friend, onUpdateChat, setMessages) {
                 video: data.message.url && data.message.message_type === "video" ? `http://localhost:5000${data.message.url}` : msg.video,
                 file: data.message.url && data.message.message_type === "file" ? {
                   name: msg.file?.name || data.message.content,
-                  url: `http://localhost:5000${data.message.url}`,
+                  url: data.message.url,
                 } : msg.file,
                 isTemporary: false,
                 uploading: false,

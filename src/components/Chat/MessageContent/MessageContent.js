@@ -16,21 +16,29 @@ function MessageContent({ message, onImagePreview }) {
   };
 
   const handleDownload = async (url, filename, e) => {
-    e.preventDefault();
-    e.stopPropagation();
+  e.preventDefault();
+  e.stopPropagation();
 
-    try {
-      const response = await fetch(url);
-      const blob = await response.blob();
-      const link = document.createElement("a");
-      link.href = window.URL.createObjectURL(blob);
-      link.download = filename;
-      link.click();
-      window.URL.revokeObjectURL(link.href);
-    } catch (error) {
-      console.error("Tải xuống thất bại:", error);
+  try {
+    const fileUrl = `https://ichigomazone.s3.amazonaws.com/${url}`;
+    console.log("Fetching:", fileUrl);
+    const response = await fetch(fileUrl);
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
-  };
+    const blob = await response.blob();
+    const link = document.createElement("a");
+    link.href = window.URL.createObjectURL(blob);
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    window.URL.revokeObjectURL(link.href);
+    console.log("Download triggered for:", filename);
+  } catch (error) {
+    console.error("Tải xuống thất bại:", error);
+  }
+};
 
   // Handle uploading state
   if (message.uploading) {
@@ -58,6 +66,8 @@ function MessageContent({ message, onImagePreview }) {
     const imageSource = message.temporaryImage || message.image;
     const isBase64 = imageSource && imageSource.startsWith("data:image/");
 
+    console.log(imageSource)
+
     return (
       <div
         className={cx("message-image", { temporary: message.isTemporary })}
@@ -70,7 +80,7 @@ function MessageContent({ message, onImagePreview }) {
               ? imageSource
               : imageSource && imageSource.startsWith("http")
               ? imageSource
-              : `http://localhost:5000${imageSource}`
+              : `https://ichigomazone.s3.amazonaws.com/${imageSource}`
           }
           alt={message.fileName || "Hình ảnh được chia sẻ"}
           className={cx("image-content")}
@@ -102,7 +112,7 @@ function MessageContent({ message, onImagePreview }) {
                 ? videoSource
                 : videoSource && videoSource.startsWith("http")
                 ? videoSource
-                : `http://localhost:5000${videoSource}`
+                : `https://ichigomazone.s3.amazonaws.com/${videoSource}`
             }
             type="video/mp4"
           />
@@ -119,9 +129,9 @@ function MessageContent({ message, onImagePreview }) {
 
   // Handle file content
   if (message.file) {
-    const fileUrl = message.file.url.startsWith("http")
-      ? message.file.url
-      : `http://localhost:5000${message.file.url}`;
+    const fileUrl = `https://ichigomazone.s3.amazonaws.com/${message.file.url}`;
+
+    console.log("FILE: ", message)
 
     return (
       <div className={cx("message-file")}>
@@ -135,7 +145,7 @@ function MessageContent({ message, onImagePreview }) {
               <a
                 href={fileUrl}
                 className={cx("download-link")}
-                onClick={(e) => handleDownload(fileUrl, message.file.name, e)}
+                onClick={(e) => handleDownload(message.file.url, message.file.name, e)}
               >
                 Tải xuống
               </a>
@@ -176,3 +186,9 @@ function MessageContent({ message, onImagePreview }) {
 }
 
 export default MessageContent;
+
+
+
+
+
+
